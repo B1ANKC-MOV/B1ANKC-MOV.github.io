@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>全栈学习·MybatisPlus多表查询及分页查询 - VVulpes</title><meta name="Description" content="Vulpes的博客"><meta property="og:title" content="全栈学习·MybatisPlus多表查询及分页查询" />
+<meta property="og:description" content="Mybatis多表查询 实现复杂关系映射，可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://b1ankc-mov.github.io/posts/springbootp7.html/" /><meta property="og:image" content="https://b1ankc-mov.github.io/47"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-05T16:55:12+08:00" />
+<meta property="article:modified_time" content="2023-12-20T17:13:30+08:00" /><meta property="og:site_name" content="Vulpes的博客" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://b1ankc-mov.github.io/47"/>
+
+<meta name="twitter:title" content="全栈学习·MybatisPlus多表查询及分页查询"/>
+<meta name="twitter:description" content="Mybatis多表查询 实现复杂关系映射，可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置"/>
+<meta name="application-name" content="VVulpes Blog">
+<meta name="apple-mobile-web-app-title" content="VVulpes Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="canonical" href="https://b1ankc-mov.github.io/posts/springbootp7.html/" /><link rel="prev" href="https://b1ankc-mov.github.io/posts/springbootp6.html/" /><link rel="next" href="https://b1ankc-mov.github.io/posts/vuep8.html/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "全栈学习·MybatisPlus多表查询及分页查询",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/b1ankc-mov.github.io\/posts\/springbootp7.html\/"
+        },"genre": "posts","keywords": "个人学习, 后端, 数据库","wordcount":  1011 ,
+        "url": "https:\/\/b1ankc-mov.github.io\/posts\/springbootp7.html\/","datePublished": "2023-12-05T16:55:12+08:00","dateModified": "2023-12-20T17:13:30+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Vulpes"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+    <a href="https://github.com/B1ANKC-MOV" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="3.5rem" height="3.5rem" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+        <div class="header-title">
+            <a href="/" title="VVulpes"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/foxsleeping.png"
+        data-srcset="/images/foxsleeping.png, /images/foxsleeping.png 1.5x, /images/foxsleeping.png 2x"
+        data-sizes="auto"
+        alt="/images/foxsleeping.png"
+        title="/images/foxsleeping.png" />VVulpes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/" title="Home Page"><i class='fa fa-home'></i> 首页 </a><a class="menu-item" href="/posts/" title="All Post"><i class='fa fa-quote-left'></i> 文档 </a><a class="menu-item" href="/categories/" title="All Categories"><i class='fa fa-archive'></i> 分类 </a><a class="menu-item" href="/tags/" title="All tags"><i class='fa fa-tags'></i> 标签 </a><a class="menu-item" href="/friends/" title="friends&#39; URL"><i class='fa fa-plane'></i> 友链 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="VVulpes"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/foxsleeping.png"
+        data-srcset="/images/foxsleeping.png, /images/foxsleeping.png 1.5x, /images/foxsleeping.png 2x"
+        data-sizes="auto"
+        alt="/images/foxsleeping.png"
+        title="/images/foxsleeping.png" />VVulpes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="Home Page"><i class='fa fa-home'></i>首页</a><a class="menu-item" href="/posts/" title="All Post"><i class='fa fa-quote-left'></i>文档</a><a class="menu-item" href="/categories/" title="All Categories"><i class='fa fa-archive'></i>分类</a><a class="menu-item" href="/tags/" title="All tags"><i class='fa fa-tags'></i>标签</a><a class="menu-item" href="/friends/" title="friends&#39; URL"><i class='fa fa-plane'></i>友链</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">全栈学习·MybatisPlus多表查询及分页查询</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-category">included in <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div>
+            <div class="post-meta-line">
+                
+    
+
+    
+        
+
+        
+        
+            <span id="busuanzi_container_value_page_pv"><i class="far fa-eye fa-fw"></i>
+                
+                <span id="busuanzi_value_page_pv"></span>&nbsp;views</span>
+        
+    
+
+<i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2023-12-05">2023-12-05</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2023-12-20">2023-12-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1011 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#mybatis多表查询">Mybatis多表查询</a></li>
+  </ol>
+</nav></div>
+            </div>
+        <div class="content" id="content"><h2 id="mybatis多表查询">Mybatis多表查询</h2>
+<p>实现复杂关系映射，可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">注解</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">@Reults</td>
+<td style="text-align:left">代替<resultMap>标签,该注解中可以加入单个或多个@Result注解</td>
+</tr>
+<tr>
+<td style="text-align:left">@Result</td>
+<td style="text-align:left">代替<id>标签和<Result>标签，@Result中可以使用以下属性: <br/>- column: 数据表的字段名称<br />- property:类中对应的属性名<br />- one:与@one注解配合，进行一对一的映射<br />- many: 与@Many注解配合，进行一对多的映射</td>
+</tr>
+<tr>
+<td style="text-align:left">@One</td>
+<td style="text-align:left">代替<assocation>标签，用于指定查询中返回的单一对象<br />通过select属性指定用于多表查询的方法<br />使用格式:@Result(column=&quot;&quot;,property=&quot;&quot;,one=@one(select=&quot;&quot;))</td>
+</tr>
+<tr>
+<td style="text-align:left">@Many</td>
+<td style="text-align:left">代替<collection>标签,用于指定查询中返回的集合对象<br />使用格式:@Result(column=&quot;&quot;,property=&quot;&quot;,many=@Many(select=&quot;&quot;))</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实际使用</strong></p>
+<ol>
+<li>要查同一用户下的所有订单：加入一个字段orders，字段orders并不存在，其属性为List集合，存放的是订单对象Orders。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TableName(&#34;t_user&#34;)
+</span></span><span class="line"><span class="cl">public class User {
+</span></span><span class="line"><span class="cl">    @TableId(type = IdType .AUT0)
+</span></span><span class="line"><span class="cl">    private int id;
+</span></span><span class="line"><span class="cl">    priwate string username ;
+</span></span><span class="line"><span class="cl">    private string password;
+</span></span><span class="line"><span class="cl">    private string birthday ;
+</span></span><span class="line"><span class="cl">    //描述用户的所有订单
+</span></span><span class="line"><span class="cl">    @TableField(exist = false)
+</span></span><span class="line"><span class="cl">    private List&lt;0rder&gt;orders;
+</span></span><span class="line"><span class="cl">    //alt + insert
+</span></span><span class="line"><span class="cl">…………
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>这个字段需要自行映射</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">…………
+</span></span><span class="line"><span class="cl">//查询用户及其所有的订单
+</span></span><span class="line"><span class="cl">    @Select(&#34;&#34;select * from t_user&#34;&#34;)
+</span></span><span class="line"><span class="cl">    @Results(
+</span></span><span class="line"><span class="cl">        {
+</span></span><span class="line"><span class="cl">            @Result(column = &#34;id&#34; , property = &#34;id&#34;),
+</span></span><span class="line"><span class="cl">            @Result(column = &#34;username&#34; , property = &#34;username&#34;),
+</span></span><span class="line"><span class="cl">            @Result(column = &#34;password&#34; , property = &#34;password&#34;&#34;),
+</span></span><span class="line"><span class="cl">            @Result(column = &#34;birthday&#34; , property = &#34;birthday&#34;&#34;) ,
+</span></span><span class="line"><span class="cl">            @Result(column = &#34;id &#34; , property = &#34;orders&#34;,javaType = List.class,
+</span></span><span class="line"><span class="cl">                many=@Many(select = &#34;com.example.mpdemo.mapper.OrderMapper.selectBy……
+</span></span><span class="line"><span class="cl">            )
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">    List&lt;User&gt; selectAllUserAnd0rders();
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>前面意思是↑从数据库里面调取的id这一列需要赋值给user类中的id属性。
+关键在于映射orders：最后一行，标记需要使用id字段，需要映射orders，类型为集合list。还需要写一个方法：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@Select(&#34;select * from t_order where uid = #{uid}&#34;)
+</span></span><span class="line"><span class="cl">List&lt;Order&gt; selettByUid(int uid);
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>many注解，意思是一个用户会有多个订单，后接需要调用哪个mapper的哪个方法（对着mapper右键copy path选最后一个就行）,查询出来的订单最后传给了orders属性，就完成了映射。</li>
+<li>如果我们需要查订单的用户：需要用one注解</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">one=@0ne(select = &#34;com.example.mpdemo.mapper .UserHapper.selectById&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>条件查询</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@GetMapping(&#34;/user/find&#34;)
+</span></span><span class="line"><span class="cl">public List&lt;User&gt; findBycond(){
+</span></span><span class="line"><span class="cl">    QueryWrapper&lt;User&gt; queryWrapper = new QueryWrapper();
+</span></span><span class="line"><span class="cl">    queryWirapper.eq( &#34;username&#34; , &#34;zhangsan&#34;);
+</span></span><span class="line"><span class="cl">    return userMapper.selectList(queryWrapper);
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>分页查询</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@GetMapping(&#34;/user/findByPage&#34;)
+</span></span><span class="line"><span class="cl">public IPage findByPage(){
+</span></span><span class="line"><span class="cl">    //设置起始值及每页条数
+</span></span><span class="line"><span class="cl">    Page&lt;User&gt; page = new Page&lt;&gt;(0, 2) ;
+</span></span><span class="line"><span class="cl">    IPage iPage = userMapper.selectPage(page,  null);
+</span></span><span class="line"><span class="cl">    return iPage;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>  
+<div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-12-20</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/springbootp7.html/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://b1ankc-mov.github.io/posts/springbootp7.html/" data-title="全栈学习·MybatisPlus多表查询及分页查询" data-hashtags="个人学习,后端,数据库"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://b1ankc-mov.github.io/posts/springbootp7.html/" data-hashtag="个人学习"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://b1ankc-mov.github.io/posts/springbootp7.html/" data-title="全栈学习·MybatisPlus多表查询及分页查询"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://b1ankc-mov.github.io/posts/springbootp7.html/" data-title="全栈学习·MybatisPlus多表查询及分页查询"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://b1ankc-mov.github.io/posts/springbootp7.html/" data-title="全栈学习·MybatisPlus多表查询及分页查询"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">个人学习</a>,&nbsp;<a href="/tags/%E5%90%8E%E7%AB%AF/">后端</a>,&nbsp;<a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/springbootp6.html/" class="prev" rel="prev" title="全栈学习·Mybatis-Plus增/删/改"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>全栈学习·Mybatis-Plus增/删/改</a>
+            <a href="/posts/vuep8.html/" class="next" rel="next" title="全栈学习·Vue框架介绍及应用">全栈学习·Vue框架介绍及应用<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Vulpes</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    
+        
+        <script async src=" //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js "></script>
+    
+
+    
+        
+            <section>
+                
+                    <span id="busuanzi_container_value_site_pv"><i class="far fa-eye fa-fw"></i>
+                        
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+
+                
+                    &nbsp;|&nbsp;              
+                
+
+                
+                    <span id="busuanzi_container_value_site_uv"><i class="fa fa-user"></i>
+                        
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+            </section>
+        
+
+        
+        
+    
+
+</div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script><script type="text/javascript" src="/js/custom.js"></script>
+
+
+</body>
+</html>
