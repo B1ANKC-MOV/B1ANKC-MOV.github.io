@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>全栈学习·RESTful服务&#43;Swagger - VVulpes</title><meta name="Description" content="Vulpes的博客"><meta property="og:title" content="全栈学习·RESTful服务&#43;Swagger" />
+<meta property="og:description" content="RESTful服务 RESTful介绍 RESTful是一种软件服务架构设计风格 RESTful特点 例如，将请求清晰分类，GET用于获取，POST" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://b1ankc-mov.github.io/posts/springbootp5.html/" /><meta property="og:image" content="https://b1ankc-mov.github.io/47"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-03T16:01:03+08:00" />
+<meta property="article:modified_time" content="2023-12-03T16:01:03+08:00" /><meta property="og:site_name" content="Vulpes的博客" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://b1ankc-mov.github.io/47"/>
+
+<meta name="twitter:title" content="全栈学习·RESTful服务&#43;Swagger"/>
+<meta name="twitter:description" content="RESTful服务 RESTful介绍 RESTful是一种软件服务架构设计风格 RESTful特点 例如，将请求清晰分类，GET用于获取，POST"/>
+<meta name="application-name" content="VVulpes Blog">
+<meta name="apple-mobile-web-app-title" content="VVulpes Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="canonical" href="https://b1ankc-mov.github.io/posts/springbootp5.html/" /><link rel="prev" href="https://b1ankc-mov.github.io/posts/springbootp4.html/" /><link rel="next" href="https://b1ankc-mov.github.io/posts/springbootp6.html/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "全栈学习·RESTful服务+Swagger",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/b1ankc-mov.github.io\/posts\/springbootp5.html\/"
+        },"genre": "posts","keywords": "个人学习, 后端","wordcount":  1413 ,
+        "url": "https:\/\/b1ankc-mov.github.io\/posts\/springbootp5.html\/","datePublished": "2023-12-03T16:01:03+08:00","dateModified": "2023-12-03T16:01:03+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Vulpes"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+    <a href="https://github.com/B1ANKC-MOV" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="3.5rem" height="3.5rem" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+        <div class="header-title">
+            <a href="/" title="VVulpes"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/foxsleeping.png"
+        data-srcset="/images/foxsleeping.png, /images/foxsleeping.png 1.5x, /images/foxsleeping.png 2x"
+        data-sizes="auto"
+        alt="/images/foxsleeping.png"
+        title="/images/foxsleeping.png" />VVulpes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/" title="Home Page"><i class='fa fa-home'></i> 首页 </a><a class="menu-item" href="/posts/" title="All Post"><i class='fa fa-quote-left'></i> 文档 </a><a class="menu-item" href="/categories/" title="All Categories"><i class='fa fa-archive'></i> 分类 </a><a class="menu-item" href="/tags/" title="All tags"><i class='fa fa-tags'></i> 标签 </a><a class="menu-item" href="/friends/" title="friends&#39; URL"><i class='fa fa-plane'></i> 友链 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="VVulpes"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/foxsleeping.png"
+        data-srcset="/images/foxsleeping.png, /images/foxsleeping.png 1.5x, /images/foxsleeping.png 2x"
+        data-sizes="auto"
+        alt="/images/foxsleeping.png"
+        title="/images/foxsleeping.png" />VVulpes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="Home Page"><i class='fa fa-home'></i>首页</a><a class="menu-item" href="/posts/" title="All Post"><i class='fa fa-quote-left'></i>文档</a><a class="menu-item" href="/categories/" title="All Categories"><i class='fa fa-archive'></i>分类</a><a class="menu-item" href="/tags/" title="All tags"><i class='fa fa-tags'></i>标签</a><a class="menu-item" href="/friends/" title="friends&#39; URL"><i class='fa fa-plane'></i>友链</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">全栈学习·RESTful服务+Swagger</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-category">included in <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div>
+            <div class="post-meta-line">
+                
+    
+
+    
+        
+
+        
+        
+            <span id="busuanzi_container_value_page_pv"><i class="far fa-eye fa-fw"></i>
+                
+                <span id="busuanzi_value_page_pv"></span>&nbsp;views</span>
+        
+    
+
+<i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2023-12-03">2023-12-03</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2023-12-03">2023-12-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1413 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#restful服务">RESTful服务</a>
+      <ol>
+        <li><a href="#restful介绍">RESTful介绍</a></li>
+        <li><a href="#restful特点">RESTful特点</a></li>
+        <li><a href="#restful-api符合此架构接口的必备特质">RESTful API（符合此架构接口的必备特质）</a></li>
+        <li><a href="#实操">实操</a></li>
+      </ol>
+    </li>
+    <li><a href="#swagger">Swagger</a>
+      <ol>
+        <li><a href="#配置">配置</a></li>
+        <li><a href="#使用swagger2进行接口测试">使用Swagger2进行接口测试</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav></div>
+            </div>
+        <div class="content" id="content"><h2 id="restful服务">RESTful服务</h2>
+<h3 id="restful介绍">RESTful介绍</h3>
+<p>RESTful是一种软件服务架构设计风格</p>
+<h3 id="restful特点">RESTful特点</h3>
+<p>例如，将请求清晰分类，GET用于获取，POST用于新建，等等等等</p>
+<ul>
+<li>每一个URI代表一种资源。</li>
+<li>客户端使用GET、POST、PUT、DELETE四种表示操作方式的动词对服务端资源进行操作:GET用于获取资源,POST用于新建资源(也可以用于更新资源)，PUT用于更新资源，DELETE用于删除资源。</li>
+<li>通过操作资源的表现形式来实现服务端请求操作。</li>
+<li>资源的表现形式是JSON或者HTML。</li>
+<li>客户端与服务端之间的交互在请求之间是无状态的。从客户端到服务端的每个请求都包含必需的信息。</li>
+</ul>
+<h3 id="restful-api符合此架构接口的必备特质">RESTful API（符合此架构接口的必备特质）</h3>
+<p><strong>符合RESTful规范的Web API需要具备如下两个关键特性:</strong></p>
+<ul>
+<li>安全性:安全的方法被期望不会产生任何副作用。当我们使用GET操作获取资源时。不会引起资源本身的改变，也不会引起服务器状态的改变。</li>
+<li>幂等性:幂等的方法保证了重复进行一个请求和一次清求的效果相同（并不是指响应总是相同的,而是指服务器上资源的状态从第一次请求后就不再改变了），在数学上幂等性是指N次变换和一次变换相同。</li>
+</ul>
+<p><strong>在做BS架构程序时，想要符合RESTful风格，对应几种请求方法即可</strong></p>
+<p><strong>实际编程时如何实现RESTful风格</strong>：</p>
+<ul>
+<li>Spring Boot提供的spring-boot-starter-web组件完全支持开发RESTful API,提供了与REST操作方式(GET.POST、PUT、DELETE)对应的注解：
+<ul>
+<li>GetMapping:处理GET请求，获取资源。</li>
+<li>PostMapping:处理POST请求，新增资源。</li>
+<li>putMapping:处理PUT请求，更新资源。</li>
+<li>DeleteMapping:处理DELETE请求，删除资源。</li>
+<li>PatchMapping:处理PATCH请求，用于部分更新资源。</li>
+</ul>
+</li>
+<li><strong>URL中不要包含动词</strong>（传统的比如删除用户操作为http://xxx/del?id=10，但是RESTful需要delete http://xxx/user/10）
+<strong>示例：（RESTful增删改查）</strong>（加**{}<strong>意味其为</strong>动态**，需要加入PathVariable注解）</li>
+</ul>
+<h3 id="实操">实操</h3>
+<p><strong>全部代码如下</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@RestController
+</span></span><span class="line"><span class="cl">public class UserController {
+</span></span><span class="line"><span class="cl">    @GetMapping(&#34;/user/{id}&#34;)
+</span></span><span class="line"><span class="cl">    public String getUserById(@PathVariable int id){
+</span></span><span class="line"><span class="cl">        System.out.println(id);
+</span></span><span class="line"><span class="cl">        return &#34;根据ID获取用户信息&#34;;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">    @PostMapping(&#34;/user&#34;)
+</span></span><span class="line"><span class="cl">    public String save(User user){return &#34;添加用户&#34;;}
+</span></span><span class="line"><span class="cl">    @PutMapping(&#34;/user&#34;)
+</span></span><span class="line"><span class="cl">    public String update(User user){return &#34;更新用户&#34;;}
+</span></span><span class="line"><span class="cl">    @DeleteMapping(&#34;/user/{id}&#34;)
+</span></span><span class="line"><span class="cl">    public String deleteById(@PathVariable int id){
+</span></span><span class="line"><span class="cl">        System.out.println(id);
+</span></span><span class="line"><span class="cl">        return &#34;根据ID删除用户&#34;;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="swagger">Swagger</h2>
+<p>Java内提供的测试工具
+通过Swagger动态生成web接口文档（方便前端使用），也可以进行端口测试</p>
+<h3 id="配置">配置</h3>
+<ol>
+<li>在pom.xml加入依赖↓</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;dependency&gt;
+</span></span><span class="line"><span class="cl">    &lt;groupId&gt;io.springfox&lt;/groupId&gt;
+</span></span><span class="line"><span class="cl">    &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;
+</span></span><span class="line"><span class="cl">    &lt;version&gt;2.9.2&lt;/version&gt;
+</span></span><span class="line"><span class="cl">&lt;/dependency&gt;
+</span></span><span class="line"><span class="cl">&lt;dependency&gt;
+</span></span><span class="line"><span class="cl">    &lt;groupId&gt;io.springfox&lt;/groupId&gt;
+</span></span><span class="line"><span class="cl">    &lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;
+</span></span><span class="line"><span class="cl">    &lt;version&gt;2.9.2&lt;/version&gt;
+</span></span><span class="line"><span class="cl">&lt;/dependency&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw" aria-hidden="true"></i>Warning<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Spring Boot 2.6.X后与Swagger有版本冲突问题，需要在application.properties中加入以下配置:
+<code>spring.mvc.pathmatch.matching-strategy=ant_path_matcher</code></div>
+        </div>
+    </div>
+<ol start="2">
+<li>然后做一个基本的配置↓（在config下创建一个SwaggerConfig配置类）</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@Configuration
+</span></span><span class="line"><span class="cl">@EnableSwagger2
+</span></span><span class="line"><span class="cl">public class SwaggerConfig {
+</span></span><span class="line"><span class="cl">    @Bean
+</span></span><span class="line"><span class="cl">    public Docket createRestApi() {
+</span></span><span class="line"><span class="cl">        return new Docket(DocumentationType.SWAGGER_2)
+</span></span><span class="line"><span class="cl">                .apiInfo(apiInfo())
+</span></span><span class="line"><span class="cl">                .select()
+</span></span><span class="line"><span class="cl">                .apis( RequestHandlerSelectors.basePackage(&#34;com&#34;))
+</span></span><span class="line"><span class="cl">                .paths(PathSelectors.any()).build();
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    private ApiInfo apiInfo() {
+</span></span><span class="line"><span class="cl">        return new ApiInfoBuilder()
+</span></span><span class="line"><span class="cl">                .title(&#34;演示项目API&#34;)//标题
+</span></span><span class="line"><span class="cl">                .description(&#34;学习Swagger2的演示项目&#34;)//描述
+</span></span><span class="line"><span class="cl">                //附加信息
+</span></span><span class="line"><span class="cl">                .build();
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="使用swagger2进行接口测试">使用Swagger2进行接口测试</h3>
+<p>启动项目访问http://127.0.0.1:8080/swagger-ui.html，即可打开自动生成的可视化测试页面</p>
+</div>  
+<div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-12-03</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/springbootp5.html/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://b1ankc-mov.github.io/posts/springbootp5.html/" data-title="全栈学习·RESTful服务&#43;Swagger" data-hashtags="个人学习,后端"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://b1ankc-mov.github.io/posts/springbootp5.html/" data-hashtag="个人学习"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://b1ankc-mov.github.io/posts/springbootp5.html/" data-title="全栈学习·RESTful服务&#43;Swagger"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://b1ankc-mov.github.io/posts/springbootp5.html/" data-title="全栈学习·RESTful服务&#43;Swagger"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://b1ankc-mov.github.io/posts/springbootp5.html/" data-title="全栈学习·RESTful服务&#43;Swagger"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">个人学习</a>,&nbsp;<a href="/tags/%E5%90%8E%E7%AB%AF/">后端</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/springbootp4.html/" class="prev" rel="prev" title="全栈学习·SpringBoot文件上传&amp;拦截器"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>全栈学习·SpringBoot文件上传&拦截器</a>
+            <a href="/posts/springbootp6.html/" class="next" rel="next" title="全栈学习·Mybatis-Plus增/删/改">全栈学习·Mybatis-Plus增/删/改<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Vulpes</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    
+        
+        <script async src=" //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js "></script>
+    
+
+    
+        
+            <section>
+                
+                    <span id="busuanzi_container_value_site_pv"><i class="far fa-eye fa-fw"></i>
+                        
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+
+                
+                    &nbsp;|&nbsp;              
+                
+
+                
+                    <span id="busuanzi_container_value_site_uv"><i class="fa fa-user"></i>
+                        
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+            </section>
+        
+
+        
+        
+    
+
+</div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script><script type="text/javascript" src="/js/custom.js"></script>
+
+
+</body>
+</html>
