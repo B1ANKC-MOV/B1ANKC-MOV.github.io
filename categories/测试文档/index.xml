@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>测试文档 - Category - VVulpes</title>
+        <title>测试文档 - 分类 - VVulpes</title>
         <link>https://b1ankc-mov.github.io/categories/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/</link>
-        <description>测试文档 - Category - VVulpes</description>
+        <description>测试文档 - 分类 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
             <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Wed, 13 Dec 2023 10:15:21 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/categories/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/" rel="self" type="application/rss+xml" /><item>
     <title>测试文档</title>

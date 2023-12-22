@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Categories - Category - VVulpes</title>
+        <title>Categories - 分类 - VVulpes</title>
         <link>https://b1ankc-mov.github.io/categories/</link>
-        <description>Categories - Category - VVulpes</description>
+        <description>Categories - 分类 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
             <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Wed, 13 Dec 2023 10:15:21 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/categories/" rel="self" type="application/rss+xml" /><item>
     <title>测试文档</title>
@@ -22,10 +22,10 @@
 </item>
 <item>
     <title>SpringBoot&#43;Vue全栈开发</title>
-    <link>https://b1ankc-mov.github.io/categories/springvue/_index.zh-cn/</link>
+    <link>https://b1ankc-mov.github.io/categories/springvue/</link>
     <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
     <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/categories/springvue/_index.zh-cn/</guid>
+    <guid>https://b1ankc-mov.github.io/categories/springvue/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

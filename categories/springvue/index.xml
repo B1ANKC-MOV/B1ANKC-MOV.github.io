@@ -1,0 +1,8 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>SpringBoot&#43;Vue全栈开发 - 分类 - VVulpes</title>
+        <link>https://b1ankc-mov.github.io/categories/springvue/</link>
+        <description>SpringBoot&#43;Vue全栈开发 - 分类 - VVulpes</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><atom:link href="https://b1ankc-mov.github.io/categories/springvue/" rel="self" type="application/rss+xml" /></channel>
+</rss>
