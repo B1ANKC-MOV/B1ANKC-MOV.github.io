@@ -40,5 +40,13 @@ window.onload = function() {
 	  }
 	});
   }
+/* 轮播背景图片 */
+// $(function () {
+// 	$.backstretch([
+// 		  "/images/background/DNC.jpg",
+// 		  "/images/background/SAM.jpg",
+// 		  "/images/background/ninja.jpg"
+// 	], { duration: 6000, fade: 15000 });
+// });
 
 
