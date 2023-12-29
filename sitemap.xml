@@ -2,6 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>https://b1ankc-mov.github.io/website/</loc><lastmod>2023-12-29T13:53:27&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://b1ankc-mov.github.io/categories/</loc><lastmod>2023-12-29T08:47:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://b1ankc-mov.github.io/posts/</loc><lastmod>2023-12-29T08:47:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://b1ankc-mov.github.io/categories/springboot&#43;vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/</loc><lastmod>2023-12-29T08:47:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
