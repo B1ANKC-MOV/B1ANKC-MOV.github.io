@@ -4,7 +4,15 @@
         <link>https://b1ankc-mov.github.io/posts/</link>
         <description>所有文章 | VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Wed, 13 Dec 2023 10:15:21 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Fri, 29 Dec 2023 08:47:13 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>全栈学习·Axios网络请求</title>
+    <link>https://b1ankc-mov.github.io/posts/vuep11.html/</link>
+    <pubDate>Fri, 29 Dec 2023 08:47:13 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/vuep11.html/</guid>
+    <description><![CDATA[Axios的使用 Axios简介 使用背景：在实际项目开发中，前端页面所需要的数据往往需要从服务器端获取，这必然涉及与服务器的通信。 Axios主]]></description>
+</item>
+<item>
     <title>测试文档</title>
     <link>https://b1ankc-mov.github.io/posts/test.html/</link>
     <pubDate>Wed, 13 Dec 2023 10:15:21 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/springbootp3.html/</guid>
     <description><![CDATA[Web入门 Spring Web提供了启动器starter，主要包含了三个组件：mvc、json、tomcat。 webmvc组件主要提供web开发的注解（]]></description>
-</item>
-<item>
-    <title>全栈学习·SpringBoot介绍/特点/创建/结构&amp;热部署</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootp2.html/</link>
-    <pubDate>Thu, 30 Nov 2023 14:30:35 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootp2.html/</guid>
-    <description><![CDATA[SpringBoot快速上手 Springboot的介绍 Springboot旨在简化SSM（Spring\SpringMVC\Mybatis）]]></description>
 </item>
 </channel>
 </rss>
