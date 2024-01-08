@@ -114,7 +114,7 @@ https://axios-http.com/zh/docs/req_config
 3. 因为这个请求最终需要交给data，所以axios需要写在vue范围内（即export default{}内）。
 4. Vue内部提供的一些**生命周期的函数**，即对于我们现在的组件App.vue来讲，从创建到加载、渲染、销毁，每一个阶段会有对应的函数。[例如：该组件在程序运行时会被创建，接下来加载到界面（绑定/挂载到界面），当页面切换了（即切换到其他组件上了），该组件就会被销毁]
 5. 其中，**created要和data平级**（不能放在methods:里面，这里面放的是自定义的函数），当组件被创建的时候，created:function()会被自动调用。
-6. 还有一个类似的方法叫mounted，这个方法作用时间会稍微迟一点，被挂载（渲染到界面上）的时候调用。（其他的方法可以在vue官网上查看。）
+6. 还有一个类似的方法叫mounted，这个方法作用时间会稍微迟一点，被挂载（渲染到界面上）的时候调用。（其他的方法/生命周期可以在vue.js官网上查看。）
 示例代码如下：
 
 ```html
@@ -126,19 +126,25 @@ import axios from 'axios'
 
 export default{
 	name:'App',
-	data:function(){
-		return{
-			movies:[
-				{id:1,title:"金刚狼1",rating:8.7},
-				{id:1,title:"金刚狼2",rating:8.8},
-				{id:1,title:"金刚狼3",rating:8.6},
-			]
-		}
-	},
-	components:{
-		Movie,
-		Hello
-	}
+    data:function(){
+        return{
+            movies:[
+                {id:1,title:"金刚狼1",rating:8.7},
+                {id:1,title:"金刚狼2",rating:8.8},
+                {id:1,title:"金刚狼3",rating:8.6},
+            ]
+        }
+    },
+      created:function(){
+        console.log("App组件被创建了")
+      },
+      mounted:function(){
+        console.log("App被挂载完毕")
+      },
+    components:{
+        Movie,
+        Hello
+    }
 }
 </script>
 ......
@@ -206,20 +212,20 @@ Access-Control-Max-Age: 1728000
 - Accss-Control-Allow-Credentials: 是否允许用户发送、处理cookie
 - Access-Control-Max-Age:预检请求的有效期，单位为秒，有效期内不会重新发送预检请求。
 ##### Spring Boot中配置CORS
-在传统的Java EE开发中，可以通过过滤器统- -配置, 而Spring Boot中对此则提供了更加简洁的解决方案：
+在传统的Java EE开发中，可以通过过滤器统一配置, 而Spring Boot中对此则提供了更加简洁的解决方案：
 ```java
 @Configuration
-public class CorsConfig implementa WebMvcConfigurer {
+public class CorsConfig implements WebMvcConfigurer {
 
-	@override
-	public vo1d addCorsMappingg(CorsRegistry registry){
-		registry.addMapping("/**")//允许跨域访问的路径
-		.allowedOrigins("*")//允许跨域访问的源
-		.allowedMethods("POST", "GET", "PUT", "OPTIONS", "DELETE")//允许请求方法
-		.maxAge(168000)//预检间隔时间
-		.allowedHeaders("*") //允许头部设置
-		.allowCredentials(true);//是否发送cookie
-	}
+    @Override
+    public void addCorsMappings(CorsRegistry registry){
+        registry.addMapping("/**")//允许跨域访问的路径
+                .allowedOrigins("*")//允许跨域访问的源
+                .allowedMethods("POST", "GET", "PUT", "OPTIONS", "DELETE")//允许请求方法
+                .maxAge(168000)//预检间隔时间
+                .allowedHeaders("*") //允许头部设置
+                .allowCredentials(true);//是否发送cookie
+    }
 }
 ```
 ### 跨域问题解决方法
@@ -234,10 +240,10 @@ public class CorsConfig implementa WebMvcConfigurer {
 - 可以通过全局配置的方式解决上述问题(写入main.js):
 ```json
 //配置请求根路径
-axios.defau1ts.baseURL = 'http://api.com'
+axios.defaults.baseURL = 'http://localhost:8088'
 //将axios 作为全局的自定义属性，每个组件可以在内部直接访问(Vue3)
 app.config.globalProperties.$http = axios
-//将axios 作为全局的自定义属性，每个组件可以在内部直接访间(Vue2)
+//将axios 作为全局的自定义属性，每个组件可以在内部直接访间(Vue2)←
 Vue.prototype.$http = axios
 ```
 

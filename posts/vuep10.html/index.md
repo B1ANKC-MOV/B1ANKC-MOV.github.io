@@ -25,6 +25,16 @@ vue create component-demo
 npm i element-ui
 ```
 4. 引入Element
+```js
+// 在main.js文件头中加入
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+```
+5. 注册Element
+```js
+// 在main.js文件中写入
+Vue.use(ElementUI);
+```
 
 **（如果node_modules没了，可以直接npm install重新下载依赖）**
 
@@ -36,7 +46,7 @@ npm i element-ui
 ```
 npm install font-awesome
 ```
-5. 使用:
+5. 使用（在main.js中写入）:
 ``` 
 import 'font-awesome/css/font-awesome.min.css'
 ```
