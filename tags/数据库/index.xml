@@ -6,26 +6,26 @@
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
             <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Mon, 08 Jan 2024 08:55:39 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="self" type="application/rss+xml" /><item>
     <title>[Java] Mybatis向Mysql插入主副表JSON数据</title>
-    <link>https://b1ankc-mov.github.io/posts/mybatisplusmysql.html/</link>
+    <link>https://b1ankc-mov.github.io/posts/mybatisplusmysql/</link>
     <pubDate>Mon, 08 Jan 2024 08:55:39 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/mybatisplusmysql.html/</guid>
+    <guid>https://b1ankc-mov.github.io/posts/mybatisplusmysql/</guid>
     <description><![CDATA[使用MybatisPlus中的注解与语句，接收主子表JSON格式信息，向Mysql数据库中同时插入主表和与子表的数据，子表外键与主表相连。(编译器使用IDEA，接口测试使用POSTMAN)]]></description>
 </item>
 <item>
     <title>全栈学习·MybatisPlus多表查询及分页查询</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootp7.html/</link>
+    <link>https://b1ankc-mov.github.io/posts/springbootp7/</link>
     <pubDate>Tue, 05 Dec 2023 16:55:12 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootp7.html/</guid>
+    <guid>https://b1ankc-mov.github.io/posts/springbootp7/</guid>
     <description><![CDATA[Mybatis多表查询 实现复杂关系映射，可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置]]></description>
 </item>
 <item>
     <title>全栈学习·Mybatis-Plus增/删/改</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootp6.html/</link>
+    <link>https://b1ankc-mov.github.io/posts/springbootp6/</link>
     <pubDate>Mon, 04 Dec 2023 16:41:14 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootp6.html/</guid>
+    <guid>https://b1ankc-mov.github.io/posts/springbootp6/</guid>
     <description><![CDATA[ORM ORM (Object Relational Mapping,对象关系映射）是为了解决面向对象与关系数据库存在的互不匹配现象的一种技术。 ORM通过使用描述对象和数据库之间映射的元]]></description>
 </item>
 </channel>

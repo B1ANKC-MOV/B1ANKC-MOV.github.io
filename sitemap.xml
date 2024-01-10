@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://b1ankc-mov.github.io/posts/mybatisplusmysql.html/</loc><lastmod>2024-01-08T08:55:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/posts/mybatisplusmysql/</loc><lastmod>2024-01-08T08:55:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://b1ankc-mov.github.io/categories/</loc><lastmod>2024-01-08T14:01:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://b1ankc-mov.github.io/tags/java/</loc><lastmod>2024-01-08T08:55:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://b1ankc-mov.github.io/tags/mybatis/</loc><lastmod>2024-01-08T08:55:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
@@ -17,25 +17,26 @@
             <loc>https://b1ankc-mov.github.io/categories/springboot&#43;vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/</loc><lastmod>2024-01-08T08:47:33&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://b1ankc-mov.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/</loc><lastmod>2024-01-08T08:47:33&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://b1ankc-mov.github.io/tags/%E5%89%8D%E7%AB%AF/</loc><lastmod>2024-01-08T08:47:33&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://b1ankc-mov.github.io/posts/vuep15.html/</loc><lastmod>2024-01-08T08:47:33&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://b1ankc-mov.github.io/posts/vuep14.html/</loc><lastmod>2024-01-08T08:47:21&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://b1ankc-mov.github.io/posts/vuep13.html/</loc><lastmod>2024-01-08T08:47:10&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://b1ankc-mov.github.io/posts/vuep12.html/</loc><lastmod>2024-01-08T08:47:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/posts/vuep15/</loc><lastmod>2024-01-08T08:47:33&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/posts/vuep14/</loc><lastmod>2024-01-08T08:47:21&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/posts/vuep13/</loc><lastmod>2024-01-08T08:47:10&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/tags/vue3/</loc><lastmod>2024-01-08T08:47:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/posts/vuep12/</loc><lastmod>2024-01-08T08:47:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://b1ankc-mov.github.io/website/</loc><lastmod>2023-12-29T13:53:27&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://b1ankc-mov.github.io/posts/vuep11.html/</loc><lastmod>2023-12-29T08:47:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://b1ankc-mov.github.io/posts/vuep10.html/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://b1ankc-mov.github.io/posts/vuep9.html/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://b1ankc-mov.github.io/posts/vuep8.html/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://b1ankc-mov.github.io/posts/springbootp7.html/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://b1ankc-mov.github.io/posts/springbootp6.html/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://b1ankc-mov.github.io/posts/springbootp5.html/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://b1ankc-mov.github.io/posts/springbootp4.html/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://b1ankc-mov.github.io/posts/springbootp3.html/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://b1ankc-mov.github.io/posts/springbootp2.html/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://b1ankc-mov.github.io/posts/ff14secpicpostcard.html/</loc><lastmod>2024-01-08T14:01:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/posts/vuep11/</loc><lastmod>2023-12-29T08:47:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/posts/vuep10/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/posts/vuep9/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/posts/vuep8/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/posts/springbootp7/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/posts/springbootp6/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/posts/springbootp5/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/posts/springbootp4/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/posts/springbootp3/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/posts/springbootp2/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/posts/ff14secpicpostcard/</loc><lastmod>2024-01-08T14:01:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://b1ankc-mov.github.io/tags/ff14/</loc><lastmod>2024-01-08T14:01:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://b1ankc-mov.github.io/categories/%E8%A7%92%E8%89%B2%E7%85%A7%E7%89%87/</loc><lastmod>2024-01-08T14:01:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://b1ankc-mov.github.io/tags/%E6%B8%B8%E6%88%8F%E8%AE%B0%E5%BD%95/</loc><lastmod>2024-01-08T14:01:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://b1ankc-mov.github.io/posts/ff14secpic.html/</loc><lastmod>2023-12-13T10:15:21&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://b1ankc-mov.github.io/categories/springvue/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://b1ankc-mov.github.io/friends/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url></urlset>
+            <loc>https://b1ankc-mov.github.io/posts/ff14secpic/</loc><lastmod>2023-12-13T10:15:21&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/categories/springvue/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://b1ankc-mov.github.io/friends/</loc><lastmod>2023-12-20T17:13:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url></urlset>

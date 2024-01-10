@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>全栈学习·Axios网络请求 - VVulpes</title><meta name="Description" content="Vulpes的博客"><meta property="og:title" content="全栈学习·Axios网络请求" />
+<meta property="og:description" content="Axios的使用 Axios简介 使用背景：在实际项目开发中，前端页面所需要的数据往往需要从服务器端获取，这必然涉及与服务器的通信。 Axios主" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://b1ankc-mov.github.io/posts/vuep11/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-29T08:47:13+08:00" />
+<meta property="article:modified_time" content="2023-12-29T08:47:13+08:00" /><meta property="og:site_name" content="Vulpes的博客" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="全栈学习·Axios网络请求"/>
+<meta name="twitter:description" content="Axios的使用 Axios简介 使用背景：在实际项目开发中，前端页面所需要的数据往往需要从服务器端获取，这必然涉及与服务器的通信。 Axios主"/>
+<meta name="application-name" content="VVulpes Blog">
+<meta name="apple-mobile-web-app-title" content="VVulpes Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/fox.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://b1ankc-mov.github.io/posts/vuep11/" /><link rel="prev" href="https://b1ankc-mov.github.io/posts/vuep10/" /><link rel="next" href="https://b1ankc-mov.github.io/posts/vuep12/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "全栈学习·Axios网络请求",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/b1ankc-mov.github.io\/posts\/vuep11\/"
+        },"genre": "posts","keywords": "个人学习, 前端, 后端","wordcount":  3973 ,
+        "url": "https:\/\/b1ankc-mov.github.io\/posts\/vuep11\/","datePublished": "2023-12-29T08:47:13+08:00","dateModified": "2023-12-29T08:47:13+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Vulpes"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+    <a href="https://github.com/B1ANKC-MOV" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="3.5rem" height="3.5rem" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+        <div class="header-title">
+            <a href="/" title="VVulpes"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/foy.png"
+        data-srcset="/foy.png, /foy.png 1.5x, /foy.png 2x"
+        data-sizes="auto"
+        alt="/foy.png"
+        title="Just a fox sleeping here." />VVulpes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/" title="Home Page"><i class='fa fa-home'></i> 首页 </a><a class="menu-item" href="/posts/" title="All Posts"><i class='fa fa-quote-left'></i> 文档 </a><a class="menu-item" href="/categories/" title="All Categories"><i class='fa fa-archive'></i> 分类 </a><a class="menu-item" href="/tags/" title="All tags"><i class='fa fa-tags'></i> 标签 </a><a class="menu-item" href="/friends/" title="friends&#39; URL"><i class='fa fa-paper-plane'></i> 友链 </a><a class="menu-item" href="/website/" title="website notebook"><i class='fa fa-cog'></i> 站点 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="VVulpes"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/foy.png"
+        data-srcset="/foy.png, /foy.png 1.5x, /foy.png 2x"
+        data-sizes="auto"
+        alt="/foy.png"
+        title="/foy.png" />VVulpes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title="Home Page"><i class='fa fa-home'></i>首页</a><a class="menu-item" href="/posts/" title="All Posts"><i class='fa fa-quote-left'></i>文档</a><a class="menu-item" href="/categories/" title="All Categories"><i class='fa fa-archive'></i>分类</a><a class="menu-item" href="/tags/" title="All tags"><i class='fa fa-tags'></i>标签</a><a class="menu-item" href="/friends/" title="friends&#39; URL"><i class='fa fa-paper-plane'></i>友链</a><a class="menu-item" href="/website/" title="website notebook"><i class='fa fa-cog'></i>站点</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">全栈学习·Axios网络请求</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2023-12-29">2023-12-29</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2023-12-29">2023-12-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 3973 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 8 分钟&nbsp;<span id="/posts/vuep11/" class="leancloud_visitors" data-flag-title="全栈学习·Axios网络请求">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;
+                    <a href="#comments" id="post-meta-vcount" title="查看评论">
+                        <i class="fas fa-comment fa-fw"></i>&nbsp;<span id="/posts/vuep11/" class="valine-comment-count"></span>0&nbsp;条评论
+                    </a></div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#axios的使用">Axios的使用</a>
+      <ol>
+        <li><a href="#axios简介">Axios简介</a></li>
+        <li><a href="#axios的安装和导入">Axios的安装和导入</a></li>
+        <li><a href="#axios发送请求的方式">Axios发送请求的方式</a>
+          <ol>
+            <li><a href="#发送get请求通过url传参">发送GET请求（通过url传参）</a></li>
+            <li><a href="#发送post请求通过请求体传参">发送POST请求（通过请求体传参）</a></li>
+            <li><a href="#异步回调问题">异步回调问题</a></li>
+            <li><a href="#其他请求方式">其他请求方式</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#与vue整合">与Vue整合</a></li>
+    <li><a href="#跨域">跨域</a>
+      <ol>
+        <li><a href="#和后端进行关联">和后端进行关联</a></li>
+        <li><a href="#跨域问题">跨域问题</a>
+          <ol>
+            <li><a href="#为什么会出现跨域问题">为什么会出现跨域问题</a></li>
+            <li><a href="#跨域问题解决">跨域问题解决</a>
+              <ol>
+                <li><a href="#简单请求的服务器处理">简单请求的服务器处理</a></li>
+                <li><a href="#非简单请求">非简单请求</a></li>
+                <li><a href="#spring-boot中配置cors">Spring Boot中配置CORS</a></li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li><a href="#跨域问题解决方法">跨域问题解决方法</a>
+          <ol>
+            <li><a href="#与vue整合-1">与Vue整合</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav></div>
+            </div>
+        <div class="content" id="content"><h2 id="axios的使用">Axios的使用</h2>
+<h3 id="axios简介">Axios简介</h3>
+<p>使用背景：在实际项目开发中，前端页面所需要的数据往往需要从服务器端获取，这必然涉及与服务器的通信。
+Axios主要是前端的一个网络请求框架，大部分基于<em><strong>Ajax</strong></em></p>
+<ul>
+<li>Axios基于<strong>promise</strong>网络请求库，作用与node.js和浏览器中。</li>
+<li>Axios在浏览器端使用XMLHttpRequests发送网络请求，并能自动完成<strong>JSON</strong>数据的转换。</li>
+<li>地址</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://www.axios-http.cn/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="axios的安装和导入">Axios的安装和导入</h3>
+<ul>
+<li>安装：输入</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npm install axios
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>导入：在文件开头输入</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">import axios from &#39;axios&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="axios发送请求的方式">Axios发送请求的方式</h3>
+<p>这可以与Springboot的GetMapping对应</p>
+<h4 id="发送get请求通过url传参">发送GET请求（通过url传参）</h4>
+<p>示例代码如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">//向给定ID的用户发起请求
+</span></span><span class="line"><span class="cl">axios.get(&#39;/user?ID=12345&#39;)
+</span></span><span class="line"><span class="cl">.then(function(response){
+</span></span><span class="line"><span class="cl">	//若处理成功
+</span></span><span class="line"><span class="cl">	console.log(response);
+</span></span><span class="line"><span class="cl">})
+</span></span><span class="line"><span class="cl">.catch(function(error){
+</span></span><span class="line"><span class="cl">	//若处理失败
+</span></span><span class="line"><span class="cl">	console.log(error);
+</span></span><span class="line"><span class="cl">})
+</span></span><span class="line"><span class="cl">.then(function(){
+</span></span><span class="line"><span class="cl">	//总是执行
+</span></span><span class="line"><span class="cl">});
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">//上述请求也可以按以下方式完成
+</span></span><span class="line"><span class="cl">axios.get(&#39;/user&#39;,{
+</span></span><span class="line"><span class="cl">	params:{
+</span></span><span class="line"><span class="cl">		ID:12345
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">})
+</span></span><span class="line"><span class="cl">.then(function(response){
+</span></span><span class="line"><span class="cl">	//若处理成功
+</span></span><span class="line"><span class="cl">	console.log(response);
+</span></span><span class="line"><span class="cl">})
+</span></span><span class="line"><span class="cl">.catch(function(error){
+</span></span><span class="line"><span class="cl">	//若处理失败
+</span></span><span class="line"><span class="cl">	console.log(error);
+</span></span><span class="line"><span class="cl">})
+</span></span><span class="line"><span class="cl">.then(function(){
+</span></span><span class="line"><span class="cl">	//总是执行
+</span></span><span class="line"><span class="cl">});
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>关于上述代码：</p>
+<ol>
+<li>如果请求成功，系统会调用.then()；如果请求失败或出现错误，则会调用.catch()。</li>
+<li>.then()与.catch()就是promise相关的语法。</li>
+<li>.then()内需要传入一个回调函数（function(response)），.catch()也需要传入一个回调函数（function(error)），这些都是自定义的函数。</li>
+<li>get请求如果想给后端传递数据，可以通过<code>? String</code>的方式传参（Springboot的时候说过）；如果参数较多，可以通过params（在后面再传一个参，参数是对象，对象内可以放多种配置）传参。</li>
+<li>最后可以加一个.then()方法，不论成功或失败都执行该方法。</li>
+</ol>
+<h4 id="发送post请求通过请求体传参">发送POST请求（通过请求体传参）</h4>
+<p>示例代码如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">axios.post(&#39;/user&#39;,{
+</span></span><span class="line"><span class="cl">	firstName:&#39;Fred&#39;,
+</span></span><span class="line"><span class="cl">	lastName:&#39;Flintstone&#39;
+</span></span><span class="line"><span class="cl">})
+</span></span><span class="line"><span class="cl">.then(function(response){
+</span></span><span class="line"><span class="cl">	console.log(response);
+</span></span><span class="line"><span class="cl">})
+</span></span><span class="line"><span class="cl">.catch(function(error){
+</span></span><span class="line"><span class="cl">	console.log(error);
+</span></span><span class="line"><span class="cl">})
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>关于上述代码：
+用{}括起来，就会放在请求体内传参，而且需要注意的是：<em>Axois会自动把请求体里面的数据转为JSON格式传送给后端。<em>后端处理POST请求时，需要注意它是<strong>JSON</strong>的格式，作</em>特殊的处理</em>。</p>
+<h4 id="异步回调问题">异步回调问题</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">//async/await的用法
+</span></span><span class="line"><span class="cl">async function getUser(){
+</span></span><span class="line"><span class="cl">	try{
+</span></span><span class="line"><span class="cl">		const response = await axios.get(&#39;/user?ID=12345&#39;);
+</span></span><span class="line"><span class="cl">		console.log(response);
+</span></span><span class="line"><span class="cl">	}catch(error){
+</span></span><span class="line"><span class="cl">		console.log(error);
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>JavaScript最新的标准里面，有async和await的语法结构。</li>
+<li>前面GET和POST都涉及了异步回调获取数据的形式，如果需要同步获取数据，则可以通过前面加一个async（方法内必须有配对的await）实现。</li>
+<li>当<strong>方法前面加了async</strong>之后，发送<strong>异步请求的前面就可以加上await</strong>，<strong>无需再添加回调函数</strong>（即.then()），直接拿到响应，以<strong>同步</strong>的形式取代异步的编程。</li>
+<li>不过<em>常用的还是加回调函数</em>的方式。</li>
+</ul>
+<h4 id="其他请求方式">其他请求方式</h4>
+<p>参考：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://axios-http.com/zh/docs/req_config
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>更详细的配置项可以去官网文档查询。</p>
+<h2 id="与vue整合">与Vue整合</h2>
+<ol>
+<li>axios不能直接写在<code>&lt;script&gt;</code>标签内，因为网络请求下来的数据最终还是要交给<em>data</em>的。</li>
+<li>目前虽然data中的电影信息是我们自己写的，但这些数据本应该是从数据库中查询出来交给前端的，最终再放在data里面去。</li>
+<li>因为这个请求最终需要交给data，所以axios需要写在vue范围内（即export default{}内）。</li>
+<li>Vue内部提供的一些<strong>生命周期的函数</strong>，即对于我们现在的组件App.vue来讲，从创建到加载、渲染、销毁，每一个阶段会有对应的函数。[例如：该组件在程序运行时会被创建，接下来加载到界面（绑定/挂载到界面），当页面切换了（即切换到其他组件上了），该组件就会被销毁]</li>
+<li>其中，<strong>created要和data平级</strong>（不能放在methods:里面，这里面放的是自定义的函数），当组件被创建的时候，created:function()会被自动调用。</li>
+<li>还有一个类似的方法叫mounted，这个方法作用时间会稍微迟一点，被挂载（渲染到界面上）的时候调用。（其他的方法/生命周期可以在vue.js官网上查看。）
+示例代码如下：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Movie</span> <span class="nx">from</span> <span class="s1">&#39;./compents/Movie.vue&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Hello</span> <span class="nx">from</span> <span class="s1">&#39;./compents/Hello.vue&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s1">&#39;axios&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">name</span><span class="o">:</span><span class="s1">&#39;App&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">data</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">movies</span><span class="o">:</span><span class="p">[</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span><span class="nx">id</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="nx">title</span><span class="o">:</span><span class="s2">&#34;金刚狼1&#34;</span><span class="p">,</span><span class="nx">rating</span><span class="o">:</span><span class="mf">8.7</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span><span class="nx">id</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="nx">title</span><span class="o">:</span><span class="s2">&#34;金刚狼2&#34;</span><span class="p">,</span><span class="nx">rating</span><span class="o">:</span><span class="mf">8.8</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span><span class="nx">id</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="nx">title</span><span class="o">:</span><span class="s2">&#34;金刚狼3&#34;</span><span class="p">,</span><span class="nx">rating</span><span class="o">:</span><span class="mf">8.6</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">created</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;App组件被创建了&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">mounted</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;App被挂载完毕&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">components</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Movie</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">Hello</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">......
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="跨域">跨域</h2>
+<h3 id="和后端进行关联">和后端进行关联</h3>
+<ol>
+<li>首先，需要修改后端启动的端口：server.port=8088，再启动。</li>
+<li>在created:function(){}里面写的axois.get(&quot;&quot;)，它这个链接的发送需要有一个后端的接口。（比如说，想要控制器查询所有的用户，url访问其中的一个控制器，localhost:8088/user/findAll，就能看见所有的数据。）（TIPS：一般来说如果要查看问题，可以在<em>网页处右键→检查→network</em>）</li>
+<li>所以axois.get(&quot;&quot;)里面写↓</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">axios.get(&#34;http://localhost:8088/user/findAll&#34;).then(function(response){console.log(response)})
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>该处get请求一经发送，正好对应后端的@GetMapping，于是就拿到数据。（注意，虽然created先执行，但是里面的console.log()是异步回调函数，所以输出的文本先后并不代表方法调用的先后）</li>
+</ol>
+<p><u><em><strong>但是！还是会失败并报错的！</strong></em></u>
+<strong>这是跨域问题引起的</strong>↓</p>
+<h3 id="跨域问题">跨域问题</h3>
+<h4 id="为什么会出现跨域问题">为什么会出现跨域问题</h4>
+<ul>
+<li>为了保证浏览器的安全,不同源的客户端脚本在没有明确授权的情况下，不能读写对方资源，称为同源策略,同源策略是浏览器安全的基石</li>
+<li>同源策略(Sameoriginpolicy) 是一种约定，它是浏览器最核心也最基本的安全功能</li>
+<li>所谓同源(即指在同一个域)就是两个页面具有相同的协议(protocol) ，主机(host) 和端口号(port)</li>
+<li>当一个请求url的协议、 域名、端口三者之间任意-个与当前页面url不同即为跨域，此时无法读取非同源网页的Cookie,无法向非同源地址发送AJAX请求</li>
+</ul>
+<h4 id="跨域问题解决">跨域问题解决</h4>
+<ul>
+<li>CORS (Cross-Origin Resource Sharing)是由W3C制定的一种跨域资源共享技术标准，其目的就是为了解决前端的跨域请求。</li>
+<li>CORS可以在不破坏即有规则的情况下，通过后端服务器实现CORS接口,从而实现跨域通信。</li>
+<li>CORS将请求分为两类：简单请求和非简单请求，分别对跨域通信提供了支持。</li>
+</ul>
+<h5 id="简单请求的服务器处理">简单请求的服务器处理</h5>
+<ul>
+<li>对于简单请求，CORS的策略是请求时在请求头中增加一个Origin字段</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="err">Host:localhost:8080
+</span></span></span><span class="line"><span class="cl"><span class="err">Origin:http://localhost:8081
+</span></span></span><span class="line"><span class="cl"><span class="err">Referer:http://localhost:8081/index.html
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>服务器收到请求后， 根据该字段判断是否允许该请求访问，如果允许，则在HTTP头信息中添加Access-Control- Allw-Origin字段。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="err">Access-Control-Allow-Origin:http://localhost:8081
+</span></span></span><span class="line"><span class="cl"><span class="err">Content-Length:20
+</span></span></span><span class="line"><span class="cl"><span class="err">Content-Type:text/plain;charset=UTF-8
+</span></span></span><span class="line"><span class="cl"><span class="err">Date:Thu,12 Jul 2018 12:51:14 GMT
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="非简单请求">非简单请求</h5>
+<ol>
+<li>对于非简单请求的跨源请求，浏览器会在真实请求发出前增加一次OPTION请求，称为预检请求(preflight request)</li>
+<li>预检请求将真实请求的信息，包括请求方法、自定义头字段、源信息添加到HTTP头信息字段中，询问服务器是否允许这样的操作。</li>
+<li>例如一个GET请求:</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="err">OPTIONS/test HTTP/1.1
+</span></span></span><span class="line"><span class="cl"><span class="err">origin:http://ww.test.com
+</span></span></span><span class="line"><span class="cl"><span class="err">Access-Control-Request-Method:GET
+</span></span></span><span class="line"><span class="cl"><span class="err">Access-Control-Request-Headers:X-Custom-Header
+</span></span></span><span class="line"><span class="cl"><span class="err">Host:www.test.com
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>Access-Control-Request-Method表示请求使用的HTTP方法，Access-Control-Request-Headers包含请求的自定义头字段</li>
+<li>服务器收到请求时，需要分别对Origin、 Access-Control-Request-Method、Access-Control-Request-Headers进行验证，验证通过后，会在返回HTTP头信息中添加:</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="err">Access-Control-Allow-Origin: http://www.test.com
+</span></span></span><span class="line"><span class="cl"><span class="err">Access-Control-Allow-Methods: GET,POST,PUT,DELETE
+</span></span></span><span class="line"><span class="cl"><span class="err">Access-Control-Allow-Headers: X-Custom-Header
+</span></span></span><span class="line"><span class="cl"><span class="err">Access-Control-Allow-Credentials:true
+</span></span></span><span class="line"><span class="cl"><span class="err">Access-Control-Max-Age: 1728000
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Access-Control-Allow-Methods、Access -Control-Allow-Headers:真实请求允许的方法、允许使用的字段</li>
+<li>Accss-Control-Allow-Credentials: 是否允许用户发送、处理cookie</li>
+<li>Access-Control-Max-Age:预检请求的有效期，单位为秒，有效期内不会重新发送预检请求。</li>
+</ul>
+<h5 id="spring-boot中配置cors">Spring Boot中配置CORS</h5>
+<p>在传统的Java EE开发中，可以通过过滤器统一配置, 而Spring Boot中对此则提供了更加简洁的解决方案：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CorsConfig</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">WebMvcConfigurer</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">addCorsMappings</span><span class="p">(</span><span class="n">CorsRegistry</span><span class="w"> </span><span class="n">registry</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">registry</span><span class="p">.</span><span class="na">addMapping</span><span class="p">(</span><span class="s">&#34;/**&#34;</span><span class="p">)</span><span class="c1">//允许跨域访问的路径</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">.</span><span class="na">allowedOrigins</span><span class="p">(</span><span class="s">&#34;*&#34;</span><span class="p">)</span><span class="c1">//允许跨域访问的源</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">.</span><span class="na">allowedMethods</span><span class="p">(</span><span class="s">&#34;POST&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;GET&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;PUT&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;OPTIONS&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;DELETE&#34;</span><span class="p">)</span><span class="c1">//允许请求方法</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">.</span><span class="na">maxAge</span><span class="p">(</span><span class="n">168000</span><span class="p">)</span><span class="c1">//预检间隔时间</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">.</span><span class="na">allowedHeaders</span><span class="p">(</span><span class="s">&#34;*&#34;</span><span class="p">)</span><span class="w"> </span><span class="c1">//允许头部设置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">.</span><span class="na">allowCredentials</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="c1">//是否发送cookie</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="跨域问题解决方法">跨域问题解决方法</h3>
+<ol>
+<li>在控制器之前加注解@CrossOrigin，使得控制器里面所有的方法都允许被跨域。要么就加一个配置类，使得所有的控制器都能被跨域。（加完之后重启服务器）</li>
+<li>拿到以后渲染到界面上：赋值给data，把response.data取出来，显示到表格里面。直接this.tableData = response.data就可以了。</li>
+<li>解决回调函数this作用域的限制：改写.成then(response)=&gt;{}</li>
+<li>每个组件都要导入axios，以及写相同的域名localhost:8088，可以抽出来进行整合。（在main.js里面做一个统一的导入）</li>
+</ol>
+<h4 id="与vue整合-1">与Vue整合</h4>
+<ul>
+<li>在实际项目开发中，几乎每个组件中都会用到axios发起数据请求。此时会遇到如下两个问题:</li>
+<li>每个组件中都需要导入axios</li>
+<li>每次发请求都需要填写完整的请求路径</li>
+<li>可以通过全局配置的方式解决上述问题(写入main.js):</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="c1">//配置请求根路径
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">axios.defaults.baseURL</span> <span class="err">=</span> <span class="err">&#39;http:</span><span class="c1">//localhost:8088&#39;
+</span></span></span><span class="line"><span class="cl"><span class="c1">//将axios 作为全局的自定义属性，每个组件可以在内部直接访问(Vue3)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">app.config.globalProperties.$http</span> <span class="err">=</span> <span class="err">axios</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//将axios 作为全局的自定义属性，每个组件可以在内部直接访间(Vue2)←
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">Vue.prototype.$http</span> <span class="err">=</span> <span class="err">axios</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition note open">
+			<div class="details-summary admonition-title">
+				<i class="icon fas fa-pencil-alt fa-fwnote"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+				</div>	
+				<div class="details-content">
+				<div class="admonition-content">
+					本文最后更新于 <span class="timeago" datetime="2023-12-29T08:47:13"  title="December 29, 2023">December 29, 2023</span>，若内容或图片失效，请留言反馈。部分素材来自网络，如不慎触及您的利益，请联系删除。</div>
+			</div></div>  
+<div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-12-29</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/vuep11/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://b1ankc-mov.github.io/posts/vuep11/" data-title="全栈学习·Axios网络请求" data-hashtags="个人学习,前端,后端"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://b1ankc-mov.github.io/posts/vuep11/" data-hashtag="个人学习"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://b1ankc-mov.github.io/posts/vuep11/" data-title="全栈学习·Axios网络请求"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://b1ankc-mov.github.io/posts/vuep11/" data-title="全栈学习·Axios网络请求"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://b1ankc-mov.github.io/posts/vuep11/" data-title="全栈学习·Axios网络请求"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">个人学习</a>,&nbsp;<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>,&nbsp;<a href="/tags/%E5%90%8E%E7%AB%AF/">后端</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/vuep10/" class="prev" rel="prev" title="全栈学习·第三方组件（element-ui）"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>全栈学习·第三方组件（element-ui）</a>
+            <a href="/posts/vuep12/" class="next" rel="next" title="全栈学习·前端路由VueRouter">全栈学习·前端路由VueRouter<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+    
+        
+        <script async src=" //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js "></script>
+    
+
+    
+        
+            <section>
+                
+                    <span id="busuanzi_container_value_site_pv"><i class="far fa-eye fa-fw"></i>
+                        
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+
+                
+                    &nbsp;|&nbsp;              
+                
+
+                
+                    <span id="busuanzi_container_value_site_uv"><i class="fa fa-user"></i>
+                        
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+            </section>
+        
+
+        
+        
+    
+
+<span id="run-time"></span>
+
+            
+
+            <i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Vulpes</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"valine":{"appId":"gqYOXwJxowCs0B6vVNrzR1kC-gzGzoHsz","appKey":"sE7odWIgmbpekKiXZaB1khda","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-CN","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"visitor":true}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script type="text/javascript" src="/js/custom.js"></script>
+
+
+</body>
+</html>

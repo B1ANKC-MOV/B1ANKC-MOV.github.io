@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Vue3 - 标签 - VVulpes</title>
+        <link>https://b1ankc-mov.github.io/tags/vue3/</link>
+        <description>Vue3 - 标签 - VVulpes</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Mon, 08 Jan 2024 08:47:03 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/vue3/" rel="self" type="application/rss+xml" /><item>
+    <title>全栈学习·前端路由VueRouter</title>
+    <link>https://b1ankc-mov.github.io/posts/vuep12/</link>
+    <pubDate>Mon, 08 Jan 2024 08:47:03 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/vuep12/</guid>
+    <description><![CDATA[VueRouter的安装与使用 Vue路由vue-router是官方的路由插件，能够轻松的管理 SPA 项目中组件的切换 Vue的单页面应用是基于路由和]]></description>
+</item>
+</channel>
+</rss>

@@ -6,66 +6,66 @@
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
             <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Mon, 08 Jan 2024 08:47:33 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/%E5%89%8D%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
     <title>全栈学习·vue-element-admin</title>
-    <link>https://b1ankc-mov.github.io/posts/vuep15.html/</link>
+    <link>https://b1ankc-mov.github.io/posts/vuep15/</link>
     <pubDate>Mon, 08 Jan 2024 08:47:33 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/vuep15.html/</guid>
-    <description><![CDATA[]]></description>
+    <guid>https://b1ankc-mov.github.io/posts/vuep15/</guid>
+    <description><![CDATA[vue-element-admin介绍 vue-element-admin 是一个后台前端解决方案，它基于 vue 和 element-ui实现 内置了 i18 国际化解决方案，动态路由，权限验证]]></description>
 </item>
 <item>
     <title>全栈学习·前端数据模拟MockJS</title>
-    <link>https://b1ankc-mov.github.io/posts/vuep14.html/</link>
+    <link>https://b1ankc-mov.github.io/posts/vuep14/</link>
     <pubDate>Mon, 08 Jan 2024 08:47:21 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/vuep14.html/</guid>
-    <description><![CDATA[]]></description>
+    <guid>https://b1ankc-mov.github.io/posts/vuep14/</guid>
+    <description><![CDATA[mockjs介绍 Mock.js 是一款前端开发中拦截Ajax请求再生成随机数据响应的工具，可以用来模拟服务器响应，优点是非常简单方便, 无侵入性, 基本覆盖常]]></description>
 </item>
 <item>
     <title>全栈学习·状态管理VueX</title>
-    <link>https://b1ankc-mov.github.io/posts/vuep13.html/</link>
+    <link>https://b1ankc-mov.github.io/posts/vuep13/</link>
     <pubDate>Mon, 08 Jan 2024 08:47:10 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/vuep13.html/</guid>
-    <description><![CDATA[]]></description>
+    <guid>https://b1ankc-mov.github.io/posts/vuep13/</guid>
+    <description><![CDATA[Vuex介绍 对于组件化开发来说，大型应用的状态往往跨越多个组件。在多层嵌套的父子组件之间传递状态已经十分麻烦，而Vue更是没有为兄弟组件提供]]></description>
 </item>
 <item>
     <title>全栈学习·前端路由VueRouter</title>
-    <link>https://b1ankc-mov.github.io/posts/vuep12.html/</link>
+    <link>https://b1ankc-mov.github.io/posts/vuep12/</link>
     <pubDate>Mon, 08 Jan 2024 08:47:03 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/vuep12.html/</guid>
-    <description><![CDATA[]]></description>
+    <guid>https://b1ankc-mov.github.io/posts/vuep12/</guid>
+    <description><![CDATA[VueRouter的安装与使用 Vue路由vue-router是官方的路由插件，能够轻松的管理 SPA 项目中组件的切换 Vue的单页面应用是基于路由和]]></description>
 </item>
 <item>
     <title>全栈学习·Axios网络请求</title>
-    <link>https://b1ankc-mov.github.io/posts/vuep11.html/</link>
+    <link>https://b1ankc-mov.github.io/posts/vuep11/</link>
     <pubDate>Fri, 29 Dec 2023 08:47:13 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/vuep11.html/</guid>
+    <guid>https://b1ankc-mov.github.io/posts/vuep11/</guid>
     <description><![CDATA[Axios的使用 Axios简介 使用背景：在实际项目开发中，前端页面所需要的数据往往需要从服务器端获取，这必然涉及与服务器的通信。 Axios主]]></description>
 </item>
 <item>
     <title>全栈学习·第三方组件（element-ui）</title>
-    <link>https://b1ankc-mov.github.io/posts/vuep10.html/</link>
+    <link>https://b1ankc-mov.github.io/posts/vuep10/</link>
     <pubDate>Tue, 12 Dec 2023 16:31:54 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/vuep10.html/</guid>
+    <guid>https://b1ankc-mov.github.io/posts/vuep10/</guid>
     <description><![CDATA[组件间的传值 组件可以由内部的Data提供数据，也可以由父组件通过prop的方式传值 兄弟组件之间可以通过Vuex等统一数据源提供数据共享 项目创]]></description>
 </item>
 <item>
     <title>全栈学习·Vue组件化&amp;模块化开发</title>
-    <link>https://b1ankc-mov.github.io/posts/vuep9.html/</link>
+    <link>https://b1ankc-mov.github.io/posts/vuep9/</link>
     <pubDate>Mon, 11 Dec 2023 15:32:53 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/vuep9.html/</guid>
+    <guid>https://b1ankc-mov.github.io/posts/vuep9/</guid>
     <description><![CDATA[NPM使用 NPM简介 NPM (Node Package Manager)是一个NodeJS包管理和分发工具。 NPM以其优秀的依赖管理机制和庞大的用户群体，目前已经发展成为]]></description>
 </item>
 <item>
     <title>全栈学习·Vue框架介绍及应用</title>
-    <link>https://b1ankc-mov.github.io/posts/vuep8.html/</link>
+    <link>https://b1ankc-mov.github.io/posts/vuep8/</link>
     <pubDate>Wed, 06 Dec 2023 16:04:47 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/vuep8.html/</guid>
+    <guid>https://b1ankc-mov.github.io/posts/vuep8/</guid>
     <description><![CDATA[信息 需要前端基础html、css、js Vue框架介绍 vue是一套用于构建用户界面的渐进式框架。 vue.js提供了MVVM数据绑定和一个可组合]]></description>
 </item>
 </channel>
