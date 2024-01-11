@@ -455,3 +455,424 @@ Mock.Random提供的完整方法(占位符)如下：
 | Address       | area,region                                                  |
 | Helper        | capitalize,upper,lower,pick,shuffle                          |
 | Miscellaneous | guid,id                                                      |
+
+#### Basic
+
+**Random.boolean(min?max?current?)**
+
+随机生成布尔值
+
+```js
+var bool1 = Random.boolean(); //true false各一半
+var bool2 = Random.boolean(1,2，false) //1/3的可能性是false 2/3是true
+```
+
+**Random.natural(min?,max?)**
+
+随机生成一个自然数，什么叫自然数，就是大于等于0的
+
+```js
+var natural1 = Random.natural(); //默认值最大为 9007199254740992
+var natural2 = Random.natural(4); //随机出来的最小值是4
+var natural3 = Random.natural(6,9);
+```
+
+**Random.Integer(min?,max?)**
+
+生成一个随机的整数，可以是负数。
+
+```js
+var integer1 = Random.integer();
+var integer2 = Random.integer(-10); //随机最小值是-10
+var integer3 = Random.integer(-10,20);
+```
+
+**Random.float(min?,max?,dmin?,dmax?)**
+
+随机生成一个小数浮点数,四个参数分别为，整数部分最小值最大值，小数部分最小值最大值。
+
+```js
+var float1 = Random.float();
+var float2 = Random.float(3,8);
+var float3 = Random.float(1,3,5,7)
+```
+
+**Random.character(pool?)**
+
+随机生成一个字符,pool的值可以是：
+
+1. upper: 26个大写字母
+2. lower: 26个小写字母
+3. number: 0到9十个数字
+4. sympol: "!@#$%^&*()[]"
+
+```js
+var character1 = Random.character();
+var character2 = Random.character('lower');
+var character3 = Random.character('upper');
+var character4 = Random.character('symbol');
+```
+
+**Random.string(pool?,min?,max?)**
+
+随机生成一个字符串，pool的值同上边四个。
+
+```js
+var str1 = Random.string(); //长度3到7位
+var str2 = Random.string(5); //长度5位
+var str3 = Random.string('lower',7); //长度7位，小写
+var str4 = Random.string(4,6); //长度4到
+var str5 = Random.string('新的字符串会从这里选择4到5位',4,6); //从第一个参数里选择4到5
+位
+```
+
+**Random.range(start?,stop,step?)**
+
+返回一个整型数组
+1. start,可选，数组起始值，闭区间
+2. stop,必选，数据结束值，开区间
+3. step,可选，数据每一项间隔值
+
+```js
+var range1 = Random.range(10); //[0,1,2,3,4,5,6,7,8,9]
+var range2 = Random.range(14,20); //[14,15,16,17,18,19]
+var range3 = Random.range(3,13,2); //[3,5,7,9,11]
+```
+
+**Random.date(format?)**
+
+返回一个随机日期的字符串
+format的格式是‘yyyy-MM-dd’,可以随机组合
+
+```js
+var date1 = Random.date();
+var date2 = Random.date('yyyy-MM-dd');
+var date3 = Random.date('y-M-d');
+var date4 = Random.date('yy-MM-dd');
+```
+
+**Random.time(format?)**
+
+返回时间字符串
+format的格式是‘HH-mm-ss’
+
+```js
+var time1 = Random.time();
+var time2 = Random.time('HH-mm-ss');
+var time3 = Random.time('J-m-s');
+```
+
+**Random.datetime(format?)**
+
+上边两个的结合版
+
+```js
+var dt1 = Random.datetime();
+var dt2 = Random.datetime('yyyy-MM-dd HH-mm-ss');
+Random.now(unit?,format?)
+```
+
+返回当前时间的字符串
+
+#### Image
+
+> 一般情况下，使用dataImage更好,因为更简单，但是如果要生成高度自定义的图片，则最好用image。另外，dataImage生成的是base64编码
+
+**Random.image(size?,background?,foreground?,format?text?)**
+
+1. size 图片宽高，格式是'宽x高'
+2. background:图片的背景色，默认值#000000
+3. foreground：图片的文字前景色，默认#FFFFFF
+4. format：图片的格式，默认'.png'
+5. text:图片上的默认文字，默认值为参数size
+
+其中size的取值范围是
+
+```js
+[
+'300x250', '250x250', '240x400', '336x280',
+'180x150', '720x300', '468x60', '234x60',
+'88x31', '120x90', '120x60', '120x240',
+'125x125', '728x90', '160x600', '120x600',
+'300x600'
+]
+```
+
+图片的格式可以选择`.png` 、` .gif` 、` .jpg`
+
+```js
+var image1 = Random.image();
+var image2 = Random.image('128x90');
+var image3 = Random.image('120x660','#ccc'); //前景色#ccc
+var image4 = Random.image('226x280','#eee','第三个参数是文字不是前景色');
+var image5 = Random.image('66x31','#ddd','#123456','四个参数的时候第三个参数是前景
+色');
+var image6 = Random.image('240x400','#333','#1483dc','.gif','全部参数的情况下');
+```
+
+**Random.dataImage(size?,text?)**
+
+返回一段base64编码，两个参数同上。
+
+```js
+var di1 = Random.dataImage();
+var di2 = Random.datImage('300x600');
+var di3 = Random.dataImage('180x150','hahahaha');
+```
+
+#### Color
+
+**Random.color()**
+
+有好几个相关的方法
+
+```js
+var color = Random.color(); //格式'#rrggbb'
+var hex = Random.hex(); //好像和color没什么不同
+var rgb = Random.rgb(); //生成格式如rgb(133,233,244)
+var rgba = Random.rgba(); //生成个事如rgba(111,222,233,0.5)
+var hsl = Random.hsl(); //生成格式(345,82,71)
+```
+
+#### Text
+
+**Random.paragraph(in?,max?,len?)**
+
+随机生成一段文本
+
+```js
+var para1 = Random.paragraph(); //随机生成一短文本，范围3到7
+var para2 = Random.paragraph(10); //随机生成长度是10的文本
+var para3 = Random.paragraph(9,12); //随机生成9到11位长度的文本
+```
+
+**Random.sentence(min?,max?,len?)**
+
+随机生成一个句子，第一个单词的首字母大写
+
+```js
+var sen1 = Random.sentence(); //默认长度12到18
+var sen2 = Random.sentence(10); //随机生成一个单词个数为10的句子
+var sen3 = Random.sentence(5,10); //随机生成一个5到9单词个数的句子
+```
+
+**Random.word(min?,max?,len?)**
+
+随机生成一个单词
+
+```js
+var word1 = Random.word(); //默认长度3到10
+var word2 = Random.word(7); //随机生成长度是7的单词
+var word3 = Random.word(2,12); //随机生成2到11位长度的单词
+```
+
+**Random.title(min?,max?,len?)**
+
+随机生成一段标题，每个单词的首字母大写
+
+```js
+var title1 = Random.title(); //title中的单词个数
+var title2 = Random.title(6); //title六个单词
+var title3 = Random.title(7,12); //title7到11个单词
+```
+
+**另外还有四个方法，四个方法前边加一个c ,返回中文内容**
+
+1. `Random.cparagraph` , 返回中文文本
+2. `Random.csentence `, 返回中文句子
+3. `Random.cword` , 返回中文文字
+4. `Random.ctitle `, 返回中文标题
+
+#### Name
+
+```js
+var first = Random.first(); //随机生成常见英文名
+var last = Random.last(); //随机生成常见英文姓
+var name = Random.name(); //随机生成常见英文姓名
+var cfirst = Random.cfirst(); //随机生成常见中文姓
+var clast = Random.clast(); //随机生成常见中文名
+var cname = Random.cname(); //随机生成一个常见中文姓名
+```
+
+#### Web
+
+**Random.url(protocol?,host?)**
+
+随机生成一个url
+
+1. `protocol` 可选参数，表示网络协议，如`http `。
+2. `host` 表示域名和端口号
+
+```js
+var url1 = Random.url();
+var url2 = Random.url('http');
+var url3 = Random.url('http','58.com');
+```
+
+**Random.protocol()**
+
+随机生成一个域名
+
+```js
+var protocol = Random.protocol()
+```
+
+> protocol可以选的值，'http'、'ftp'、'gopher'、'mailto'、'mid'、'cid'、'news'、'nntp'、'prospero'、'telnet'、'rlogi
+> n'、'tn3270'、'wais'。
+
+**Random.domin()**
+
+随机生成一个域名
+
+**Random.tld()**
+
+随机生成一个顶级域名
+
+```js
+var domain = Random.domain()
+var tld = Random.tld()
+```
+
+**Random.email(domain?)**
+
+随机生成一个email地址，domain表示域名
+
+```js
+var email1 = Random.email();
+var email2 = Random.email('58.com') //生成xxxx@58.com
+```
+
+**Random.ip()**
+
+随机生成一个ip地址
+
+```js
+var ip = Random.ip()
+```
+
+#### Address
+
+**Random.region()**
+
+随机生成一个中国的大区，如华北，西南
+
+```js
+var region = Random.region();
+```
+
+**Random.province()**
+
+随机生成一个中国省直辖市自治区特别行政区
+
+```js
+var province = Random.province()
+```
+
+**Random.city(prefix?)**
+
+随机生成一个中国城市，prefix布尔值，表示是否标注所在省
+
+```js
+var city1 = Random.city();
+var city2 = Random.city(ture);
+Random.country(prefix?)
+```
+
+随机生成一个中国县， `prefix` 布尔值，表示是否显示所属的省市
+
+```js
+var county1 = Random.county();
+var county2 = Random.county(ture);
+```
+
+**Random.zip()**
+
+随机生成一个六位数邮政编码
+
+```js
+var zip = Random.zip();
+```
+
+#### Helper
+
+**Random.capitlize(word)**
+
+把第一个字母转成大写
+
+```js
+var capitalize = Random.capitalize('hello')
+```
+
+**Random.upper(str)**
+
+转成大写
+
+```js
+var upper = Random.upper('zhang');
+```
+
+**Random.lower(str)**
+
+转成小写
+
+```js
+var lower = Random.lower('JINGWEI');
+```
+
+**Random.pick(arr)**
+
+从数组中随机选取一个元素
+
+```js
+var arr = [1,4,5,6,7,8];
+var pick = Random.pick(arr);
+```
+
+**Random.shuffle(arr);**
+
+打乱数组的顺序并返回
+
+```js
+var arr = [1,2,3,4,6];
+var shuffle = Random.shuffle(arr);
+```
+
+#### Miscellaneous
+
+**Random.guid()**
+
+随机生成一个GUID
+
+**Random.id()**
+
+随机生成一个18位身份证id
+
+```js
+var guid = Random.guid();
+var id = Random.id();
+```
+
+#### 扩展
+
+Mock.Random 中的方法与数据模板的` @占位符` 一一对应，在需要时还可以为 Mock.Random 扩展方
+法，然后在数据模板中通过` @扩展方法` 引用。例如：
+
+```js
+Random.extend({
+	constellation: function(date) {
+		var constellations = ['白羊座'`, '金牛座', '双子座', '巨蟹座', '狮子座', '处女
+座', '天秤座', '天蝎座', '射手座', '摩羯座', '水瓶座', '双鱼座']
+		return this.pick(constellations)
+	}
+})
+Random.constellation()
+// => "水瓶座"
+Mock.mock('@CONSTELLATION')
+// => "天蝎座"
+Mock.mock({
+	constellation: '@CONSTELLATION'
+})
+// => { constellation: "射手座" }
+```
+
+

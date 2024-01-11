@@ -4,7 +4,31 @@
         <link>https://b1ankc-mov.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/</link>
         <description>个人学习 - 标签 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Mon, 08 Jan 2024 08:47:33 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Thu, 11 Jan 2024 15:46:16 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+    <title>全栈学习·阿里云服务器的配置&amp;搭建&amp;购买&amp;使用</title>
+    <link>https://b1ankc-mov.github.io/posts/springbootvuep18/</link>
+    <pubDate>Thu, 11 Jan 2024 15:46:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/springbootvuep18/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>全栈学习·SpringBoot&#43;vue-element-template(前后端集成)</title>
+    <link>https://b1ankc-mov.github.io/posts/springbootvuep17/</link>
+    <pubDate>Thu, 11 Jan 2024 13:44:38 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/springbootvuep17/</guid>
+    <description><![CDATA[将后台管理模板与项目前端进行集成，简单修改前端API接口与后端相连。]]></description>
+</item>
+<item>
+    <title>全栈学习·JWT跨域认证</title>
+    <link>https://b1ankc-mov.github.io/posts/springbootp16/</link>
+    <pubDate>Thu, 11 Jan 2024 10:16:27 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/springbootp16/</guid>
+    <description><![CDATA[Session认证 互联网服务离不开用户认证。一般流程是下面这样： 用户向服务器发送用户名和密码。 服务器验证通过后，在当前对话（session）]]></description>
+</item>
+<item>
     <title>全栈学习·vue-element-admin</title>
     <link>https://b1ankc-mov.github.io/posts/vuep15/</link>
     <pubDate>Mon, 08 Jan 2024 08:47:33 &#43;0800</pubDate>
@@ -59,30 +83,6 @@
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/vuep9/</guid>
     <description><![CDATA[NPM使用 NPM简介 NPM (Node Package Manager)是一个NodeJS包管理和分发工具。 NPM以其优秀的依赖管理机制和庞大的用户群体，目前已经发展成为]]></description>
-</item>
-<item>
-    <title>全栈学习·Vue框架介绍及应用</title>
-    <link>https://b1ankc-mov.github.io/posts/vuep8/</link>
-    <pubDate>Wed, 06 Dec 2023 16:04:47 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/vuep8/</guid>
-    <description><![CDATA[信息 需要前端基础html、css、js Vue框架介绍 vue是一套用于构建用户界面的渐进式框架。 vue.js提供了MVVM数据绑定和一个可组合]]></description>
-</item>
-<item>
-    <title>全栈学习·MybatisPlus多表查询及分页查询</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootp7/</link>
-    <pubDate>Tue, 05 Dec 2023 16:55:12 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootp7/</guid>
-    <description><![CDATA[Mybatis多表查询 实现复杂关系映射，可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置]]></description>
-</item>
-<item>
-    <title>全栈学习·Mybatis-Plus增/删/改</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootp6/</link>
-    <pubDate>Mon, 04 Dec 2023 16:41:14 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootp6/</guid>
-    <description><![CDATA[ORM ORM (Object Relational Mapping,对象关系映射）是为了解决面向对象与关系数据库存在的互不匹配现象的一种技术。 ORM通过使用描述对象和数据库之间映射的元]]></description>
 </item>
 </channel>
 </rss>
