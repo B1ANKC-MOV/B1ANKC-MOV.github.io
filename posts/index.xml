@@ -4,13 +4,21 @@
         <link>https://b1ankc-mov.github.io/posts/</link>
         <description>所有文章 | VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Thu, 11 Jan 2024 15:46:16 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Fri, 12 Jan 2024 13:55:11 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>全站学习·Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)</title>
+    <link>https://b1ankc-mov.github.io/posts/springbootvuep19/</link>
+    <pubDate>Fri, 12 Jan 2024 13:55:11 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/springbootvuep19/</guid>
+    <description><![CDATA[云端环境准备 注意 以下部署基于Centos7 系统环境 安装MySQL 卸载Centos7自带mariadb 1 2 3 4 5 # 查找 rpm -qa|grep mariadb # mariadb-libs-5.5.52-1.el7.x86_64 # 卸载 rpm -e mariadb-libs-5.5.52-1.el7.x86_64 --nodeps]]></description>
+</item>
+<item>
     <title>全栈学习·阿里云服务器的配置&amp;搭建&amp;购买&amp;使用</title>
     <link>https://b1ankc-mov.github.io/posts/springbootvuep18/</link>
     <pubDate>Thu, 11 Jan 2024 15:46:16 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/springbootvuep18/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[云服务器介绍 云服务器概念 云服务器(Elastic Compute Service, ECS)是一种简单高效、安全可靠、处理能力可弹性伸缩的计算服务。其管理方式比物理服务器更]]></description>
 </item>
 <item>
     <title>全栈学习·SpringBoot&#43;vue-element-template(前后端集成)</title>
@@ -75,14 +83,6 @@
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/vuep11/</guid>
     <description><![CDATA[Axios的使用 Axios简介 使用背景：在实际项目开发中，前端页面所需要的数据往往需要从服务器端获取，这必然涉及与服务器的通信。 Axios主]]></description>
-</item>
-<item>
-    <title>全栈学习·第三方组件（element-ui）</title>
-    <link>https://b1ankc-mov.github.io/posts/vuep10/</link>
-    <pubDate>Tue, 12 Dec 2023 16:31:54 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/vuep10/</guid>
-    <description><![CDATA[组件间的传值 组件可以由内部的Data提供数据，也可以由父组件通过prop的方式传值 兄弟组件之间可以通过Vuex等统一数据源提供数据共享 项目创]]></description>
 </item>
 </channel>
 </rss>
