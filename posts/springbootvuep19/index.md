@@ -1,4 +1,4 @@
-# 全站学习·Springboot+Vue云端环境配置(阿里云服务器环境配置)
+# 全栈学习·Springboot+Vue云端环境配置(阿里云服务器环境配置)
 
 
 ## 云端环境准备
@@ -102,8 +102,8 @@ systemctl disable firewalld.service #禁止firewall开机启动
 #### 安装命令
 
 ```shell
-yum install epel-release
-yum update
+yum install epel-release #更新样本源
+yum update 
 yum -y install nginx
 ```
 
@@ -138,7 +138,7 @@ tar -zvxf jdk-8u131-linux-x64.tar.gz
 ```shell
 vi /etc/profile
 # 文件末尾增加
-export JAVA_HOME=/usr/server/jdk1.8.0_131
+export JAVA_HOME=/usr/server/jdk1.8.0_391
 export PATH=${JAVA_HOME}/bin:$PATH
 ```
 
@@ -154,56 +154,7 @@ source /etc/profile
 java -version
 ```
 
-## 项目部署
-
-### 部署Vue项目
-
-#### 打包Vue项目
-
-进入到Vue项目目录，执行
-
-```shell
-npm run build
-```
-
-将生成的dist目录上传至服务器 /usr/vue/dist
-
-#### 配置nginx
-
-进入到/etc/nginx/conf.d目录，创建vue.conf文件，内容如下
-
-```
-server {
-    listen 80;
-    server_name locahost;
-    location / {
-        root /usr/app/dist;
-        index index.html;
-    }
-}
-```
-
-使配置生效
-
-```npm
-nginx -s reload
-```
-
-### 打包Java程序
-
-双击package，会自动打包在项目路径文件夹的/target文件夹下
-
-![ ](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java.5n1e67d27700.webp)
-
-![ ](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java2.64vdj17krvg.webp)
-
-因为springboot有内置tomcat容器，这点比较方便，省去了tomcat的部署。我们到时候直接可以直接把jar包扔到linux上。
-
-```shell
-nohup java -jar shop-0.0.1-SNAPSHOT.jar > logName.log 2>&1 &
-```
-
-## 实操
+## 实操(指令行代码在前半部分都有)
 
 ### 切换目录
 
@@ -231,11 +182,11 @@ https://www.xshell.com/zh/free-for-home-school/
 
 下载完Xftp7之后，点击XShell里面的新建文件传输。
 
-把下载好的[java](https://www.oracle.com/java/technologies/downloads/#java8 )压缩包、[mysql]([MySQL :: Download MySQL Community Server](https://dev.mysql.com/downloads/mysql/))压缩包和[nginx]()压缩包传输过去。
+把下载好的<u>[java](https://www.oracle.com/java/technologies/downloads/#java8 )</u>压缩包、<u>[mysql](https://dev.mysql.com/downloads/mysql/)</u>压缩包和<u>[nginx](https://nginx.org/en/download.html)</u>压缩包(nginx可以先不下)传输过去。
 
 ![mysql下载版本选择](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS4.4b8cadvvezg0.webp)
 
-![ngins下载版本选择](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS3.6tp1dm9nhcs0.webp)
+![nginx下载版本选择](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS3.6tp1dm9nhcs0.webp)
 
 ![拖拽压缩包到服务器窗口进行传输](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS5.2rpf8zdiacy0.webp)
 
@@ -247,9 +198,9 @@ https://www.xshell.com/zh/free-for-home-school/
 
 查询系统中是否已有mariadb，如果有，就卸掉。
 
-![查找amriadb](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS10.3tsc5ydn39k0.webp)
+![查找mariadb](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS10.3tsc5ydn39k0.webp)
 
-![卸载amriadb](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS7.7gxe3fkuh8c0.webp)
+![卸载mariadb](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS7.7gxe3fkuh8c0.webp)
 
 ### 解压mysql
 
@@ -258,3 +209,115 @@ https://www.xshell.com/zh/free-for-home-school/
 ![创建mysql文件夹](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS8.5bornek6en40.webp)
 
 ![解压mysql](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS9.54ttj5m8tf80.webp)
+
+### 安装mysql
+
+先输入yum指令安装依赖
+
+![安装mysql的依赖(环境)](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS11.5s2kfes7erg0.webp)
+
+![安装mysql的依赖(环境)](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS12.1c0nfhzv9tog.webp)
+
+再输入安装指令进行安装(没有安装依赖会报错)
+
+{{< admonition example "注意">}}
+
+需要根据前面安装的版本**修改**一下指令里面的**版本**，这里如果不是阿里云服务器而是自己的虚拟机，需要确定已经联网。
+
+{{< /admonition>}}
+
+![安装mysql](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS13.47vbuhxrsi20.webp)
+
+### 启动mysql
+
+输入指令启动mysql，使用cat指令拿到临时密码，随后进入root修改密码
+
+![启动mysql并修改密码](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS14.2wtcr90kyj60.webp)
+
+### 开启mysql远程连接
+
+开启远程连接权限，并设置开机自启。
+
+![远程连接&开启自启](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS15.6rn3b007wxo0.webp)
+
+{{< admonition example "注意">}}
+
+这里如果不是阿里云服务器而是自己的虚拟机，需要再关一下防火墙，阿里云自带的防火墙在安全组里面已经关了，只需要保证把3306的端口打开就行。
+
+{{< /admonition>}}
+
+### 安装nginx
+
+先更新一下样本源
+
+![更新源](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS16.5f2nvrh3r78.webp)
+
+{{< admonition example "注意">}}
+
+也可以使用之前自己下载的安装包，但如果这里是更新样本源的话，刚刚上传的安装包也就没什么用了，可以不上传。
+
+{{< /admonition>}}
+
+接着更新一下
+
+![yum更新](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS17.6lrhqian9sw0.webp)
+
+{{< admonition example "注意">}}
+
+笔者第一次更新好像非常的慢，一直卡在一个Installing五分钟，就直接中止当前任务再更新一次了。终止快捷键是<kbd>ctrl</kbd>+<kbd>z</kbd>，然后再输入
+
+```shell
+rm -f /var/run/yum.pid
+```
+
+强行把任务断掉，要不然会一直等进程释放，接着再输入更新命令即可。
+
+{{< /admonition>}}
+
+![解决掉问题之后的yum更新](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS18.42pmj9jqk7m0.webp)
+
+最后使用命令安装
+
+![安装nignx](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS19.6u8c51y3rds0.webp)
+
+### 启动nginx
+
+输入指令启动nginx
+
+![启动启动启动全部启动.jpg](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS20.2kxj0mkqppy0.webp)
+
+### 配置JDK
+
+输入指令解压JDK文件到server目录
+
+![解压JDK](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS21.29nnqvzrkqf4.webp)
+
+再进入 /etc/profile 文件，在文件末尾添加两行代码。
+
+![打开文件](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS22.6yo8qmybdwo0.webp)
+
+![编辑文件](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS23.416l1n0031e0.webp)
+
+{{< admonition example "注意">}}
+
+这里一定要注意把path里面的文件路径改成你自己安装的文件路径，按<kbd>i</kbd>进入编辑状态，把代码粘进去之后，<kbd>Esc</kbd>进入command状态，然后输入``:wq``保存并退出。
+
+{{< /admonition>}}
+
+最后输入指令，读一下配置，试一下java命令能不能用
+
+![配置&测试](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS24.69w26blo9ak0.webp)
+
+### 创建mysql连接服务器
+
+笔者是在Navicat里面创建mysql连接，主机是服务器的公网IP地址，密码和用户名是刚刚设配置数据库的时候设置的密码和用户名。
+
+![创建数据库连接](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS25.3o53w9dx7ba0.webp)
+
+{{< admonition example "注意">}}
+
+如果这里连接失败了，需要检查前面mysql的远程连接有没有开启，以及安全组里面3306的端口有没有开启。
+
+{{< /admonition>}}
+
+# 由于篇幅原因，打包部署项目到服务器的部分放在下一篇

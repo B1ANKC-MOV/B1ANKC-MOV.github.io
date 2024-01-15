@@ -4,10 +4,18 @@
         <link>https://b1ankc-mov.github.io/</link>
         <description>Vulpes的博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Fri, 12 Jan 2024 13:55:11 &#43;0800</lastBuildDate>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</lastBuildDate>
             <atom:link href="https://b1ankc-mov.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>全站学习·Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)</title>
+    <title>全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)</title>
+    <link>https://b1ankc-mov.github.io/posts/springbootvuep20/</link>
+    <pubDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/springbootvuep20/</guid>
+    <description><![CDATA[项目部署 部署Vue项目 打包Vue项目 进入到Vue项目目录，执行 1 npm run build 将生成的dist目录上传至服务器 /usr/vue/dist 配置nginx 进入到/etc/ngi]]></description>
+</item>
+<item>
+    <title>全栈学习·Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)</title>
     <link>https://b1ankc-mov.github.io/posts/springbootvuep19/</link>
     <pubDate>Fri, 12 Jan 2024 13:55:11 &#43;0800</pubDate>
     <author>作者</author>
@@ -77,14 +85,6 @@
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/vuep12/</guid>
     <description><![CDATA[VueRouter的安装与使用 Vue路由vue-router是官方的路由插件，能够轻松的管理 SPA 项目中组件的切换 Vue的单页面应用是基于路由和]]></description>
-</item>
-<item>
-    <title>全栈学习·Axios网络请求</title>
-    <link>https://b1ankc-mov.github.io/posts/vuep11/</link>
-    <pubDate>Fri, 29 Dec 2023 08:47:13 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/vuep11/</guid>
-    <description><![CDATA[Axios的使用 Axios简介 使用背景：在实际项目开发中，前端页面所需要的数据往往需要从服务器端获取，这必然涉及与服务器的通信。 Axios主]]></description>
 </item>
 </channel>
 </rss>
