@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目) - VVulpes</title><meta name="Description" content="Vulpes的博客"><meta property="og:title" content="全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)" />
-<meta property="og:description" content="项目部署 部署Vue项目 打包Vue项目 进入到Vue项目目录，执行 1 npm run build 将生成的dist目录上传至服务器 /usr/vue/dist 配置nginx 进入到/etc/ngi" />
+<meta property="og:description" content="注意 在部署前后端项目之前，首先需要保证nginx服务是开启的： 1 systemctl start nginx #开启nginx服务 接着将服务器的公网IP地址粘到浏览器中，如果能看见" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://b1ankc-mov.github.io/posts/springbootvuep20/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-01-15T11:10:40+08:00" />
@@ -13,7 +13,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)"/>
-<meta name="twitter:description" content="项目部署 部署Vue项目 打包Vue项目 进入到Vue项目目录，执行 1 npm run build 将生成的dist目录上传至服务器 /usr/vue/dist 配置nginx 进入到/etc/ngi"/>
+<meta name="twitter:description" content="注意 在部署前后端项目之前，首先需要保证nginx服务是开启的： 1 systemctl start nginx #开启nginx服务 接着将服务器的公网IP地址粘到浏览器中，如果能看见"/>
 <meta name="application-name" content="VVulpes Blog">
 <meta name="apple-mobile-web-app-title" content="VVulpes Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/fox.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://b1ankc-mov.github.io/posts/springbootvuep20/" /><link rel="prev" href="https://b1ankc-mov.github.io/posts/springbootvuep19/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -26,7 +26,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/b1ankc-mov.github.io\/posts\/springbootvuep20\/"
-        },"genre": "posts","wordcount":  252 ,
+        },"genre": "posts","keywords": "个人学习, 后端, 前端, 服务器","wordcount":  1289 ,
         "url": "https:\/\/b1ankc-mov.github.io\/posts\/springbootvuep20\/","datePublished": "2024-01-15T11:10:40+08:00","dateModified": "2024-01-15T11:10:40+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -115,9 +115,9 @@
             <h2 class="toc-title">目录</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">全栈学习·Springboot+Vue云端环境部署(阿里云服务器部署项目)</h1><h2 class="single-subtitle">▲建议跟着实操部分，有缺失了再往前翻</h2><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2024-01-15">2024-01-15</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2024-01-15">2024-01-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 252 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/springbootvuep20/" class="leancloud_visitors" data-flag-title="全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2024-01-15">2024-01-15</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2024-01-15">2024-01-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1289 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/springbootvuep20/" class="leancloud_visitors" data-flag-title="全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;
                     <a href="#comments" id="post-meta-vcount" title="查看评论">
@@ -141,10 +141,58 @@
         <li><a href="#打包java程序">打包Java程序</a></li>
       </ol>
     </li>
+    <li><a href="#实操代码在前半部分都有">实操(代码在前半部分都有)</a>
+      <ol>
+        <li><a href="#前端vue项目部署">前端vue项目部署</a>
+          <ol>
+            <li><a href="#打包简单的vue项目">打包简单的vue项目</a></li>
+            <li><a href="#打包复杂的vue项目">打包复杂的vue项目</a></li>
+            <li><a href="#上传vue项目dist文件">上传vue项目dist文件</a></li>
+            <li><a href="#配置nginx读取dist文件">配置nginx读取dist文件</a></li>
+          </ol>
+        </li>
+        <li><a href="#后端springboot项目部署">后端springboot项目部署</a>
+          <ol>
+            <li><a href="#新建数据库">新建数据库</a></li>
+            <li><a href="#打包发送文件">打包发送文件</a></li>
+            <li><a href="#执行jar包">执行jar包</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
   </ol>
 </nav></div>
             </div>
-        <div class="content" id="content"><h2 id="项目部署">项目部署</h2>
+        <div class="content" id="content"><div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>在部署前后端项目之前，首先需要保证nginx服务是开启的：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">systemctl start nginx <span class="c1">#开启nginx服务</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>接着将服务器的公网IP地址粘到浏览器中，如果能看见如下界面，说明nginx可以访问。(这个访问的是80端口，需要保证安全组的80端口是开启的)</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS1.755p8emc61c0.webp" title="nginx成功界面" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS1.755p8emc61c0.webp" data-sub-html="<h2> </h2><p>nginx成功界面</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS1.755p8emc61c0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS1.755p8emc61c0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS1.755p8emc61c0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS1.755p8emc61c0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS1.755p8emc61c0.webp" />
+    </a><figcaption class="image-caption">nginx成功界面</figcaption>
+    </figure></p>
+</div>
+        </div>
+    </div>
+<h2 id="项目部署">项目部署</h2>
 <h3 id="部署vue项目">部署Vue项目</h3>
 <h4 id="打包vue项目">打包Vue项目</h4>
 <p>进入到Vue项目目录，执行</p>
@@ -220,10 +268,238 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">nohup java -jar shop-0.0.1-SNAPSHOT.jar &gt; logName.log 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">nohup java -jar projectName-0.0.1-SNAPSHOT.jar &gt; logName.log 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="details admonition note open">
+</div><h2 id="实操代码在前半部分都有">实操(代码在前半部分都有)</h2>
+<h3 id="前端vue项目部署">前端vue项目部署</h3>
+<h4 id="打包简单的vue项目">打包简单的vue项目</h4>
+<p>以<u><a href="https://b1ankc-mov.github.io/posts/vuep10/" target="_blank" rel="noopener noreffer ">全栈学习·第三方组件（element-ui）</a></u>里的vue项目为例。</p>
+<p>打开项目，在终端服务器输入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm run build
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>将代码进行打包，打包下来的文件会放在dist目录下的index.html(只有一行是因为做了压缩)，最后需要做的就是把dist目录放在服务器上进行访问。</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS2.66aa97855v40.webp" title="打包成功的终端界面" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS2.66aa97855v40.webp" data-sub-html="<h2> </h2><p>打包成功的终端界面</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS2.66aa97855v40.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS2.66aa97855v40.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS2.66aa97855v40.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS2.66aa97855v40.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS2.66aa97855v40.webp" />
+    </a><figcaption class="image-caption">打包成功的终端界面</figcaption>
+    </figure></p>
+<h4 id="打包复杂的vue项目">打包复杂的vue项目</h4>
+<p>以<u><a href="https://b1ankc-mov.github.io/posts/vuep15/" target="_blank" rel="noopener noreffer ">全栈学习·vue-element-admin</a></u>里的vue项目为例。</p>
+<p>修改.env.production文件里面的BASE_API为服务器的公网IP地址并打包文件：</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS4.4ffvl6fijuy0.webp" title="修改API&amp;amp;终端打包" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS4.4ffvl6fijuy0.webp" data-sub-html="<h2> </h2><p>修改API&amp;amp;终端打包</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS4.4ffvl6fijuy0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS4.4ffvl6fijuy0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS4.4ffvl6fijuy0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS4.4ffvl6fijuy0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS4.4ffvl6fijuy0.webp" />
+    </a><figcaption class="image-caption">修改API&amp;终端打包</figcaption>
+    </figure></p>
+<h4 id="上传vue项目dist文件">上传vue项目dist文件</h4>
+<p>先创建一个目录放上传的项目文件</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS3.705t24hmkkw0.webp" title="创建文件夹" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS3.705t24hmkkw0.webp" data-sub-html="<h2> </h2><p>创建文件夹</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS3.705t24hmkkw0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS3.705t24hmkkw0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS3.705t24hmkkw0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS3.705t24hmkkw0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS3.705t24hmkkw0.webp" />
+    </a><figcaption class="image-caption">创建文件夹</figcaption>
+    </figure></p>
+<p>接着使用xftp将dist文件拖进服务器文件夹里</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS5.1bc8cdrey9c0.webp" title="传输dist文件" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS5.1bc8cdrey9c0.webp" data-sub-html="<h2> </h2><p>传输dist文件</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS5.1bc8cdrey9c0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS5.1bc8cdrey9c0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS5.1bc8cdrey9c0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS5.1bc8cdrey9c0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS5.1bc8cdrey9c0.webp" />
+    </a><figcaption class="image-caption">传输dist文件</figcaption>
+    </figure></p>
+<h4 id="配置nginx读取dist文件">配置nginx读取dist文件</h4>
+<p>进入到/etc/nginx/conf.d目录，创建vue.conf文件</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS6.286s8o34zpno.webp" title="创建.conf文件" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS6.286s8o34zpno.webp" data-sub-html="<h2> </h2><p>创建.conf文件</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS6.286s8o34zpno.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS6.286s8o34zpno.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS6.286s8o34zpno.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS6.286s8o34zpno.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS6.286s8o34zpno.webp" />
+    </a><figcaption class="image-caption">创建.conf文件</figcaption>
+    </figure></p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS7.554ctcz7t4g0.webp" title="编辑.conf文件" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS7.554ctcz7t4g0.webp" data-sub-html="<h2> </h2><p>编辑.conf文件</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS7.554ctcz7t4g0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS7.554ctcz7t4g0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS7.554ctcz7t4g0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS7.554ctcz7t4g0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS7.554ctcz7t4g0.webp" />
+    </a><figcaption class="image-caption">编辑.conf文件</figcaption>
+    </figure></p>
+<p>其中，localhost处是自己的域名，location里面的index.html是自己的首页。</p>
+<p>接着输入指令加载配置，然后再去访问公网IP，页面就会变化(此时是登录不进去的，还没连上后台)</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS8.mteiydw3z28.webp" title="使配置生效" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS8.mteiydw3z28.webp" data-sub-html="<h2> </h2><p>使配置生效</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS8.mteiydw3z28.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS8.mteiydw3z28.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS8.mteiydw3z28.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS8.mteiydw3z28.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS8.mteiydw3z28.webp" />
+    </a><figcaption class="image-caption">使配置生效</figcaption>
+    </figure></p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS9.7756oskvjmw0.webp" title="页面内容变化" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS9.7756oskvjmw0.webp" data-sub-html="<h2> </h2><p>页面内容变化</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS9.7756oskvjmw0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS9.7756oskvjmw0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS9.7756oskvjmw0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS9.7756oskvjmw0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS9.7756oskvjmw0.webp" />
+    </a><figcaption class="image-caption">页面内容变化</figcaption>
+    </figure></p>
+<h3 id="后端springboot项目部署">后端springboot项目部署</h3>
+<h4 id="新建数据库">新建数据库</h4>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>如果创建不了数据库，记得重新开一下服务器的数据库。</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS10.36lgma9j1pi0.webp" title="启动数据库" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS10.36lgma9j1pi0.webp" data-sub-html="<h2> </h2><p>启动数据库</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS10.36lgma9j1pi0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS10.36lgma9j1pi0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS10.36lgma9j1pi0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS10.36lgma9j1pi0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS10.36lgma9j1pi0.webp" />
+    </a><figcaption class="image-caption">启动数据库</figcaption>
+    </figure></p>
+<p>如果执行sql文件导入表时出现问题，Navicat可以看这个解决方法：<u><a href="https://blog.csdn.net/weixin_54257705/article/details/132807720" target="_blank" rel="noopener noreffer ">Navicat报错Unknown collation: ‘utf8mb4_0900_ai_ci’_</a></u></p>
+</div>
+        </div>
+    </div>
+<p>数据库工具上创建和依赖文件同名的数据库</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS11.2c9shfei5se8.webp" title="数据库" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS11.2c9shfei5se8.webp" data-sub-html="<h2> </h2><p>数据库</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS11.2c9shfei5se8.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS11.2c9shfei5se8.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS11.2c9shfei5se8.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS11.2c9shfei5se8.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS11.2c9shfei5se8.webp" />
+    </a><figcaption class="image-caption">数据库</figcaption>
+    </figure></p>
+<h4 id="打包发送文件">打包发送文件</h4>
+<p>点Maven里面的package打包文件，生成jar包，并上传到服务器的/usr/app目录下</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS12.ej95uf8mt0w.webp" title="打包成功" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS12.ej95uf8mt0w.webp" data-sub-html="<h2> </h2><p>打包成功</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS12.ej95uf8mt0w.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS12.ej95uf8mt0w.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS12.ej95uf8mt0w.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS12.ej95uf8mt0w.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS12.ej95uf8mt0w.webp" />
+    </a><figcaption class="image-caption">打包成功</figcaption>
+    </figure></p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS13.4gvh0h75aw00.webp" title="传输jar包" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS13.4gvh0h75aw00.webp" data-sub-html="<h2> </h2><p>传输jar包</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS13.4gvh0h75aw00.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS13.4gvh0h75aw00.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS13.4gvh0h75aw00.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS13.4gvh0h75aw00.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS13.4gvh0h75aw00.webp" />
+    </a><figcaption class="image-caption">传输jar包</figcaption>
+    </figure></p>
+<h4 id="执行jar包">执行jar包</h4>
+<p>在服务器终端执行命令，加载jar包(记得修改jar包的名字变成自己的)</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS14.1k15ew7qmvk0.webp" title="启动java项目，查看日志文件" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS14.1k15ew7qmvk0.webp" data-sub-html="<h2> </h2><p>启动java项目，查看日志文件</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS14.1k15ew7qmvk0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS14.1k15ew7qmvk0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS14.1k15ew7qmvk0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS14.1k15ew7qmvk0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS14.1k15ew7qmvk0.webp" />
+    </a><figcaption class="image-caption">启动java项目，查看日志文件</figcaption>
+    </figure></p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>如果日志显示</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">nohup: ignoring input
+</span></span><span class="line"><span class="cl">no main manifest attribute, in projectName-0.0.1-SNAPSHOT.jar
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>把pom.xml文件里面的这个地方注释掉，再上传启动一次</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS15.6qwls33tx3k0.webp" title="jar包找不到启动类解决方法" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS15.6qwls33tx3k0.webp" data-sub-html="<h2> </h2><p>jar包找不到启动类解决方法</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS15.6qwls33tx3k0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS15.6qwls33tx3k0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS15.6qwls33tx3k0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS15.6qwls33tx3k0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS15.6qwls33tx3k0.webp" />
+    </a><figcaption class="image-caption">jar包找不到启动类解决方法</figcaption>
+    </figure></p>
+<p>(可害死我了，找了半天发现这里居然有个默认跳过的代码！)</p>
+</div>
+        </div>
+    </div>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS16.1tgcx3qkfwjk.webp" title="启动成功的日志" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS16.1tgcx3qkfwjk.webp" data-sub-html="<h2> </h2><p>启动成功的日志</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS16.1tgcx3qkfwjk.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS16.1tgcx3qkfwjk.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS16.1tgcx3qkfwjk.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS16.1tgcx3qkfwjk.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS16.1tgcx3qkfwjk.webp" />
+    </a><figcaption class="image-caption">启动成功的日志</figcaption>
+    </figure></p>
+<p>[笔者部署完之后无法成功登录老是neterror不知道什么情况，改天再解决一下]</p>
+<div class="details admonition note open">
 			<div class="details-summary admonition-title">
 				<i class="icon fas fa-pencil-alt fa-fwnote"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
 				</div>	
@@ -242,13 +518,13 @@
                             <a class="link-to-markdown" href="/posts/springbootvuep20/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://b1ankc-mov.github.io/posts/springbootvuep20/" data-title="全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://b1ankc-mov.github.io/posts/springbootvuep20/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://b1ankc-mov.github.io/posts/springbootvuep20/" data-title="全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://b1ankc-mov.github.io/posts/springbootvuep20/" data-title="全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://b1ankc-mov.github.io/posts/springbootvuep20/" data-title="全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://b1ankc-mov.github.io/posts/springbootvuep20/" data-title="全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)" data-hashtags="个人学习,后端,前端,服务器"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://b1ankc-mov.github.io/posts/springbootvuep20/" data-hashtag="个人学习"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://b1ankc-mov.github.io/posts/springbootvuep20/" data-title="全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://b1ankc-mov.github.io/posts/springbootvuep20/" data-title="全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://b1ankc-mov.github.io/posts/springbootvuep20/" data-title="全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">个人学习</a>,&nbsp;<a href="/tags/%E5%90%8E%E7%AB%AF/">后端</a>,&nbsp;<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>,&nbsp;<a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

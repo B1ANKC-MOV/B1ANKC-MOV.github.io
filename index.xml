@@ -12,7 +12,7 @@
     <pubDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/springbootvuep20/</guid>
-    <description><![CDATA[项目部署 部署Vue项目 打包Vue项目 进入到Vue项目目录，执行 1 npm run build 将生成的dist目录上传至服务器 /usr/vue/dist 配置nginx 进入到/etc/ngi]]></description>
+    <description><![CDATA[注意 在部署前后端项目之前，首先需要保证nginx服务是开启的： 1 systemctl start nginx #开启nginx服务 接着将服务器的公网IP地址粘到浏览器中，如果能看见]]></description>
 </item>
 <item>
     <title>全栈学习·Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)</title>

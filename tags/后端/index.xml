@@ -4,7 +4,15 @@
         <link>https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/</link>
         <description>后端 - 标签 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Fri, 12 Jan 2024 13:55:11 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)</title>
+    <link>https://b1ankc-mov.github.io/posts/springbootvuep20/</link>
+    <pubDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/springbootvuep20/</guid>
+    <description><![CDATA[注意 在部署前后端项目之前，首先需要保证nginx服务是开启的： 1 systemctl start nginx #开启nginx服务 接着将服务器的公网IP地址粘到浏览器中，如果能看见]]></description>
+</item>
+<item>
     <title>全栈学习·Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)</title>
     <link>https://b1ankc-mov.github.io/posts/springbootvuep19/</link>
     <pubDate>Fri, 12 Jan 2024 13:55:11 &#43;0800</pubDate>
@@ -75,14 +83,6 @@
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/springbootp5/</guid>
     <description><![CDATA[RESTful服务 RESTful介绍 RESTful是一种软件服务架构设计风格 RESTful特点 例如，将请求清晰分类，GET用于获取，POST]]></description>
-</item>
-<item>
-    <title>全栈学习·SpringBoot文件上传&amp;拦截器</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootp4/</link>
-    <pubDate>Sat, 02 Dec 2023 10:50:38 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootp4/</guid>
-    <description><![CDATA[Web开发进阶 静态资源访问 前后端分离static是不会存放内容的 实操 当没有配置静态资源时，直接 “/” 后接 静态资源 名称即可访问（例：local]]></description>
 </item>
 </channel>
 </rss>
