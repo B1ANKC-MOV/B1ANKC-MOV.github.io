@@ -4,7 +4,31 @@
         <link>https://b1ankc-mov.github.io/posts/</link>
         <description>所有文章 | VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Thu, 18 Jan 2024 09:47:03 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>[FF14] 维埃拉族·普通约拍册(横屏专辑·下)</title>
+    <link>https://b1ankc-mov.github.io/posts/ff14hpic1/</link>
+    <pubDate>Thu, 18 Jan 2024 09:47:03 &#43;0800</pubDate>
+    <author>小极</author>
+    <guid>https://b1ankc-mov.github.io/posts/ff14hpic1/</guid>
+    <description><![CDATA[这个劳斯打光简直神迹🔮！这一次约拍是黑白幻化专场，每张分三版：白框、调色、原片。]]></description>
+</item>
+<item>
+    <title>[FF14] 维埃拉族·普通约拍册(横屏专辑·上)</title>
+    <link>https://b1ankc-mov.github.io/posts/ff14hpic/</link>
+    <pubDate>Thu, 18 Jan 2024 09:37:03 &#43;0800</pubDate>
+    <author>小极</author>
+    <guid>https://b1ankc-mov.github.io/posts/ff14hpic/</guid>
+    <description><![CDATA[这个劳斯打光简直神迹🔮！这一次约拍是黑白幻化专场，每张分三版：白框、调色、原片。]]></description>
+</item>
+<item>
+    <title>[FF14] 维埃拉族·普通约拍册(竖屏专辑)</title>
+    <link>https://b1ankc-mov.github.io/posts/ff14spic/</link>
+    <pubDate>Wed, 17 Jan 2024 17:01:09 &#43;0800</pubDate>
+    <author>小极</author>
+    <guid>https://b1ankc-mov.github.io/posts/ff14spic/</guid>
+    <description><![CDATA[这个劳斯打光简直神迹🔮！这一次约拍是黑白幻化专场，每张分三版：白框、调色、原片。]]></description>
+</item>
+<item>
     <title>全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)</title>
     <link>https://b1ankc-mov.github.io/posts/springbootvuep20/</link>
     <pubDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</pubDate>
@@ -59,30 +83,6 @@
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/vuep15/</guid>
     <description><![CDATA[vue-element-admin介绍 vue-element-admin 是一个后台前端解决方案，它基于 vue 和 element-ui实现 内置了 i18 国际化解决方案，动态路由，权限验证]]></description>
-</item>
-<item>
-    <title>全栈学习·前端数据模拟MockJS</title>
-    <link>https://b1ankc-mov.github.io/posts/vuep14/</link>
-    <pubDate>Mon, 08 Jan 2024 08:47:21 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/vuep14/</guid>
-    <description><![CDATA[mockjs介绍 Mock.js 是一款前端开发中拦截Ajax请求再生成随机数据响应的工具，可以用来模拟服务器响应，优点是非常简单方便, 无侵入性, 基本覆盖常]]></description>
-</item>
-<item>
-    <title>全栈学习·状态管理VueX</title>
-    <link>https://b1ankc-mov.github.io/posts/vuep13/</link>
-    <pubDate>Mon, 08 Jan 2024 08:47:10 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/vuep13/</guid>
-    <description><![CDATA[Vuex介绍 对于组件化开发来说，大型应用的状态往往跨越多个组件。在多层嵌套的父子组件之间传递状态已经十分麻烦，而Vue更是没有为兄弟组件提供]]></description>
-</item>
-<item>
-    <title>全栈学习·前端路由VueRouter</title>
-    <link>https://b1ankc-mov.github.io/posts/vuep12/</link>
-    <pubDate>Mon, 08 Jan 2024 08:47:03 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/vuep12/</guid>
-    <description><![CDATA[VueRouter的安装与使用 Vue路由vue-router是官方的路由插件，能够轻松的管理 SPA 项目中组件的切换 Vue的单页面应用是基于路由和]]></description>
 </item>
 </channel>
 </rss>
