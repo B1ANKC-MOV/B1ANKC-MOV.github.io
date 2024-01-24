@@ -17,60 +17,11 @@ systemctl start nginx #开启nginx服务
 
 ## 项目部署
 
-### 部署Vue项目
-
-#### 打包Vue项目
-
-进入到Vue项目目录，执行
-
-```shell
-npm run build
-```
-
-将生成的dist目录上传至服务器 /usr/vue/dist
-
-#### 配置nginx
-
-进入到/etc/nginx/conf.d目录，创建vue.conf文件，内容如下
-
-```
-server {
-    listen 80;
-    server_name locahost;
-    location / {
-        root /usr/app/dist;
-        index index.html;
-    }
-}
-```
-
-使配置生效
-
-```npm
-nginx -s reload
-```
-
-### 打包Java程序
-
-双击package，会自动打包在项目路径文件夹的/target文件夹下
-
-![ ](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java.5n1e67d27700.webp)
-
-![ ](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java2.64vdj17krvg.webp)
-
-因为springboot有内置tomcat容器，这点比较方便，省去了tomcat的部署。我们到时候直接可以直接把jar包扔到linux上。
-
-```shell
-nohup java -jar projectName-0.0.1-SNAPSHOT.jar > logName.log 2>&1 &
-```
-
-## 实操(代码在前半部分都有)
-
 ### 前端vue项目部署
 
 #### 打包简单的vue项目
 
-以<u>[全栈学习·第三方组件（element-ui）](https://b1ankc-mov.github.io/posts/vuep10/)</u>里的vue项目为例。
+以<u>**[全栈学习·第三方组件（element-ui）](https://b1ankc-mov.github.io/posts/vuep10/)**</u>里的vue项目为例。
 
 打开项目，在终端服务器输入
 
@@ -84,7 +35,7 @@ npm run build
 
 #### 打包复杂的vue项目
 
-以<u>[全栈学习·vue-element-admin](https://b1ankc-mov.github.io/posts/vuep15/)</u>里的vue项目为例。
+以<u>**[全栈学习·vue-element-admin](https://b1ankc-mov.github.io/posts/vuep15/)**</u>里的vue项目为例。     
 
 修改.env.production文件里面的BASE_API为服务器的公网IP地址并打包文件：
 
@@ -168,3 +119,54 @@ no main manifest attribute, in projectName-0.0.1-SNAPSHOT.jar
 ![启动成功的日志](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS16.1tgcx3qkfwjk.webp)
 
 [笔者部署完之后无法成功登录老是neterror不知道什么情况，改天再解决一下]
+
+## 本篇流程总结
+
+### 部署Vue项目
+
+#### 打包Vue项目
+
+进入到Vue项目目录，执行
+
+```shell
+npm run build
+```
+
+将生成的dist目录上传至服务器 /usr/vue/dist
+
+#### 配置nginx
+
+进入到/etc/nginx/conf.d目录，创建vue.conf文件，内容如下
+
+```
+server {
+    listen 80;
+    server_name locahost;
+    location / {
+        root /usr/app/dist;
+        index index.html;
+    }
+}
+```
+
+使配置生效
+
+```npm
+nginx -s reload
+```
+
+### 打包Java程序
+
+双击package，会自动打包在项目路径文件夹的/target文件夹下
+
+![ ](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java.5n1e67d27700.webp)
+
+![ ](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java2.64vdj17krvg.webp)
+
+因为springboot有内置tomcat容器，这点比较方便，省去了tomcat的部署。我们到时候直接可以直接把jar包扔到linux上。
+
+```shell
+nohup java -jar projectName-0.0.1-SNAPSHOT.jar > logName.log 2>&1 &
+```
+
+

@@ -18,12 +18,36 @@
 #### 创建
 
 1. Group处一般输入公司域名
+
 2. Artifact处输入项目名称
+
 3. SDK:1.8
-4. Java version:8【SDK17选择Java 17也无大碍】
+
+4. Java version:8
+
+   {{< admonition example "注意">}}
+
+   如果选不了8，把Server URL改成https://start.aliyun.com/
+
+   ![修改URL](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240124/P21.528a2ac5z1s0.webp)
+
+   {{< /admonition>}}
+
 5. Web→Spring Web
+
 6. 选择存放位置
-7. 右下角会显示下载依赖的进度条，如果持续太久了可能是下面的配置路径出了问题（需要修改过阿里云镜像，要不然就很慢） **Settings→Build,Execution,Deployment→Build Tools→Maven**
+
+7. 右下角会显示下载依赖的进度条，如果持续太久了可能是下面的配置路径出了问题，需要修改过阿里云镜像，要不然就很慢， 在项目里修改的路径是：**Settings→Build,Execution,Deployment→Build Tools→Maven**。
+
+   {{< admonition example "注意">}}
+
+   但是这样设置有可能在创新项目的时候又改成C盘下的.m2文件里的配置路径，可以在创建项目的页面直接修改，这样一劳永逸。
+
+   ![打开设置](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240124/P22.6qfnzmc5ojs.webp)
+
+   ![找到配置路径设置并修改](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240124/P23.61p5sbwnwyw0.webp)
+
+   {{< /admonition>}}
 
 #### 基本结构（基于maven）
 
@@ -57,7 +81,7 @@
 
 *创建**Controller**包，包下创建**HelloController**类*
 
-```
+```java
 @RestController
 public class HelloController {
 
@@ -77,7 +101,7 @@ public class HelloController {
 4. 修改一定要重启项目（可以通过热部署解决）
 ## 开发环境热部署
 - 在pom.xml中加入依赖
- ```
+ ```xml
  <dependency>
  	<groupId>org.springframework.boot</groupId>
  	<artifactId>spring-boot-starter-web</artifactId>
@@ -85,7 +109,7 @@ public class HelloController {
  ```
 - 点击右上角的按钮，下载依赖
 - 在application.properties配置devtools
-```
+```properties
 spring.devtools.restart.enabled=true
 spring.devtools.restart.additional-paths=src/main/java
 ```

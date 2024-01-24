@@ -18,7 +18,7 @@
     <pubDate>Fri, 12 Jan 2024 13:55:11 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/springbootvuep19/</guid>
-    <description><![CDATA[云端环境准备 注意 以下部署基于Centos7 系统环境 安装MySQL 卸载Centos7自带mariadb 1 2 3 4 5 # 查找 rpm -qa|grep mariadb # mariadb-libs-5.5.52-1.el7.x86_64 # 卸载 rpm -e mariadb-libs-5.5.52-1.el7.x86_64 --nodeps]]></description>
+    <description><![CDATA[云端环境准备 注意 以下部署基于Centos7 系统环境 切换目录 打开XShell连接服务器后是在root目录下，切换到usr目录。 创建文件 创建文件]]></description>
 </item>
 <item>
     <title>全栈学习·阿里云服务器的配置&amp;搭建&amp;购买&amp;使用</title>

@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目) - VVulpes</title><meta name="Description" content="Vulpes的博客"><meta property="og:title" content="全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)" />
-<meta property="og:description" content="注意 在部署前后端项目之前，首先需要保证nginx服务是开启的： 1 systemctl start nginx #开启nginx服务 接着将服务器的公网IP地址粘到浏览器中，如果能看见" />
+        <title>全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目) - VVulpes</title><meta name="Description" content="利用Xftp可视化文件传输工具进行部署"><meta property="og:title" content="全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)" />
+<meta property="og:description" content="利用Xftp可视化文件传输工具进行部署" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://b1ankc-mov.github.io/posts/springbootvuep20/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-01-15T11:10:40+08:00" />
@@ -13,9 +13,9 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)"/>
-<meta name="twitter:description" content="注意 在部署前后端项目之前，首先需要保证nginx服务是开启的： 1 systemctl start nginx #开启nginx服务 接着将服务器的公网IP地址粘到浏览器中，如果能看见"/>
+<meta name="twitter:description" content="利用Xftp可视化文件传输工具进行部署"/>
 <meta name="application-name" content="VVulpes Blog">
-<meta name="apple-mobile-web-app-title" content="VVulpes Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/fox.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://b1ankc-mov.github.io/posts/springbootvuep20/" /><link rel="prev" href="https://b1ankc-mov.github.io/posts/springbootvuep19/" /><link rel="next" href="https://b1ankc-mov.github.io/posts/ff14spic/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<meta name="apple-mobile-web-app-title" content="VVulpes Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/fox.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://b1ankc-mov.github.io/posts/springbootvuep20/" /><link rel="prev" href="https://b1ankc-mov.github.io/posts/springbootvuep19/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -26,13 +26,13 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/b1ankc-mov.github.io\/posts\/springbootvuep20\/"
-        },"genre": "posts","keywords": "个人学习, 后端, 前端, 服务器","wordcount":  1289 ,
+        },"genre": "posts","keywords": "个人学习, 后端, 前端, 服务器","wordcount":  1282 ,
         "url": "https:\/\/b1ankc-mov.github.io\/posts\/springbootvuep20\/","datePublished": "2024-01-15T11:10:40+08:00","dateModified": "2024-01-15T11:10:40+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
                 "name": "Vulpes"
-            },"description": ""
+            },"description": "利用Xftp可视化文件传输工具进行部署"
     }
     </script></head>
     <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -114,9 +114,9 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">全栈学习·Springboot+Vue云端环境部署(阿里云服务器部署项目)</h1><h2 class="single-subtitle">▲建议跟着实操部分，有缺失了再往前翻</h2><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">全栈学习·Springboot+Vue云端环境部署(阿里云服务器部署项目)</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2024-01-15">2024-01-15</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2024-01-15">2024-01-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1289 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2024-01-15">2024-01-15</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2024-01-15">2024-01-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1282 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/springbootvuep20/" class="leancloud_visitors" data-flag-title="全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;
@@ -131,17 +131,6 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ol>
     <li><a href="#项目部署">项目部署</a>
-      <ol>
-        <li><a href="#部署vue项目">部署Vue项目</a>
-          <ol>
-            <li><a href="#打包vue项目">打包Vue项目</a></li>
-            <li><a href="#配置nginx">配置nginx</a></li>
-          </ol>
-        </li>
-        <li><a href="#打包java程序">打包Java程序</a></li>
-      </ol>
-    </li>
-    <li><a href="#实操代码在前半部分都有">实操(代码在前半部分都有)</a>
       <ol>
         <li><a href="#前端vue项目部署">前端vue项目部署</a>
           <ol>
@@ -158,6 +147,17 @@
             <li><a href="#执行jar包">执行jar包</a></li>
           </ol>
         </li>
+      </ol>
+    </li>
+    <li><a href="#本篇流程总结">本篇流程总结</a>
+      <ol>
+        <li><a href="#部署vue项目">部署Vue项目</a>
+          <ol>
+            <li><a href="#打包vue项目">打包Vue项目</a></li>
+            <li><a href="#配置nginx">配置nginx</a></li>
+          </ol>
+        </li>
+        <li><a href="#打包java程序">打包Java程序</a></li>
       </ol>
     </li>
   </ol>
@@ -193,88 +193,9 @@
         </div>
     </div>
 <h2 id="项目部署">项目部署</h2>
-<h3 id="部署vue项目">部署Vue项目</h3>
-<h4 id="打包vue项目">打包Vue项目</h4>
-<p>进入到Vue项目目录，执行</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm run build
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>将生成的dist目录上传至服务器 /usr/vue/dist</p>
-<h4 id="配置nginx">配置nginx</h4>
-<p>进入到/etc/nginx/conf.d目录，创建vue.conf文件，内容如下</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">server {
-</span></span><span class="line"><span class="cl">    listen 80;
-</span></span><span class="line"><span class="cl">    server_name locahost;
-</span></span><span class="line"><span class="cl">    location / {
-</span></span><span class="line"><span class="cl">        root /usr/app/dist;
-</span></span><span class="line"><span class="cl">        index index.html;
-</span></span><span class="line"><span class="cl">    }
-</span></span><span class="line"><span class="cl">}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>使配置生效</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">nginx</span> <span class="o">-</span><span class="n">s</span> <span class="n">reload</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="打包java程序">打包Java程序</h3>
-<p>双击package，会自动打包在项目路径文件夹的/target文件夹下</p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java.5n1e67d27700.webp" title=" " data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java.5n1e67d27700.webp" data-sub-html="<h2> </h2><p> </p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java.5n1e67d27700.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java.5n1e67d27700.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java.5n1e67d27700.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java.5n1e67d27700.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java.5n1e67d27700.webp" />
-    </a><figcaption class="image-caption"> </figcaption>
-    </figure></p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java2.64vdj17krvg.webp" title=" " data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java2.64vdj17krvg.webp" data-sub-html="<h2> </h2><p> </p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java2.64vdj17krvg.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java2.64vdj17krvg.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java2.64vdj17krvg.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java2.64vdj17krvg.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java2.64vdj17krvg.webp" />
-    </a><figcaption class="image-caption"> </figcaption>
-    </figure></p>
-<p>因为springboot有内置tomcat容器，这点比较方便，省去了tomcat的部署。我们到时候直接可以直接把jar包扔到linux上。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">nohup java -jar projectName-0.0.1-SNAPSHOT.jar &gt; logName.log 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="实操代码在前半部分都有">实操(代码在前半部分都有)</h2>
 <h3 id="前端vue项目部署">前端vue项目部署</h3>
 <h4 id="打包简单的vue项目">打包简单的vue项目</h4>
-<p>以<u><a href="https://b1ankc-mov.github.io/posts/vuep10/" target="_blank" rel="noopener noreffer ">全栈学习·第三方组件（element-ui）</a></u>里的vue项目为例。</p>
+<p>以<u><strong><a href="https://b1ankc-mov.github.io/posts/vuep10/" target="_blank" rel="noopener noreffer ">全栈学习·第三方组件（element-ui）</a></strong></u>里的vue项目为例。</p>
 <p>打开项目，在终端服务器输入</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -297,7 +218,7 @@
     </a><figcaption class="image-caption">打包成功的终端界面</figcaption>
     </figure></p>
 <h4 id="打包复杂的vue项目">打包复杂的vue项目</h4>
-<p>以<u><a href="https://b1ankc-mov.github.io/posts/vuep15/" target="_blank" rel="noopener noreffer ">全栈学习·vue-element-admin</a></u>里的vue项目为例。</p>
+<p>以<u><strong><a href="https://b1ankc-mov.github.io/posts/vuep15/" target="_blank" rel="noopener noreffer ">全栈学习·vue-element-admin</a></strong></u>里的vue项目为例。</p>
 <p>修改.env.production文件里面的BASE_API为服务器的公网IP地址并打包文件：</p>
 <p>
 <figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS4.4ffvl6fijuy0.webp" title="修改API&amp;amp;终端打包" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS4.4ffvl6fijuy0.webp" data-sub-html="<h2> </h2><p>修改API&amp;amp;终端打包</p>">
@@ -499,7 +420,86 @@
     </a><figcaption class="image-caption">启动成功的日志</figcaption>
     </figure></p>
 <p>[笔者部署完之后无法成功登录老是neterror不知道什么情况，改天再解决一下]</p>
-<div class="details admonition note open">
+<h2 id="本篇流程总结">本篇流程总结</h2>
+<h3 id="部署vue项目">部署Vue项目</h3>
+<h4 id="打包vue项目">打包Vue项目</h4>
+<p>进入到Vue项目目录，执行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm run build
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>将生成的dist目录上传至服务器 /usr/vue/dist</p>
+<h4 id="配置nginx">配置nginx</h4>
+<p>进入到/etc/nginx/conf.d目录，创建vue.conf文件，内容如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">    listen 80;
+</span></span><span class="line"><span class="cl">    server_name locahost;
+</span></span><span class="line"><span class="cl">    location / {
+</span></span><span class="line"><span class="cl">        root /usr/app/dist;
+</span></span><span class="line"><span class="cl">        index index.html;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>使配置生效</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">nginx</span> <span class="o">-</span><span class="n">s</span> <span class="n">reload</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="打包java程序">打包Java程序</h3>
+<p>双击package，会自动打包在项目路径文件夹的/target文件夹下</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java.5n1e67d27700.webp" title=" " data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java.5n1e67d27700.webp" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java.5n1e67d27700.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java.5n1e67d27700.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java.5n1e67d27700.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java.5n1e67d27700.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java.5n1e67d27700.webp" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java2.64vdj17krvg.webp" title=" " data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java2.64vdj17krvg.webp" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java2.64vdj17krvg.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java2.64vdj17krvg.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java2.64vdj17krvg.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java2.64vdj17krvg.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/Java2.64vdj17krvg.webp" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<p>因为springboot有内置tomcat容器，这点比较方便，省去了tomcat的部署。我们到时候直接可以直接把jar包扔到linux上。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">nohup java -jar projectName-0.0.1-SNAPSHOT.jar &gt; logName.log 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition note open">
 			<div class="details-summary admonition-title">
 				<i class="icon fas fa-pencil-alt fa-fwnote"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
 				</div>	
@@ -530,8 +530,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/springbootvuep19/" class="prev" rel="prev" title="全栈学习·Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>全栈学习·Springboot+Vue云端环境配置(阿里云服务器环境配置)</a>
-            <a href="/posts/ff14spic/" class="next" rel="next" title="[FF14] 维埃拉族·普通约拍册(竖屏专辑)">[FF14] 维埃拉族·普通约拍册(竖屏专辑)<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/posts/springbootvuep19/" class="prev" rel="prev" title="全栈学习·Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>全栈学习·Springboot+Vue云端环境配置(阿里云服务器环境配置)</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

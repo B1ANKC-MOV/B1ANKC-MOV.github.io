@@ -4,31 +4,7 @@
         <link>https://b1ankc-mov.github.io/posts/</link>
         <description>所有文章 | VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Thu, 18 Jan 2024 09:47:03 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>[FF14] 维埃拉族·普通约拍册(横屏专辑·下)</title>
-    <link>https://b1ankc-mov.github.io/posts/ff14hpic1/</link>
-    <pubDate>Thu, 18 Jan 2024 09:47:03 &#43;0800</pubDate>
-    <author>小极</author>
-    <guid>https://b1ankc-mov.github.io/posts/ff14hpic1/</guid>
-    <description><![CDATA[这个劳斯打光简直神迹🔮！这一次约拍是黑白幻化专场，每张分三版：白框、调色、原片。]]></description>
-</item>
-<item>
-    <title>[FF14] 维埃拉族·普通约拍册(横屏专辑·上)</title>
-    <link>https://b1ankc-mov.github.io/posts/ff14hpic/</link>
-    <pubDate>Thu, 18 Jan 2024 09:37:03 &#43;0800</pubDate>
-    <author>小极</author>
-    <guid>https://b1ankc-mov.github.io/posts/ff14hpic/</guid>
-    <description><![CDATA[这个劳斯打光简直神迹🔮！这一次约拍是黑白幻化专场，每张分三版：白框、调色、原片。]]></description>
-</item>
-<item>
-    <title>[FF14] 维埃拉族·普通约拍册(竖屏专辑)</title>
-    <link>https://b1ankc-mov.github.io/posts/ff14spic/</link>
-    <pubDate>Wed, 17 Jan 2024 17:01:09 &#43;0800</pubDate>
-    <author>小极</author>
-    <guid>https://b1ankc-mov.github.io/posts/ff14spic/</guid>
-    <description><![CDATA[这个劳斯打光简直神迹🔮！这一次约拍是黑白幻化专场，每张分三版：白框、调色、原片。]]></description>
-</item>
-<item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)</title>
     <link>https://b1ankc-mov.github.io/posts/springbootvuep20/</link>
     <pubDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</pubDate>
@@ -42,7 +18,31 @@
     <pubDate>Fri, 12 Jan 2024 13:55:11 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/springbootvuep19/</guid>
-    <description><![CDATA[云端环境准备 注意 以下部署基于Centos7 系统环境 安装MySQL 卸载Centos7自带mariadb 1 2 3 4 5 # 查找 rpm -qa|grep mariadb # mariadb-libs-5.5.52-1.el7.x86_64 # 卸载 rpm -e mariadb-libs-5.5.52-1.el7.x86_64 --nodeps]]></description>
+    <description><![CDATA[云端环境准备 注意 以下部署基于Centos7 系统环境 切换目录 打开XShell连接服务器后是在root目录下，切换到usr目录。 创建文件 创建文件]]></description>
+</item>
+<item>
+    <title>[FF14] 维埃拉族·普通约拍册(横屏专辑·下)</title>
+    <link>https://b1ankc-mov.github.io/posts/ff14hpic1/</link>
+    <pubDate>Fri, 12 Jan 2024 09:47:03 &#43;0800</pubDate>
+    <author>小极</author>
+    <guid>https://b1ankc-mov.github.io/posts/ff14hpic1/</guid>
+    <description><![CDATA[这个劳斯打光简直神迹🔮！这一次约拍是黑白幻化专场，每张分三版：白框、调色、原片。]]></description>
+</item>
+<item>
+    <title>[FF14] 维埃拉族·普通约拍册(横屏专辑·上)</title>
+    <link>https://b1ankc-mov.github.io/posts/ff14hpic/</link>
+    <pubDate>Fri, 12 Jan 2024 09:37:03 &#43;0800</pubDate>
+    <author>小极</author>
+    <guid>https://b1ankc-mov.github.io/posts/ff14hpic/</guid>
+    <description><![CDATA[这个劳斯打光简直神迹🔮！这一次约拍是黑白幻化专场，每张分三版：白框、调色、原片。]]></description>
+</item>
+<item>
+    <title>[FF14] 维埃拉族·普通约拍册(竖屏专辑)</title>
+    <link>https://b1ankc-mov.github.io/posts/ff14spic/</link>
+    <pubDate>Fri, 12 Jan 2024 08:01:09 &#43;0800</pubDate>
+    <author>小极</author>
+    <guid>https://b1ankc-mov.github.io/posts/ff14spic/</guid>
+    <description><![CDATA[这个劳斯打光简直神迹🔮！这一次约拍是黑白幻化专场，每张分三版：白框、调色、原片。]]></description>
 </item>
 <item>
     <title>全栈学习·阿里云服务器的配置&amp;搭建&amp;购买&amp;使用</title>
@@ -74,7 +74,9 @@
     <pubDate>Mon, 08 Jan 2024 08:55:39 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/mybatisplusmysql/</guid>
-    <description><![CDATA[使用MybatisPlus中的注解与语句，接收主子表JSON格式信息，向Mysql数据库中同时插入主表和与子表的数据，子表外键与主表相连。(编译器使用IDEA，接口测试使用POSTMAN)]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240124/MybatisMysqlJson.1tvmck88b64g.webp" referrerpolicy="no-referrer">
+            </div>使用MybatisPlus中的注解与语句，接收主子表JSON格式信息，向Mysql数据库中同时插入主表和与子表的数据，子表外键与主表相连。(编译器使用IDEA，接口测试使用POSTMAN)]]></description>
 </item>
 <item>
     <title>全栈学习·vue-element-admin</title>

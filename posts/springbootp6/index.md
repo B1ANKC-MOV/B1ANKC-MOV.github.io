@@ -1,4 +1,4 @@
-# 全栈学习·Mybatis-Plus增/删/改
+# 全栈学习·MybatisPlus增/删/改
 
 ## ORM
 1. ORM (Object Relational Mapping,对象关系映射）是为了解决面向对象与关系数据库存在的互不匹配现象的一种技术。
@@ -11,7 +11,7 @@
 - MyBatis-Plus是一个MyBatis的增强工具。在MyBatis的基础上做了增强。简化了开发。
 ### 配置
 1. 添加依赖到pom.xml：（MybatisPlus其实依赖了Mybatis）（需要准备好Mysql数据库）
-```
+```xml
 <!--MyBatisP1us依赖-->
 <dependency>
     <groupId>com.baomidou</groupId>

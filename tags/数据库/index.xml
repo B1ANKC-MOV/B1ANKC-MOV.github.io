@@ -10,7 +10,9 @@
     <pubDate>Mon, 08 Jan 2024 08:55:39 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/mybatisplusmysql/</guid>
-    <description><![CDATA[使用MybatisPlus中的注解与语句，接收主子表JSON格式信息，向Mysql数据库中同时插入主表和与子表的数据，子表外键与主表相连。(编译器使用IDEA，接口测试使用POSTMAN)]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240124/MybatisMysqlJson.1tvmck88b64g.webp" referrerpolicy="no-referrer">
+            </div>使用MybatisPlus中的注解与语句，接收主子表JSON格式信息，向Mysql数据库中同时插入主表和与子表的数据，子表外键与主表相连。(编译器使用IDEA，接口测试使用POSTMAN)]]></description>
 </item>
 <item>
     <title>全栈学习·MybatisPlus多表查询及分页查询</title>
@@ -21,7 +23,7 @@
     <description><![CDATA[Mybatis多表查询 实现复杂关系映射，可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置]]></description>
 </item>
 <item>
-    <title>全栈学习·Mybatis-Plus增/删/改</title>
+    <title>全栈学习·MybatisPlus增/删/改</title>
     <link>https://b1ankc-mov.github.io/posts/springbootp6/</link>
     <pubDate>Mon, 04 Dec 2023 16:41:14 &#43;0800</pubDate>
     <author>作者</author>

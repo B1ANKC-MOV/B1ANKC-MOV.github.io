@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>全栈学习·MybatisPlus多表查询及分页查询 - VVulpes</title><meta name="Description" content="Vulpes的博客"><meta property="og:title" content="全栈学习·MybatisPlus多表查询及分页查询" />
-<meta property="og:description" content="Mybatis多表查询 实现复杂关系映射，可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置" />
+        <title>全栈学习·MybatisPlus多表查询及分页查询 - VVulpes</title><meta name="Description" content="多表及分页查询大部分还是依赖Mybatis"><meta property="og:title" content="全栈学习·MybatisPlus多表查询及分页查询" />
+<meta property="og:description" content="多表及分页查询大部分还是依赖Mybatis" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://b1ankc-mov.github.io/posts/springbootp7/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-12-05T16:55:12+08:00" />
@@ -13,7 +13,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="全栈学习·MybatisPlus多表查询及分页查询"/>
-<meta name="twitter:description" content="Mybatis多表查询 实现复杂关系映射，可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置"/>
+<meta name="twitter:description" content="多表及分页查询大部分还是依赖Mybatis"/>
 <meta name="application-name" content="VVulpes Blog">
 <meta name="apple-mobile-web-app-title" content="VVulpes Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/fox.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://b1ankc-mov.github.io/posts/springbootp7/" /><link rel="prev" href="https://b1ankc-mov.github.io/posts/springbootp6/" /><link rel="next" href="https://b1ankc-mov.github.io/posts/vuep8/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -32,7 +32,7 @@
             "name": ""},"author": {
                 "@type": "Person",
                 "name": "Vulpes"
-            },"description": ""
+            },"description": "多表及分页查询大部分还是依赖Mybatis"
     }
     </script></head>
     <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -182,19 +182,19 @@
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TableName(&#34;t_user&#34;)
-</span></span><span class="line"><span class="cl">public class User {
-</span></span><span class="line"><span class="cl">    @TableId(type = IdType .AUT0)
-</span></span><span class="line"><span class="cl">    private int id;
-</span></span><span class="line"><span class="cl">    priwate string username ;
-</span></span><span class="line"><span class="cl">    private string password;
-</span></span><span class="line"><span class="cl">    private string birthday ;
-</span></span><span class="line"><span class="cl">    //描述用户的所有订单
-</span></span><span class="line"><span class="cl">    @TableField(exist = false)
-</span></span><span class="line"><span class="cl">    private List&lt;0rder&gt;orders;
-</span></span><span class="line"><span class="cl">    //alt + insert
-</span></span><span class="line"><span class="cl">…………
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">TableName</span><span class="p">(</span><span class="s">&#34;t_user&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">User</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@TableId</span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IdType</span><span class="w"> </span><span class="p">.</span><span class="na">AUT0</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">priwate</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">password</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">birthday</span><span class="w"> </span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//描述用户的所有订单</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@TableField</span><span class="p">(</span><span class="n">exist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">0rder</span><span class="o">&gt;</span><span class="n">orders</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//alt + insert</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">…………</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="2">
 <li>这个字段需要自行映射</li>
@@ -219,23 +219,23 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">…………
-</span></span><span class="line"><span class="cl">//查询用户及其所有的订单
-</span></span><span class="line"><span class="cl">    @Select(&#34;&#34;select * from t_user&#34;&#34;)
-</span></span><span class="line"><span class="cl">    @Results(
-</span></span><span class="line"><span class="cl">        {
-</span></span><span class="line"><span class="cl">            @Result(column = &#34;id&#34; , property = &#34;id&#34;),
-</span></span><span class="line"><span class="cl">            @Result(column = &#34;username&#34; , property = &#34;username&#34;),
-</span></span><span class="line"><span class="cl">            @Result(column = &#34;password&#34; , property = &#34;password&#34;&#34;),
-</span></span><span class="line"><span class="cl">            @Result(column = &#34;birthday&#34; , property = &#34;birthday&#34;&#34;) ,
-</span></span><span class="line"><span class="cl">            @Result(column = &#34;id &#34; , property = &#34;orders&#34;,javaType = List.class,
-</span></span><span class="line"><span class="cl">                many=@Many(select = &#34;com.example.mpdemo.mapper.OrderMapper.selectBy……
-</span></span><span class="line"><span class="cl">            )
-</span></span><span class="line"><span class="cl">        }
-</span></span><span class="line"><span class="cl">    }
-</span></span><span class="line"><span class="cl">    List&lt;User&gt; selectAllUserAnd0rders();
-</span></span><span class="line"><span class="cl">}
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="err">…………</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//查询用户及其所有的订单</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Select</span><span class="p">(</span><span class="s">&#34;&#34;</span><span class="n">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">t_user</span><span class="s">&#34;&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Results</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nd">@Result</span><span class="p">(</span><span class="n">column</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;id&#34;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">property</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;id&#34;</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nd">@Result</span><span class="p">(</span><span class="n">column</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;username&#34;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">property</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;username&#34;</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nd">@Result</span><span class="p">(</span><span class="n">column</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;password&#34;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">property</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;password&#34;&#34;),
+</span></span></span><span class="line"><span class="cl"><span class="s">            @Result(column = &#34;</span><span class="n">birthday</span><span class="s">&#34; , property = &#34;</span><span class="n">birthday</span><span class="s">&#34;&#34;</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nd">@Result</span><span class="p">(</span><span class="n">column</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;id &#34;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">property</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;orders&#34;</span><span class="p">,</span><span class="n">javaType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">many</span><span class="o">=</span><span class="nd">@Many</span><span class="p">(</span><span class="n">select</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;com.example.mpdemo.mapper.OrderMapper.selectBy……
+</span></span></span><span class="line"><span class="cl"><span class="s">            )
+</span></span></span><span class="line"><span class="cl"><span class="s">        }
+</span></span></span><span class="line"><span class="cl"><span class="s">    }
+</span></span></span><span class="line"><span class="cl"><span class="s">    List&lt;User&gt; selectAllUserAnd0rders();
+</span></span></span><span class="line"><span class="cl"><span class="s">}
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="3">
 <li>前面意思是↑从数据库里面调取的id这一列需要赋值给user类中的id属性。
@@ -247,9 +247,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@Select(&#34;select * from t_order where uid = #{uid}&#34;)
-</span></span><span class="line"><span class="cl">List&lt;Order&gt; selettByUid(int uid);
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Select</span><span class="p">(</span><span class="s">&#34;select * from t_order where uid = #{uid}&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">List</span><span class="o">&lt;</span><span class="n">Order</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">selettByUid</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">uid</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="4">
 <li>many注解，意思是一个用户会有多个订单，后接需要调用哪个mapper的哪个方法（对着mapper右键copy path选最后一个就行）,查询出来的订单最后传给了orders属性，就完成了映射。</li>
@@ -260,8 +260,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">one=@0ne(select = &#34;com.example.mpdemo.mapper .UserHapper.selectById&#34;)
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">one</span><span class="o">=</span><span class="nd">@0ne</span><span class="p">(</span><span class="n">select</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;com.example.mpdemo.mapper .UserHapper.selectById&#34;</span><span class="p">)</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>条件查询</strong>：</p>
 <div class="highlight"><div class="chroma">
@@ -274,13 +274,13 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@GetMapping(&#34;/user/find&#34;)
-</span></span><span class="line"><span class="cl">public List&lt;User&gt; findBycond(){
-</span></span><span class="line"><span class="cl">    QueryWrapper&lt;User&gt; queryWrapper = new QueryWrapper();
-</span></span><span class="line"><span class="cl">    queryWirapper.eq( &#34;username&#34; , &#34;zhangsan&#34;);
-</span></span><span class="line"><span class="cl">    return userMapper.selectList(queryWrapper);
-</span></span><span class="line"><span class="cl">}
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&#34;/user/find&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">findBycond</span><span class="p">(){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">QueryWrapper</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="n">queryWrapper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QueryWrapper</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">queryWirapper</span><span class="p">.</span><span class="na">eq</span><span class="p">(</span><span class="w"> </span><span class="s">&#34;username&#34;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s">&#34;zhangsan&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">userMapper</span><span class="p">.</span><span class="na">selectList</span><span class="p">(</span><span class="n">queryWrapper</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>分页查询</strong>：</p>
 <div class="highlight"><div class="chroma">
@@ -294,14 +294,14 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@GetMapping(&#34;/user/findByPage&#34;)
-</span></span><span class="line"><span class="cl">public IPage findByPage(){
-</span></span><span class="line"><span class="cl">    //设置起始值及每页条数
-</span></span><span class="line"><span class="cl">    Page&lt;User&gt; page = new Page&lt;&gt;(0, 2) ;
-</span></span><span class="line"><span class="cl">    IPage iPage = userMapper.selectPage(page,  null);
-</span></span><span class="line"><span class="cl">    return iPage;
-</span></span><span class="line"><span class="cl">}
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&#34;/user/findByPage&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="n">IPage</span><span class="w"> </span><span class="nf">findByPage</span><span class="p">(){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//设置起始值及每页条数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Page</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Page</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">2</span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">IPage</span><span class="w"> </span><span class="n">iPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userMapper</span><span class="p">.</span><span class="na">selectPage</span><span class="p">(</span><span class="n">page</span><span class="p">,</span><span class="w">  </span><span class="kc">null</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">iPage</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><div class="details admonition note open">
 			<div class="details-summary admonition-title">
@@ -334,7 +334,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/springbootp6/" class="prev" rel="prev" title="全栈学习·Mybatis-Plus增/删/改"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>全栈学习·Mybatis-Plus增/删/改</a>
+    <div class="post-nav"><a href="/posts/springbootp6/" class="prev" rel="prev" title="全栈学习·MybatisPlus增/删/改"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>全栈学习·MybatisPlus增/删/改</a>
             <a href="/posts/vuep8/" class="next" rel="next" title="全栈学习·Vue框架介绍及应用">全栈学习·Vue框架介绍及应用<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>

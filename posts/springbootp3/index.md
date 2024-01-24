@@ -53,7 +53,7 @@
 
 *创建**entity**实体包，在entity下**创建User类**<u>(按住<kbd>alt</kbd>+<kbd>insert</kbd>快捷加入get/set/to String方法)</u>*
 
-```
+```java
 public class User {
     public String getUsername() {
         return username;
@@ -85,7 +85,7 @@ public class User {
 ```
 *在**Controller**包下创建**ParamsController**控制器类(后面的POST方法用APIPOST可以调试)*
 
-```
+```java
 @RestController
 public class ParamsController {
     @RequestMapping(value = "/getTest1",method = RequestMethod.GET)

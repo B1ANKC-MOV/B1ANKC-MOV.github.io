@@ -6,11 +6,11 @@
 ### 实操
 - 当没有配置静态资源时，直接 **“/”** 后接 **静态资源** 名称即可访问（例：localhost:8080/test.jpg）
 - 如果不想放在根路径下直接访问，而希望在**资源前**面加一个**统一路径**images方便管理，可以通过static path设置虚拟路径（也叫**过滤规则**）:在application.properties中加入代码
-```
+```properties
 spring.mvc.static-path-pattern=/images/**
 ```
 - 如果在<u>resource</u>下额外创建了一个文件，将**静态资源放在自创文件**css中，则需要通过static locations进行修改（classpath是整个项目的类路径，在target下的classes，是一个固定的目录）
-```
+```properties
 spring.web.resources.static-locations=classpath:/css
 ```
 ## 文件上传
@@ -19,7 +19,7 @@ spring.web.resources.static-locations=classpath:/css
 （修改后，例如表单中的字符串字段，还是使用文本形式进行传输；但如果上传的字段是文件，则会与上一个分开，用另外的形式上传）
 #### 配置
 在application.properties中加入
-```
+```properties
 spring.servlet.multipart.max-file-size=10MB
 spring.servlet.multipart.max-request-size=10MB
 ```
@@ -35,14 +35,14 @@ spring.servlet.multipart.max-request-size=10MB
 - 如果status：500，意味着后端出了问题（up是文件太大了）
 - 通过自定义函数savefile判断目录是否存在，如果不存在，则使用path与文件名创建目录，最后使用**transferTo**方法把文件传输到创建好的目录中。
 - 想让用户通过刚刚创建好的目录访问文件需要在applicaition.properties中加入代码：
-```
+```properties
 spring.web.resources/static-locations=/upload/ 
 ```
 **全部代码如下**
 
 *在Controller包下创建**FileUploadController**类*
 
-```
+```java
 @RestController
 public class FileUploadController {
     @PostMapping("/upload")
@@ -89,7 +89,7 @@ public class FileUploadController {
 
 *创建**Interceptor**包，在下面创建**LoginInterceptor**类：*
 
-```
+```java
 public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response,Object handler)throws Exception{
@@ -100,7 +100,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 ```
 *在config下创建**WebConfig**类：*
 
-```
+```java
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
     @Override

@@ -46,7 +46,7 @@ https://www.aliyun.com/
 
 此为旧版购买网页，新版购买方式可以查看官方文档：
 
-```
+```http
 https://help.aliyun.com/zh/ecs/getting-started/create-and-manage-an-ecs-instance-by-using-the-ecs-console
 ```
 

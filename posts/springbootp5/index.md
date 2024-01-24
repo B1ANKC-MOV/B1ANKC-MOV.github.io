@@ -32,7 +32,7 @@ RESTful是一种软件服务架构设计风格
 **全部代码如下**
 
 
-```
+```java
 @RestController
 public class UserController {
     @GetMapping("/user/{id}")
@@ -57,7 +57,7 @@ Java内提供的测试工具
 ### 配置
 
 1. 在pom.xml加入依赖↓
-``` 
+``` xml
 <dependency>
     <groupId>io.springfox</groupId>
     <artifactId>springfox-swagger2</artifactId>
@@ -75,7 +75,7 @@ Spring Boot 2.6.X后与Swagger有版本冲突问题，需要在application.prope
 {{< /admonition >}}
 
 2. 然后做一个基本的配置↓（在config下创建一个SwaggerConfig配置类）
-```
+```java
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {

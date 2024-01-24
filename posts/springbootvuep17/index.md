@@ -5,7 +5,7 @@
 
 **下载地址：**
 
-```
+```http
 https://github.com/B1ANKC-MOV/SpringVue/tree/f9761a2732d92e2bb82e4d21e568613f859c489a/P17/projectName
 ```
 
@@ -19,7 +19,7 @@ https://github.com/B1ANKC-MOV/SpringVue/tree/f9761a2732d92e2bb82e4d21e568613f859
 
 **下载地址：**
 
-```
+```http
 https://github.com/B1ANKC-MOV/SpringVue/tree/f9761a2732d92e2bb82e4d21e568613f859c489a/P17/vue-admin-template
 ```
 

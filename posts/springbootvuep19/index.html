@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>全栈学习·Springboot&#43;Vue云端环境配置(阿里云服务器环境配置) - VVulpes</title><meta name="Description" content="Vulpes的博客"><meta property="og:title" content="全栈学习·Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)" />
-<meta property="og:description" content="云端环境准备 注意 以下部署基于Centos7 系统环境 安装MySQL 卸载Centos7自带mariadb 1 2 3 4 5 # 查找 rpm -qa|grep mariadb # mariadb-libs-5.5.52-1.el7.x86_64 # 卸载 rpm -e mariadb-libs-5.5.52-1.el7.x86_64 --nodeps" />
+        <title>全栈学习·Springboot&#43;Vue云端环境配置(阿里云服务器环境配置) - VVulpes</title><meta name="Description" content="利用XShell可视化窗口进行配置"><meta property="og:title" content="全栈学习·Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)" />
+<meta property="og:description" content="利用XShell可视化窗口进行配置" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://b1ankc-mov.github.io/posts/springbootvuep19/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-01-12T13:55:11+08:00" />
@@ -13,9 +13,9 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="全栈学习·Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)"/>
-<meta name="twitter:description" content="云端环境准备 注意 以下部署基于Centos7 系统环境 安装MySQL 卸载Centos7自带mariadb 1 2 3 4 5 # 查找 rpm -qa|grep mariadb # mariadb-libs-5.5.52-1.el7.x86_64 # 卸载 rpm -e mariadb-libs-5.5.52-1.el7.x86_64 --nodeps"/>
+<meta name="twitter:description" content="利用XShell可视化窗口进行配置"/>
 <meta name="application-name" content="VVulpes Blog">
-<meta name="apple-mobile-web-app-title" content="VVulpes Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/fox.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://b1ankc-mov.github.io/posts/springbootvuep19/" /><link rel="prev" href="https://b1ankc-mov.github.io/posts/springbootvuep18/" /><link rel="next" href="https://b1ankc-mov.github.io/posts/springbootvuep20/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<meta name="apple-mobile-web-app-title" content="VVulpes Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/fox.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://b1ankc-mov.github.io/posts/springbootvuep19/" /><link rel="prev" href="https://b1ankc-mov.github.io/posts/ff14hpic1/" /><link rel="next" href="https://b1ankc-mov.github.io/posts/springbootvuep20/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -26,13 +26,13 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/b1ankc-mov.github.io\/posts\/springbootvuep19\/"
-        },"genre": "posts","keywords": "个人学习, 后端, 前端, 服务器","wordcount":  1831 ,
+        },"genre": "posts","keywords": "个人学习, 后端, 前端, 服务器","wordcount":  1786 ,
         "url": "https:\/\/b1ankc-mov.github.io\/posts\/springbootvuep19\/","datePublished": "2024-01-12T13:55:11+08:00","dateModified": "2024-01-12T13:55:11+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
                 "name": "Vulpes"
-            },"description": ""
+            },"description": "利用XShell可视化窗口进行配置"
     }
     </script></head>
     <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -114,9 +114,9 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">全栈学习·Springboot+Vue云端环境配置(阿里云服务器环境配置)</h1><h2 class="single-subtitle">▲建议跟着实操部分，有缺失了再往前翻</h2><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">全栈学习·Springboot+Vue云端环境配置(阿里云服务器环境配置)</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2024-01-12">2024-01-12</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2024-01-12">2024-01-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1831 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2024-01-12">2024-01-12</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2024-01-12">2024-01-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1786 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/posts/springbootvuep19/" class="leancloud_visitors" data-flag-title="全栈学习·Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;
@@ -132,25 +132,41 @@
   <ol>
     <li><a href="#云端环境准备">云端环境准备</a>
       <ol>
-        <li><a href="#安装mysql">安装MySQL</a>
+        <li><a href="#切换目录">切换目录</a></li>
+        <li><a href="#创建文件">创建文件</a></li>
+        <li><a href="#上传文件">上传文件</a></li>
+        <li><a href="#卸载mariadb">卸载mariadb</a></li>
+        <li><a href="#解压mysql">解压mysql</a></li>
+        <li><a href="#安装mysql">安装mysql</a></li>
+        <li><a href="#启动mysql">启动mysql</a></li>
+        <li><a href="#开启mysql远程连接">开启mysql远程连接</a></li>
+        <li><a href="#安装nginx">安装nginx</a></li>
+        <li><a href="#启动nginx">启动nginx</a></li>
+        <li><a href="#配置jdk">配置JDK</a></li>
+        <li><a href="#创建mysql连接服务器">创建mysql连接服务器</a></li>
+      </ol>
+    </li>
+    <li><a href="#本篇流程总结">本篇流程总结</a>
+      <ol>
+        <li><a href="#安装mysql-1">安装MySQL</a>
           <ol>
             <li><a href="#卸载centos7自带mariadb">卸载Centos7自带mariadb</a></li>
-            <li><a href="#解压mysql">解压mysql</a></li>
+            <li><a href="#解压mysql-1">解压mysql</a></li>
             <li><a href="#执行安装">执行安装</a></li>
-            <li><a href="#启动mysql">启动Mysql</a></li>
+            <li><a href="#启动mysql-1">启动Mysql</a></li>
             <li><a href="#修改初始的随机密码">修改初始的随机密码</a></li>
             <li><a href="#授予远程连接权限">授予远程连接权限</a></li>
             <li><a href="#控制命令">控制命令</a></li>
             <li><a href="#关闭防火墙">关闭防火墙</a></li>
           </ol>
         </li>
-        <li><a href="#安装nginx">安装nginx</a>
+        <li><a href="#安装nginx-1">安装nginx</a>
           <ol>
             <li><a href="#安装命令">安装命令</a></li>
             <li><a href="#nginx命令">nginx命令</a></li>
           </ol>
         </li>
-        <li><a href="#配置jdk">配置JDK</a>
+        <li><a href="#配置jdk-1">配置JDK</a>
           <ol>
             <li><a href="#官网下载">官网下载</a></li>
             <li><a href="#解压">解压</a></li>
@@ -159,22 +175,6 @@
             <li><a href="#检查是否安装成功">检查是否安装成功</a></li>
           </ol>
         </li>
-      </ol>
-    </li>
-    <li><a href="#实操代码在前半部分都有">实操(代码在前半部分都有)</a>
-      <ol>
-        <li><a href="#切换目录">切换目录</a></li>
-        <li><a href="#创建文件">创建文件</a></li>
-        <li><a href="#上传文件">上传文件</a></li>
-        <li><a href="#卸载mariadb">卸载mariadb</a></li>
-        <li><a href="#解压mysql-1">解压mysql</a></li>
-        <li><a href="#安装mysql-1">安装mysql</a></li>
-        <li><a href="#启动mysql-1">启动mysql</a></li>
-        <li><a href="#开启mysql远程连接">开启mysql远程连接</a></li>
-        <li><a href="#安装nginx-1">安装nginx</a></li>
-        <li><a href="#启动nginx">启动nginx</a></li>
-        <li><a href="#配置jdk-1">配置JDK</a></li>
-        <li><a href="#创建mysql连接服务器">创建mysql连接服务器</a></li>
       </ol>
     </li>
   </ol>
@@ -189,7 +189,379 @@
             <div class="admonition-content">以下部署基于Centos7 系统环境</div>
         </div>
     </div>
-<h3 id="安装mysql">安装MySQL</h3>
+<h3 id="切换目录">切换目录</h3>
+<p>打开XShell连接服务器后是在root目录下，切换到usr目录。</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS1.6e4z3n01k7w0.webp" title=" " data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS1.6e4z3n01k7w0.webp" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS1.6e4z3n01k7w0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS1.6e4z3n01k7w0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS1.6e4z3n01k7w0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS1.6e4z3n01k7w0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS1.6e4z3n01k7w0.webp" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<h3 id="创建文件">创建文件</h3>
+<p>创建文件夹<code>server</code></p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS2.5ok5103seng0.webp" title=" " data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS2.5ok5103seng0.webp" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS2.5ok5103seng0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS2.5ok5103seng0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS2.5ok5103seng0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS2.5ok5103seng0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS2.5ok5103seng0.webp" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<h3 id="上传文件">上传文件</h3>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>文件传输使用Xftp7，下载安装很简单，一路next就行了，此文不再赘述，官网：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="err">https://www.xshell.com/zh/free-for-home-school/
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<p>下载完Xftp7之后，点击XShell里面的新建文件传输。</p>
+<p>把下载好的<u><strong><a href="https://www.oracle.com/java/technologies/downloads/#java8" target="_blank" rel="noopener noreffer ">java</a></strong></u>压缩包、<u><strong><a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener noreffer ">mysql</a></strong></u>压缩包和<u><strong><a href="https://nginx.org/en/download.html" target="_blank" rel="noopener noreffer ">nginx</a></strong></u>压缩包(nginx可以先不下)传输过去。</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS4.4b8cadvvezg0.webp" title="mysql下载版本选择" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS4.4b8cadvvezg0.webp" data-sub-html="<h2> </h2><p>mysql下载版本选择</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS4.4b8cadvvezg0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS4.4b8cadvvezg0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS4.4b8cadvvezg0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS4.4b8cadvvezg0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS4.4b8cadvvezg0.webp" />
+    </a><figcaption class="image-caption">mysql下载版本选择</figcaption>
+    </figure></p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS3.6tp1dm9nhcs0.webp" title="nginx下载版本选择" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS3.6tp1dm9nhcs0.webp" data-sub-html="<h2> </h2><p>nginx下载版本选择</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS3.6tp1dm9nhcs0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS3.6tp1dm9nhcs0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS3.6tp1dm9nhcs0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS3.6tp1dm9nhcs0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS3.6tp1dm9nhcs0.webp" />
+    </a><figcaption class="image-caption">nginx下载版本选择</figcaption>
+    </figure></p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS5.2rpf8zdiacy0.webp" title="拖拽压缩包到服务器窗口进行传输" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS5.2rpf8zdiacy0.webp" data-sub-html="<h2> </h2><p>拖拽压缩包到服务器窗口进行传输</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS5.2rpf8zdiacy0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS5.2rpf8zdiacy0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS5.2rpf8zdiacy0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS5.2rpf8zdiacy0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS5.2rpf8zdiacy0.webp" />
+    </a><figcaption class="image-caption">拖拽压缩包到服务器窗口进行传输</figcaption>
+    </figure></p>
+<p>传输完成后再次查询目录下文件，应该能查到文件了。</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS6.5ll7h8za3r80.webp" title=" " data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS6.5ll7h8za3r80.webp" data-sub-html="<h2> </h2><p> </p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS6.5ll7h8za3r80.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS6.5ll7h8za3r80.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS6.5ll7h8za3r80.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS6.5ll7h8za3r80.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS6.5ll7h8za3r80.webp" />
+    </a><figcaption class="image-caption"> </figcaption>
+    </figure></p>
+<h3 id="卸载mariadb">卸载mariadb</h3>
+<p>查询系统中是否已有mariadb，如果有，就卸掉。</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS10.3tsc5ydn39k0.webp" title="查找mariadb" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS10.3tsc5ydn39k0.webp" data-sub-html="<h2> </h2><p>查找mariadb</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS10.3tsc5ydn39k0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS10.3tsc5ydn39k0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS10.3tsc5ydn39k0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS10.3tsc5ydn39k0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS10.3tsc5ydn39k0.webp" />
+    </a><figcaption class="image-caption">查找mariadb</figcaption>
+    </figure></p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS7.7gxe3fkuh8c0.webp" title="卸载mariadb" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS7.7gxe3fkuh8c0.webp" data-sub-html="<h2> </h2><p>卸载mariadb</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS7.7gxe3fkuh8c0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS7.7gxe3fkuh8c0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS7.7gxe3fkuh8c0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS7.7gxe3fkuh8c0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS7.7gxe3fkuh8c0.webp" />
+    </a><figcaption class="image-caption">卸载mariadb</figcaption>
+    </figure></p>
+<h3 id="解压mysql">解压mysql</h3>
+<p>创建mysql安装包存放文件夹并解压。</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS8.5bornek6en40.webp" title="创建mysql文件夹" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS8.5bornek6en40.webp" data-sub-html="<h2> </h2><p>创建mysql文件夹</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS8.5bornek6en40.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS8.5bornek6en40.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS8.5bornek6en40.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS8.5bornek6en40.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS8.5bornek6en40.webp" />
+    </a><figcaption class="image-caption">创建mysql文件夹</figcaption>
+    </figure></p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS9.54ttj5m8tf80.webp" title="解压mysql" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS9.54ttj5m8tf80.webp" data-sub-html="<h2> </h2><p>解压mysql</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS9.54ttj5m8tf80.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS9.54ttj5m8tf80.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS9.54ttj5m8tf80.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS9.54ttj5m8tf80.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS9.54ttj5m8tf80.webp" />
+    </a><figcaption class="image-caption">解压mysql</figcaption>
+    </figure></p>
+<h3 id="安装mysql">安装mysql</h3>
+<p>先输入yum指令安装依赖</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS11.5s2kfes7erg0.webp" title="安装mysql的依赖(环境)" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS11.5s2kfes7erg0.webp" data-sub-html="<h2> </h2><p>安装mysql的依赖(环境)</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS11.5s2kfes7erg0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS11.5s2kfes7erg0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS11.5s2kfes7erg0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS11.5s2kfes7erg0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS11.5s2kfes7erg0.webp" />
+    </a><figcaption class="image-caption">安装mysql的依赖(环境)</figcaption>
+    </figure></p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS12.1c0nfhzv9tog.webp" title="安装mysql的依赖(环境)" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS12.1c0nfhzv9tog.webp" data-sub-html="<h2> </h2><p>安装mysql的依赖(环境)</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS12.1c0nfhzv9tog.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS12.1c0nfhzv9tog.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS12.1c0nfhzv9tog.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS12.1c0nfhzv9tog.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS12.1c0nfhzv9tog.webp" />
+    </a><figcaption class="image-caption">安装mysql的依赖(环境)</figcaption>
+    </figure></p>
+<p>再输入安装指令进行安装(没有安装依赖会报错)</p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">需要根据前面安装的版本<strong>修改</strong>一下指令里面的<strong>版本</strong>，这里如果不是阿里云服务器而是自己的虚拟机，需要确定已经联网。</div>
+        </div>
+    </div>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS13.47vbuhxrsi20.webp" title="安装mysql" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS13.47vbuhxrsi20.webp" data-sub-html="<h2> </h2><p>安装mysql</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS13.47vbuhxrsi20.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS13.47vbuhxrsi20.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS13.47vbuhxrsi20.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS13.47vbuhxrsi20.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS13.47vbuhxrsi20.webp" />
+    </a><figcaption class="image-caption">安装mysql</figcaption>
+    </figure></p>
+<h3 id="启动mysql">启动mysql</h3>
+<p>输入指令启动mysql，使用cat指令拿到临时密码，随后进入root修改密码</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS14.2wtcr90kyj60.webp" title="启动mysql并修改密码" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS14.2wtcr90kyj60.webp" data-sub-html="<h2> </h2><p>启动mysql并修改密码</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS14.2wtcr90kyj60.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS14.2wtcr90kyj60.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS14.2wtcr90kyj60.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS14.2wtcr90kyj60.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS14.2wtcr90kyj60.webp" />
+    </a><figcaption class="image-caption">启动mysql并修改密码</figcaption>
+    </figure></p>
+<h3 id="开启mysql远程连接">开启mysql远程连接</h3>
+<p>开启远程连接权限，并设置开机自启。</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS15.6rn3b007wxo0.webp" title="远程连接&amp;amp;开启自启" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS15.6rn3b007wxo0.webp" data-sub-html="<h2> </h2><p>远程连接&amp;amp;开启自启</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS15.6rn3b007wxo0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS15.6rn3b007wxo0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS15.6rn3b007wxo0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS15.6rn3b007wxo0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS15.6rn3b007wxo0.webp" />
+    </a><figcaption class="image-caption">远程连接&amp;开启自启</figcaption>
+    </figure></p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">这里如果不是阿里云服务器而是自己的虚拟机，需要再关一下防火墙，阿里云自带的防火墙在安全组里面已经关了，只需要保证把3306的端口打开就行。</div>
+        </div>
+    </div>
+<h3 id="安装nginx">安装nginx</h3>
+<p>先更新一下样本源</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS16.5f2nvrh3r78.webp" title="更新源" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS16.5f2nvrh3r78.webp" data-sub-html="<h2> </h2><p>更新源</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS16.5f2nvrh3r78.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS16.5f2nvrh3r78.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS16.5f2nvrh3r78.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS16.5f2nvrh3r78.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS16.5f2nvrh3r78.webp" />
+    </a><figcaption class="image-caption">更新源</figcaption>
+    </figure></p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">也可以使用之前自己下载的安装包，但如果这里是更新样本源的话，刚刚上传的安装包也就没什么用了，可以不上传。</div>
+        </div>
+    </div>
+<p>接着更新一下</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS17.6lrhqian9sw0.webp" title="yum更新" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS17.6lrhqian9sw0.webp" data-sub-html="<h2> </h2><p>yum更新</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS17.6lrhqian9sw0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS17.6lrhqian9sw0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS17.6lrhqian9sw0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS17.6lrhqian9sw0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS17.6lrhqian9sw0.webp" />
+    </a><figcaption class="image-caption">yum更新</figcaption>
+    </figure></p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">yum过程中千万不要终止程序！千万不要终止程序！千万不要！要不然就要重装系统了，因为会有奇奇怪怪的报错，而且解决非常麻烦，不如重装。</div>
+        </div>
+    </div>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS18.42pmj9jqk7m0.webp" title="解决掉问题之后的yum更新" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS18.42pmj9jqk7m0.webp" data-sub-html="<h2> </h2><p>解决掉问题之后的yum更新</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS18.42pmj9jqk7m0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS18.42pmj9jqk7m0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS18.42pmj9jqk7m0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS18.42pmj9jqk7m0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS18.42pmj9jqk7m0.webp" />
+    </a><figcaption class="image-caption">解决掉问题之后的yum更新</figcaption>
+    </figure></p>
+<p>最后使用命令安装</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS19.6u8c51y3rds0.webp" title="安装nignx" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS19.6u8c51y3rds0.webp" data-sub-html="<h2> </h2><p>安装nignx</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS19.6u8c51y3rds0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS19.6u8c51y3rds0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS19.6u8c51y3rds0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS19.6u8c51y3rds0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS19.6u8c51y3rds0.webp" />
+    </a><figcaption class="image-caption">安装nignx</figcaption>
+    </figure></p>
+<h3 id="启动nginx">启动nginx</h3>
+<p>输入指令启动nginx</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS20.2kxj0mkqppy0.webp" title="启动启动启动全部启动.jpg" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS20.2kxj0mkqppy0.webp" data-sub-html="<h2> </h2><p>启动启动启动全部启动.jpg</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS20.2kxj0mkqppy0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS20.2kxj0mkqppy0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS20.2kxj0mkqppy0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS20.2kxj0mkqppy0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS20.2kxj0mkqppy0.webp" />
+    </a><figcaption class="image-caption">启动启动启动全部启动.jpg</figcaption>
+    </figure></p>
+<h3 id="配置jdk">配置JDK</h3>
+<p>输入指令解压JDK文件到server目录</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS21.29nnqvzrkqf4.webp" title="解压JDK" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS21.29nnqvzrkqf4.webp" data-sub-html="<h2> </h2><p>解压JDK</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS21.29nnqvzrkqf4.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS21.29nnqvzrkqf4.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS21.29nnqvzrkqf4.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS21.29nnqvzrkqf4.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS21.29nnqvzrkqf4.webp" />
+    </a><figcaption class="image-caption">解压JDK</figcaption>
+    </figure></p>
+<p>再进入 /etc/profile 文件，在文件末尾添加两行代码。</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS22.6yo8qmybdwo0.webp" title="打开文件" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS22.6yo8qmybdwo0.webp" data-sub-html="<h2> </h2><p>打开文件</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS22.6yo8qmybdwo0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS22.6yo8qmybdwo0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS22.6yo8qmybdwo0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS22.6yo8qmybdwo0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS22.6yo8qmybdwo0.webp" />
+    </a><figcaption class="image-caption">打开文件</figcaption>
+    </figure></p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS23.416l1n0031e0.webp" title="编辑文件" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS23.416l1n0031e0.webp" data-sub-html="<h2> </h2><p>编辑文件</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS23.416l1n0031e0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS23.416l1n0031e0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS23.416l1n0031e0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS23.416l1n0031e0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS23.416l1n0031e0.webp" />
+    </a><figcaption class="image-caption">编辑文件</figcaption>
+    </figure></p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">这里一定要注意把path里面的文件路径改成你自己安装的文件路径，按<kbd>i</kbd>进入编辑状态，把代码粘进去之后，<kbd>Esc</kbd>进入command状态，然后输入<code>:wq</code>保存并退出。</div>
+        </div>
+    </div>
+<p>最后输入指令，读一下配置，试一下java命令能不能用</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS24.69w26blo9ak0.webp" title="配置&amp;amp;测试" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS24.69w26blo9ak0.webp" data-sub-html="<h2> </h2><p>配置&amp;amp;测试</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS24.69w26blo9ak0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS24.69w26blo9ak0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS24.69w26blo9ak0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS24.69w26blo9ak0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS24.69w26blo9ak0.webp" />
+    </a><figcaption class="image-caption">配置&amp;测试</figcaption>
+    </figure></p>
+<h3 id="创建mysql连接服务器">创建mysql连接服务器</h3>
+<p>笔者是在Navicat里面创建mysql连接，主机是服务器的公网IP地址，密码和用户名是刚刚设配置数据库的时候设置的密码和用户名。</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS25.3o53w9dx7ba0.webp" title="创建数据库连接" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS25.3o53w9dx7ba0.webp" data-sub-html="<h2> </h2><p>创建数据库连接</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS25.3o53w9dx7ba0.webp"
+            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS25.3o53w9dx7ba0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS25.3o53w9dx7ba0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS25.3o53w9dx7ba0.webp 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS25.3o53w9dx7ba0.webp" />
+    </a><figcaption class="image-caption">创建数据库连接</figcaption>
+    </figure></p>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">如果这里连接失败了，需要检查前面mysql的远程连接有没有开启，以及安全组里面3306的端口有没有开启。</div>
+        </div>
+    </div>
+<h2 id="本篇流程总结">本篇流程总结</h2>
+<h3 id="安装mysql-1">安装MySQL</h3>
 <h4 id="卸载centos7自带mariadb">卸载Centos7自带mariadb</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -207,7 +579,7 @@
 </span></span><span class="line"><span class="cl">rpm -e mariadb-libs-5.5.52-1.el7.x86_64 --nodeps
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="解压mysql">解压mysql</h4>
+</div><h4 id="解压mysql-1">解压mysql</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -249,7 +621,7 @@
 </span></span><span class="line"><span class="cl">rpm -ivh mysql-community-server-5.7.34-1.el7.x86_64.rpm
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="启动mysql">启动Mysql</h4>
+</div><h4 id="启动mysql-1">启动Mysql</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -345,7 +717,7 @@
 </span></span><span class="line"><span class="cl">systemctl disable firewalld.service <span class="c1">#禁止firewall开机启动</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="安装nginx">安装nginx</h3>
+</div><h3 id="安装nginx-1">安装nginx</h3>
 <h4 id="安装命令">安装命令</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -372,7 +744,7 @@
 </span></span><span class="line"><span class="cl">systemctl restart nginx <span class="c1">#重启nginx服务</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="配置jdk">配置JDK</h3>
+</div><h3 id="配置jdk-1">配置JDK</h3>
 <h4 id="官网下载">官网下载</h4>
 <p>下载JDK，登录官网下载所需版本的JDK，版本为JDK 1.8</p>
 <div class="highlight"><div class="chroma">
@@ -436,389 +808,7 @@
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">java -version
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="实操代码在前半部分都有">实操(代码在前半部分都有)</h2>
-<h3 id="切换目录">切换目录</h3>
-<p>打开XShell连接服务器后是在root目录下，切换到usr目录。</p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS1.6e4z3n01k7w0.webp" title=" " data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS1.6e4z3n01k7w0.webp" data-sub-html="<h2> </h2><p> </p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS1.6e4z3n01k7w0.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS1.6e4z3n01k7w0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS1.6e4z3n01k7w0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS1.6e4z3n01k7w0.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS1.6e4z3n01k7w0.webp" />
-    </a><figcaption class="image-caption"> </figcaption>
-    </figure></p>
-<h3 id="创建文件">创建文件</h3>
-<p>创建文件夹<code>server</code></p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS2.5ok5103seng0.webp" title=" " data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS2.5ok5103seng0.webp" data-sub-html="<h2> </h2><p> </p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS2.5ok5103seng0.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS2.5ok5103seng0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS2.5ok5103seng0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS2.5ok5103seng0.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS2.5ok5103seng0.webp" />
-    </a><figcaption class="image-caption"> </figcaption>
-    </figure></p>
-<h3 id="上传文件">上传文件</h3>
-<div class="details admonition example open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content"><p>文件传输使用Xftp7，下载安装很简单，一路next就行了，此文不再赘述，官网：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://www.xshell.com/zh/free-for-home-school/
-</span></span></code></pre></td></tr></table>
-</div>
-</div></div>
-        </div>
-    </div>
-<p>下载完Xftp7之后，点击XShell里面的新建文件传输。</p>
-<p>把下载好的<u><a href="https://www.oracle.com/java/technologies/downloads/#java8" target="_blank" rel="noopener noreffer ">java</a></u>压缩包、<u><a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener noreffer ">mysql</a></u>压缩包和<u><a href="https://nginx.org/en/download.html" target="_blank" rel="noopener noreffer ">nginx</a></u>压缩包(nginx可以先不下)传输过去。</p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS4.4b8cadvvezg0.webp" title="mysql下载版本选择" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS4.4b8cadvvezg0.webp" data-sub-html="<h2> </h2><p>mysql下载版本选择</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS4.4b8cadvvezg0.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS4.4b8cadvvezg0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS4.4b8cadvvezg0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS4.4b8cadvvezg0.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS4.4b8cadvvezg0.webp" />
-    </a><figcaption class="image-caption">mysql下载版本选择</figcaption>
-    </figure></p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS3.6tp1dm9nhcs0.webp" title="nginx下载版本选择" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS3.6tp1dm9nhcs0.webp" data-sub-html="<h2> </h2><p>nginx下载版本选择</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS3.6tp1dm9nhcs0.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS3.6tp1dm9nhcs0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS3.6tp1dm9nhcs0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS3.6tp1dm9nhcs0.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS3.6tp1dm9nhcs0.webp" />
-    </a><figcaption class="image-caption">nginx下载版本选择</figcaption>
-    </figure></p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS5.2rpf8zdiacy0.webp" title="拖拽压缩包到服务器窗口进行传输" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS5.2rpf8zdiacy0.webp" data-sub-html="<h2> </h2><p>拖拽压缩包到服务器窗口进行传输</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS5.2rpf8zdiacy0.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS5.2rpf8zdiacy0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS5.2rpf8zdiacy0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS5.2rpf8zdiacy0.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS5.2rpf8zdiacy0.webp" />
-    </a><figcaption class="image-caption">拖拽压缩包到服务器窗口进行传输</figcaption>
-    </figure></p>
-<p>传输完成后再次查询目录下文件，应该能查到文件了。</p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS6.5ll7h8za3r80.webp" title=" " data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS6.5ll7h8za3r80.webp" data-sub-html="<h2> </h2><p> </p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS6.5ll7h8za3r80.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS6.5ll7h8za3r80.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS6.5ll7h8za3r80.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS6.5ll7h8za3r80.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS6.5ll7h8za3r80.webp" />
-    </a><figcaption class="image-caption"> </figcaption>
-    </figure></p>
-<h3 id="卸载mariadb">卸载mariadb</h3>
-<p>查询系统中是否已有mariadb，如果有，就卸掉。</p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS10.3tsc5ydn39k0.webp" title="查找mariadb" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS10.3tsc5ydn39k0.webp" data-sub-html="<h2> </h2><p>查找mariadb</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS10.3tsc5ydn39k0.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS10.3tsc5ydn39k0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS10.3tsc5ydn39k0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS10.3tsc5ydn39k0.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS10.3tsc5ydn39k0.webp" />
-    </a><figcaption class="image-caption">查找mariadb</figcaption>
-    </figure></p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS7.7gxe3fkuh8c0.webp" title="卸载mariadb" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS7.7gxe3fkuh8c0.webp" data-sub-html="<h2> </h2><p>卸载mariadb</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS7.7gxe3fkuh8c0.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS7.7gxe3fkuh8c0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS7.7gxe3fkuh8c0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS7.7gxe3fkuh8c0.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS7.7gxe3fkuh8c0.webp" />
-    </a><figcaption class="image-caption">卸载mariadb</figcaption>
-    </figure></p>
-<h3 id="解压mysql-1">解压mysql</h3>
-<p>创建mysql安装包存放文件夹并解压。</p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS8.5bornek6en40.webp" title="创建mysql文件夹" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS8.5bornek6en40.webp" data-sub-html="<h2> </h2><p>创建mysql文件夹</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS8.5bornek6en40.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS8.5bornek6en40.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS8.5bornek6en40.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS8.5bornek6en40.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS8.5bornek6en40.webp" />
-    </a><figcaption class="image-caption">创建mysql文件夹</figcaption>
-    </figure></p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS9.54ttj5m8tf80.webp" title="解压mysql" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS9.54ttj5m8tf80.webp" data-sub-html="<h2> </h2><p>解压mysql</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS9.54ttj5m8tf80.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS9.54ttj5m8tf80.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS9.54ttj5m8tf80.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS9.54ttj5m8tf80.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS9.54ttj5m8tf80.webp" />
-    </a><figcaption class="image-caption">解压mysql</figcaption>
-    </figure></p>
-<h3 id="安装mysql-1">安装mysql</h3>
-<p>先输入yum指令安装依赖</p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS11.5s2kfes7erg0.webp" title="安装mysql的依赖(环境)" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS11.5s2kfes7erg0.webp" data-sub-html="<h2> </h2><p>安装mysql的依赖(环境)</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS11.5s2kfes7erg0.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS11.5s2kfes7erg0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS11.5s2kfes7erg0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS11.5s2kfes7erg0.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS11.5s2kfes7erg0.webp" />
-    </a><figcaption class="image-caption">安装mysql的依赖(环境)</figcaption>
-    </figure></p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS12.1c0nfhzv9tog.webp" title="安装mysql的依赖(环境)" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS12.1c0nfhzv9tog.webp" data-sub-html="<h2> </h2><p>安装mysql的依赖(环境)</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS12.1c0nfhzv9tog.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS12.1c0nfhzv9tog.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS12.1c0nfhzv9tog.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS12.1c0nfhzv9tog.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS12.1c0nfhzv9tog.webp" />
-    </a><figcaption class="image-caption">安装mysql的依赖(环境)</figcaption>
-    </figure></p>
-<p>再输入安装指令进行安装(没有安装依赖会报错)</p>
-<div class="details admonition example open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content">需要根据前面安装的版本<strong>修改</strong>一下指令里面的<strong>版本</strong>，这里如果不是阿里云服务器而是自己的虚拟机，需要确定已经联网。</div>
-        </div>
-    </div>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS13.47vbuhxrsi20.webp" title="安装mysql" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS13.47vbuhxrsi20.webp" data-sub-html="<h2> </h2><p>安装mysql</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS13.47vbuhxrsi20.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS13.47vbuhxrsi20.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS13.47vbuhxrsi20.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS13.47vbuhxrsi20.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS13.47vbuhxrsi20.webp" />
-    </a><figcaption class="image-caption">安装mysql</figcaption>
-    </figure></p>
-<h3 id="启动mysql-1">启动mysql</h3>
-<p>输入指令启动mysql，使用cat指令拿到临时密码，随后进入root修改密码</p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS14.2wtcr90kyj60.webp" title="启动mysql并修改密码" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS14.2wtcr90kyj60.webp" data-sub-html="<h2> </h2><p>启动mysql并修改密码</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS14.2wtcr90kyj60.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS14.2wtcr90kyj60.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS14.2wtcr90kyj60.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS14.2wtcr90kyj60.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS14.2wtcr90kyj60.webp" />
-    </a><figcaption class="image-caption">启动mysql并修改密码</figcaption>
-    </figure></p>
-<h3 id="开启mysql远程连接">开启mysql远程连接</h3>
-<p>开启远程连接权限，并设置开机自启。</p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS15.6rn3b007wxo0.webp" title="远程连接&amp;amp;开启自启" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS15.6rn3b007wxo0.webp" data-sub-html="<h2> </h2><p>远程连接&amp;amp;开启自启</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS15.6rn3b007wxo0.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS15.6rn3b007wxo0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS15.6rn3b007wxo0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS15.6rn3b007wxo0.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS15.6rn3b007wxo0.webp" />
-    </a><figcaption class="image-caption">远程连接&amp;开启自启</figcaption>
-    </figure></p>
-<div class="details admonition example open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content">这里如果不是阿里云服务器而是自己的虚拟机，需要再关一下防火墙，阿里云自带的防火墙在安全组里面已经关了，只需要保证把3306的端口打开就行。</div>
-        </div>
-    </div>
-<h3 id="安装nginx-1">安装nginx</h3>
-<p>先更新一下样本源</p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS16.5f2nvrh3r78.webp" title="更新源" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS16.5f2nvrh3r78.webp" data-sub-html="<h2> </h2><p>更新源</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS16.5f2nvrh3r78.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS16.5f2nvrh3r78.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS16.5f2nvrh3r78.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS16.5f2nvrh3r78.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS16.5f2nvrh3r78.webp" />
-    </a><figcaption class="image-caption">更新源</figcaption>
-    </figure></p>
-<div class="details admonition example open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content">也可以使用之前自己下载的安装包，但如果这里是更新样本源的话，刚刚上传的安装包也就没什么用了，可以不上传。</div>
-        </div>
-    </div>
-<p>接着更新一下</p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS17.6lrhqian9sw0.webp" title="yum更新" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS17.6lrhqian9sw0.webp" data-sub-html="<h2> </h2><p>yum更新</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS17.6lrhqian9sw0.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS17.6lrhqian9sw0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS17.6lrhqian9sw0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS17.6lrhqian9sw0.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS17.6lrhqian9sw0.webp" />
-    </a><figcaption class="image-caption">yum更新</figcaption>
-    </figure></p>
-<div class="details admonition example open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content"><p>笔者第一次更新好像非常的慢，一直卡在一个Installing五分钟，就直接中止当前任务再更新一次了。终止快捷键是<kbd>ctrl</kbd>+<kbd>z</kbd>，然后再输入</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">rm -f /var/run/yum.pid
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>强行把任务断掉，要不然会一直等进程释放，接着再输入更新命令即可。</p>
-</div>
-        </div>
-    </div>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS18.42pmj9jqk7m0.webp" title="解决掉问题之后的yum更新" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS18.42pmj9jqk7m0.webp" data-sub-html="<h2> </h2><p>解决掉问题之后的yum更新</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS18.42pmj9jqk7m0.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS18.42pmj9jqk7m0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS18.42pmj9jqk7m0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS18.42pmj9jqk7m0.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS18.42pmj9jqk7m0.webp" />
-    </a><figcaption class="image-caption">解决掉问题之后的yum更新</figcaption>
-    </figure></p>
-<p>最后使用命令安装</p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS19.6u8c51y3rds0.webp" title="安装nignx" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS19.6u8c51y3rds0.webp" data-sub-html="<h2> </h2><p>安装nignx</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS19.6u8c51y3rds0.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS19.6u8c51y3rds0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS19.6u8c51y3rds0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS19.6u8c51y3rds0.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS19.6u8c51y3rds0.webp" />
-    </a><figcaption class="image-caption">安装nignx</figcaption>
-    </figure></p>
-<h3 id="启动nginx">启动nginx</h3>
-<p>输入指令启动nginx</p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS20.2kxj0mkqppy0.webp" title="启动启动启动全部启动.jpg" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS20.2kxj0mkqppy0.webp" data-sub-html="<h2> </h2><p>启动启动启动全部启动.jpg</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS20.2kxj0mkqppy0.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS20.2kxj0mkqppy0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS20.2kxj0mkqppy0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS20.2kxj0mkqppy0.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS20.2kxj0mkqppy0.webp" />
-    </a><figcaption class="image-caption">启动启动启动全部启动.jpg</figcaption>
-    </figure></p>
-<h3 id="配置jdk-1">配置JDK</h3>
-<p>输入指令解压JDK文件到server目录</p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS21.29nnqvzrkqf4.webp" title="解压JDK" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS21.29nnqvzrkqf4.webp" data-sub-html="<h2> </h2><p>解压JDK</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS21.29nnqvzrkqf4.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS21.29nnqvzrkqf4.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS21.29nnqvzrkqf4.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS21.29nnqvzrkqf4.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS21.29nnqvzrkqf4.webp" />
-    </a><figcaption class="image-caption">解压JDK</figcaption>
-    </figure></p>
-<p>再进入 /etc/profile 文件，在文件末尾添加两行代码。</p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS22.6yo8qmybdwo0.webp" title="打开文件" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS22.6yo8qmybdwo0.webp" data-sub-html="<h2> </h2><p>打开文件</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS22.6yo8qmybdwo0.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS22.6yo8qmybdwo0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS22.6yo8qmybdwo0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS22.6yo8qmybdwo0.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS22.6yo8qmybdwo0.webp" />
-    </a><figcaption class="image-caption">打开文件</figcaption>
-    </figure></p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS23.416l1n0031e0.webp" title="编辑文件" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS23.416l1n0031e0.webp" data-sub-html="<h2> </h2><p>编辑文件</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS23.416l1n0031e0.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS23.416l1n0031e0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS23.416l1n0031e0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS23.416l1n0031e0.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS23.416l1n0031e0.webp" />
-    </a><figcaption class="image-caption">编辑文件</figcaption>
-    </figure></p>
-<div class="details admonition example open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content">这里一定要注意把path里面的文件路径改成你自己安装的文件路径，按<kbd>i</kbd>进入编辑状态，把代码粘进去之后，<kbd>Esc</kbd>进入command状态，然后输入<code>:wq</code>保存并退出。</div>
-        </div>
-    </div>
-<p>最后输入指令，读一下配置，试一下java命令能不能用</p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS24.69w26blo9ak0.webp" title="配置&amp;amp;测试" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS24.69w26blo9ak0.webp" data-sub-html="<h2> </h2><p>配置&amp;amp;测试</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS24.69w26blo9ak0.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS24.69w26blo9ak0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS24.69w26blo9ak0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS24.69w26blo9ak0.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS24.69w26blo9ak0.webp" />
-    </a><figcaption class="image-caption">配置&amp;测试</figcaption>
-    </figure></p>
-<h3 id="创建mysql连接服务器">创建mysql连接服务器</h3>
-<p>笔者是在Navicat里面创建mysql连接，主机是服务器的公网IP地址，密码和用户名是刚刚设配置数据库的时候设置的密码和用户名。</p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS25.3o53w9dx7ba0.webp" title="创建数据库连接" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS25.3o53w9dx7ba0.webp" data-sub-html="<h2> </h2><p>创建数据库连接</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS25.3o53w9dx7ba0.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS25.3o53w9dx7ba0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS25.3o53w9dx7ba0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS25.3o53w9dx7ba0.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS25.3o53w9dx7ba0.webp" />
-    </a><figcaption class="image-caption">创建数据库连接</figcaption>
-    </figure></p>
-<div class="details admonition example open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content">如果这里连接失败了，需要检查前面mysql的远程连接有没有开启，以及安全组里面3306的端口有没有开启。</div>
-        </div>
-    </div>
-<h1 id="由于篇幅原因打包部署项目到服务器的部分放在下一篇">由于篇幅原因，打包部署项目到服务器的部分放在下一篇</h1>
+</div><h1 id="由于篇幅原因打包部署项目到服务器的部分放在下一篇">由于篇幅原因，打包部署项目到服务器的部分放在下一篇</h1>
 <div class="details admonition note open">
 			<div class="details-summary admonition-title">
 				<i class="icon fas fa-pencil-alt fa-fwnote"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
@@ -850,7 +840,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/springbootvuep18/" class="prev" rel="prev" title="全栈学习·阿里云服务器的配置&amp;搭建&amp;购买&amp;使用"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>全栈学习·阿里云服务器的配置&搭建&购买&使用</a>
+    <div class="post-nav"><a href="/posts/ff14hpic1/" class="prev" rel="prev" title="[FF14] 维埃拉族·普通约拍册(横屏专辑·下)"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>[FF14] 维埃拉族·普通约拍册(横屏专辑·下)</a>
             <a href="/posts/springbootvuep20/" class="next" rel="next" title="全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)">全栈学习·Springboot+Vue云端环境部署(阿里云服务器部署项目)<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
