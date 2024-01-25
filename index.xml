@@ -7,7 +7,7 @@
             <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</lastBuildDate>
             <atom:link href="https://b1ankc-mov.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)</title>
+    <title>【Java全栈学习】十九、Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)</title>
     <link>https://b1ankc-mov.github.io/posts/springbootvuep20/</link>
     <pubDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</pubDate>
     <author>作者</author>
@@ -15,7 +15,7 @@
     <description><![CDATA[注意 在部署前后端项目之前，首先需要保证nginx服务是开启的： 1 systemctl start nginx #开启nginx服务 接着将服务器的公网IP地址粘到浏览器中，如果能看见]]></description>
 </item>
 <item>
-    <title>全栈学习·Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)</title>
+    <title>【Java全栈学习】十八、Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)</title>
     <link>https://b1ankc-mov.github.io/posts/springbootvuep19/</link>
     <pubDate>Fri, 12 Jan 2024 13:55:11 &#43;0800</pubDate>
     <author>作者</author>
@@ -47,7 +47,7 @@
     <description><![CDATA[这个劳斯打光简直神迹🔮！这一次约拍是黑白幻化专场，每张分三版：白框、调色、原片。]]></description>
 </item>
 <item>
-    <title>全栈学习·阿里云服务器的配置&amp;搭建&amp;购买&amp;使用</title>
+    <title>【Java全栈学习】十七、阿里云服务器的配置&amp;搭建&amp;购买&amp;使用</title>
     <link>https://b1ankc-mov.github.io/posts/springbootvuep18/</link>
     <pubDate>Thu, 11 Jan 2024 15:46:16 &#43;0800</pubDate>
     <author>作者</author>
@@ -55,7 +55,7 @@
     <description><![CDATA[云服务器介绍 云服务器概念 云服务器(Elastic Compute Service, ECS)是一种简单高效、安全可靠、处理能力可弹性伸缩的计算服务。其管理方式比物理服务器更]]></description>
 </item>
 <item>
-    <title>全栈学习·SpringBoot&#43;vue-element-template(前后端集成)</title>
+    <title>【Java全栈学习】十六、SpringBoot&#43;vue-element-template(前后端集成)</title>
     <link>https://b1ankc-mov.github.io/posts/springbootvuep17/</link>
     <pubDate>Thu, 11 Jan 2024 13:44:38 &#43;0800</pubDate>
     <author>作者</author>
@@ -63,7 +63,7 @@
     <description><![CDATA[将后台管理模板与项目前端进行集成，简单修改前端API接口与后端相连。]]></description>
 </item>
 <item>
-    <title>全栈学习·JWT跨域认证</title>
+    <title>【Java全栈学习】十五、JWT跨域认证</title>
     <link>https://b1ankc-mov.github.io/posts/springbootp16/</link>
     <pubDate>Thu, 11 Jan 2024 10:16:27 &#43;0800</pubDate>
     <author>作者</author>
@@ -81,7 +81,7 @@
             </div>使用MybatisPlus中的注解与语句，接收主子表JSON格式信息，向Mysql数据库中同时插入主表和与子表的数据，子表外键与主表相连。(编译器使用IDEA，接口测试使用POSTMAN)]]></description>
 </item>
 <item>
-    <title>全栈学习·vue-element-admin</title>
+    <title>【Java全栈学习】十四、vue-element-admin</title>
     <link>https://b1ankc-mov.github.io/posts/vuep15/</link>
     <pubDate>Mon, 08 Jan 2024 08:47:33 &#43;0800</pubDate>
     <author>作者</author>

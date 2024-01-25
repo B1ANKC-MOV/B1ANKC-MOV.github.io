@@ -1,4 +1,4 @@
-# 全栈学习·Vue框架介绍及应用
+# 【Java全栈学习】七、Vue框架介绍及应用
 
 {{< admonition info >}}
 需要前端基础html、css、js

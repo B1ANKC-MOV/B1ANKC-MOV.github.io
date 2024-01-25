@@ -1,4 +1,4 @@
-# 全栈学习·前端路由VueRouter
+# 【Java全栈学习】十一、前端路由VueRouter
 
 ## VueRouter的安装与使用
 - Vue路由vue-router是官方的路由插件，能够轻松的管理 SPA 项目中组件的切换

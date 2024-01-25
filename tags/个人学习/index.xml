@@ -5,7 +5,7 @@
         <description>个人学习 - 标签 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
             <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
-    <title>全栈学习·Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)</title>
+    <title>【Java全栈学习】十九、Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)</title>
     <link>https://b1ankc-mov.github.io/posts/springbootvuep20/</link>
     <pubDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</pubDate>
     <author>作者</author>
@@ -13,7 +13,7 @@
     <description><![CDATA[注意 在部署前后端项目之前，首先需要保证nginx服务是开启的： 1 systemctl start nginx #开启nginx服务 接着将服务器的公网IP地址粘到浏览器中，如果能看见]]></description>
 </item>
 <item>
-    <title>全栈学习·Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)</title>
+    <title>【Java全栈学习】十八、Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)</title>
     <link>https://b1ankc-mov.github.io/posts/springbootvuep19/</link>
     <pubDate>Fri, 12 Jan 2024 13:55:11 &#43;0800</pubDate>
     <author>作者</author>
@@ -21,7 +21,7 @@
     <description><![CDATA[云端环境准备 注意 以下部署基于Centos7 系统环境 切换目录 打开XShell连接服务器后是在root目录下，切换到usr目录。 创建文件 创建文件]]></description>
 </item>
 <item>
-    <title>全栈学习·阿里云服务器的配置&amp;搭建&amp;购买&amp;使用</title>
+    <title>【Java全栈学习】十七、阿里云服务器的配置&amp;搭建&amp;购买&amp;使用</title>
     <link>https://b1ankc-mov.github.io/posts/springbootvuep18/</link>
     <pubDate>Thu, 11 Jan 2024 15:46:16 &#43;0800</pubDate>
     <author>作者</author>
@@ -29,7 +29,7 @@
     <description><![CDATA[云服务器介绍 云服务器概念 云服务器(Elastic Compute Service, ECS)是一种简单高效、安全可靠、处理能力可弹性伸缩的计算服务。其管理方式比物理服务器更]]></description>
 </item>
 <item>
-    <title>全栈学习·SpringBoot&#43;vue-element-template(前后端集成)</title>
+    <title>【Java全栈学习】十六、SpringBoot&#43;vue-element-template(前后端集成)</title>
     <link>https://b1ankc-mov.github.io/posts/springbootvuep17/</link>
     <pubDate>Thu, 11 Jan 2024 13:44:38 &#43;0800</pubDate>
     <author>作者</author>
@@ -37,7 +37,7 @@
     <description><![CDATA[将后台管理模板与项目前端进行集成，简单修改前端API接口与后端相连。]]></description>
 </item>
 <item>
-    <title>全栈学习·JWT跨域认证</title>
+    <title>【Java全栈学习】十五、JWT跨域认证</title>
     <link>https://b1ankc-mov.github.io/posts/springbootp16/</link>
     <pubDate>Thu, 11 Jan 2024 10:16:27 &#43;0800</pubDate>
     <author>作者</author>
@@ -45,7 +45,7 @@
     <description><![CDATA[Session认证 互联网服务离不开用户认证。一般流程是下面这样： 用户向服务器发送用户名和密码。 服务器验证通过后，在当前对话（session）]]></description>
 </item>
 <item>
-    <title>全栈学习·vue-element-admin</title>
+    <title>【Java全栈学习】十四、vue-element-admin</title>
     <link>https://b1ankc-mov.github.io/posts/vuep15/</link>
     <pubDate>Mon, 08 Jan 2024 08:47:33 &#43;0800</pubDate>
     <author>作者</author>
@@ -53,7 +53,7 @@
     <description><![CDATA[vue-element-admin介绍 vue-element-admin 是一个后台前端解决方案，它基于 vue 和 element-ui实现 内置了 i18 国际化解决方案，动态路由，权限验证]]></description>
 </item>
 <item>
-    <title>全栈学习·前端数据模拟MockJS</title>
+    <title>【Java全栈学习】十三、前端数据模拟MockJS</title>
     <link>https://b1ankc-mov.github.io/posts/vuep14/</link>
     <pubDate>Mon, 08 Jan 2024 08:47:21 &#43;0800</pubDate>
     <author>作者</author>
@@ -61,7 +61,7 @@
     <description><![CDATA[mockjs介绍 Mock.js 是一款前端开发中拦截Ajax请求再生成随机数据响应的工具，可以用来模拟服务器响应，优点是非常简单方便, 无侵入性, 基本覆盖常]]></description>
 </item>
 <item>
-    <title>全栈学习·状态管理VueX</title>
+    <title>【Java全栈学习】十二、状态管理VueX</title>
     <link>https://b1ankc-mov.github.io/posts/vuep13/</link>
     <pubDate>Mon, 08 Jan 2024 08:47:10 &#43;0800</pubDate>
     <author>作者</author>
@@ -69,7 +69,7 @@
     <description><![CDATA[Vuex介绍 对于组件化开发来说，大型应用的状态往往跨越多个组件。在多层嵌套的父子组件之间传递状态已经十分麻烦，而Vue更是没有为兄弟组件提供]]></description>
 </item>
 <item>
-    <title>全栈学习·前端路由VueRouter</title>
+    <title>【Java全栈学习】十一、前端路由VueRouter</title>
     <link>https://b1ankc-mov.github.io/posts/vuep12/</link>
     <pubDate>Mon, 08 Jan 2024 08:47:03 &#43;0800</pubDate>
     <author>作者</author>
@@ -77,7 +77,7 @@
     <description><![CDATA[VueRouter的安装与使用 Vue路由vue-router是官方的路由插件，能够轻松的管理 SPA 项目中组件的切换 Vue的单页面应用是基于路由和]]></description>
 </item>
 <item>
-    <title>全栈学习·Axios网络请求</title>
+    <title>【Java全栈学习】十、Axios网络请求</title>
     <link>https://b1ankc-mov.github.io/posts/vuep11/</link>
     <pubDate>Fri, 29 Dec 2023 08:47:13 &#43;0800</pubDate>
     <author>作者</author>

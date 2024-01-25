@@ -15,7 +15,7 @@
             </div>使用MybatisPlus中的注解与语句，接收主子表JSON格式信息，向Mysql数据库中同时插入主表和与子表的数据，子表外键与主表相连。(编译器使用IDEA，接口测试使用POSTMAN)]]></description>
 </item>
 <item>
-    <title>全栈学习·MybatisPlus多表查询及分页查询</title>
+    <title>【Java全栈学习】六、MybatisPlus多表查询及分页查询</title>
     <link>https://b1ankc-mov.github.io/posts/springbootp7/</link>
     <pubDate>Tue, 05 Dec 2023 16:55:12 &#43;0800</pubDate>
     <author>作者</author>
@@ -23,7 +23,7 @@
     <description><![CDATA[Mybatis多表查询 实现复杂关系映射，可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置]]></description>
 </item>
 <item>
-    <title>全栈学习·MybatisPlus增/删/改</title>
+    <title>【Java全栈学习】五、MybatisPlus增/删/改</title>
     <link>https://b1ankc-mov.github.io/posts/springbootp6/</link>
     <pubDate>Mon, 04 Dec 2023 16:41:14 &#43;0800</pubDate>
     <author>作者</author>
