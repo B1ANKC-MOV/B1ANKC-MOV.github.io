@@ -15,11 +15,25 @@
 
 ![ ](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS1.6e4z3n01k7w0.webp)
 
+```
+pwd
+cd /usr/
+ls
+
+```
+
 ### 创建文件
 
 创建文件夹`server`
 
 ![ ](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS2.5ok5103seng0.webp)
+
+```
+mkdir server
+cd server/
+ls
+
+```
 
 ### 上传文件
 
@@ -55,6 +69,13 @@ https://www.xshell.com/zh/free-for-home-school/
 
 ![卸载mariadb](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS7.7gxe3fkuh8c0.webp)
 
+```
+rpm -qa|grep mariadb
+rpm -e mariadb-libs-5.5.60-1.el7_5.x86_64 --nodeps
+rpm -qa|grep mariadb
+
+```
+
 ### 解压mysql
 
 创建mysql安装包存放文件夹并解压。
@@ -63,6 +84,14 @@ https://www.xshell.com/zh/free-for-home-school/
 
 ![解压mysql](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/XS9.54ttj5m8tf80.webp)
 
+```
+mkdir mysql
+tar xvf mysql-5.7.44-1.el7.x86_64.rpm-bundle.tar -C mysql
+cd mysql
+ls
+
+```
+
 ### 安装mysql
 
 先输入yum指令安装依赖
@@ -70,6 +99,13 @@ https://www.xshell.com/zh/free-for-home-school/
 ![安装mysql的依赖(环境)](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS11.5s2kfes7erg0.webp)
 
 ![安装mysql的依赖(环境)](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS12.1c0nfhzv9tog.webp)
+
+```
+yum -y install libaio
+yum -y install libncurses*
+yum -y install perl perl-devel
+
+```
 
 再输入安装指令进行安装(没有安装依赖会报错)
 
@@ -81,17 +117,50 @@ https://www.xshell.com/zh/free-for-home-school/
 
 ![安装mysql](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS13.47vbuhxrsi20.webp)
 
+```
+rpm -ivh mysql-community-common-5.7.44-1.el7.x86_64.rpm
+rpm -ivh mysql-community-libs-5.7.44-1.el7.x86_64.rpm
+rpm -ivh mysql-community-client-5.7.44-1.el7.x86_64.rpm
+rpm -ivh mysql-community-server-5.7.44-1.el7.x86_64.rpm
+
+```
+
 ### 启动mysql
 
-输入指令启动mysql，使用cat指令拿到临时密码，随后进入root修改密码
+输入指令启动mysql，使用cat指令拿到临时密码，随后进入root修改密码，两个set是为了使密码设置规则（大小写特殊字符之类）不那么麻烦的，也可以不输入。
 
 ![启动mysql并修改密码](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS14.2wtcr90kyj60.webp)
+
+```
+systemctl start mysqld.service
+cat /var/log/mysqld.log | grep password
+
+```
+
+```
+mysql -u root -p
+
+```
+
+```
+set global validate password policy=0;
+set global validate password length=1;
+set password=password('');
+```
 
 ### 开启mysql远程连接
 
 开启远程连接权限，并设置开机自启。
 
 ![远程连接&开启自启](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS15.6rn3b007wxo0.webp)
+
+```
+grant all privileges on *.* to 'root' @'%' identified by '';
+flush privileges;
+exit
+systemctl enable mysqld
+
+```
 
 {{< admonition example "注意">}}
 
@@ -105,6 +174,11 @@ https://www.xshell.com/zh/free-for-home-school/
 
 ![更新源](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS16.5f2nvrh3r78.webp)
 
+```
+yum install epel-release
+
+```
+
 {{< admonition example "注意">}}
 
 也可以使用之前自己下载的安装包，但如果这里是更新样本源的话，刚刚上传的安装包也就没什么用了，可以不上传。
@@ -115,17 +189,25 @@ https://www.xshell.com/zh/free-for-home-school/
 
 ![yum更新](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS17.6lrhqian9sw0.webp)
 
+```
+yum update
+
+```
+
 {{< admonition example "注意">}}
 
 yum过程中千万不要终止程序！千万不要终止程序！千万不要！要不然就要重装系统了，因为会有奇奇怪怪的报错，而且解决非常麻烦，不如重装。
 
 {{< /admonition>}}
 
-![解决掉问题之后的yum更新](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS18.42pmj9jqk7m0.webp)
-
 最后使用命令安装
 
 ![安装nignx](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS19.6u8c51y3rds0.webp)
+
+```
+yum -y install nginx
+
+```
 
 ### 启动nginx
 
@@ -133,17 +215,45 @@ yum过程中千万不要终止程序！千万不要终止程序！千万不要�
 
 ![启动启动启动全部启动.jpg](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS20.2kxj0mkqppy0.webp)
 
+```
+systemctl start nginx
+cd ..
+ls
+
+```
+
 ### 配置JDK
 
 输入指令解压JDK文件到server目录
 
 ![解压JDK](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS21.29nnqvzrkqf4.webp)
 
+```
+tar -zvxf jdk-8u391-linux-x64.tar.gz
+
+```
+
 再进入 /etc/profile 文件，在文件末尾添加两行代码。
 
 ![打开文件](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS22.6yo8qmybdwo0.webp)
 
+```
+ls
+cd jdk1.8.0_391
+ls
+cd bin
+ls
+cd ..
+vi /etc/profile
+
+```
+
 ![编辑文件](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS23.416l1n0031e0.webp)
+
+```
+export JAVA_HOME=/usr/server/jdk1.8.0_391
+export PATH=${JAVA_HOME}/bin:$PATH
+```
 
 {{< admonition example "注意">}}
 
@@ -154,6 +264,12 @@ yum过程中千万不要终止程序！千万不要终止程序！千万不要�
 最后输入指令，读一下配置，试一下java命令能不能用
 
 ![配置&测试](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240115/XS24.69w26blo9ak0.webp)
+
+```
+source /etc/profile
+java -version
+
+```
 
 ### 创建mysql连接服务器
 

@@ -29,7 +29,7 @@ systemctl start nginx #开启nginx服务
 npm run build
 ```
 
-将代码进行打包，打包下来的文件会放在dist目录下的index.html(只有一行是因为做了压缩)，最后需要做的就是把dist目录放在服务器上进行访问。
+将代码进行打包，打包下来的文件会放在dist目录下的index.html(只有一行是因为做了压缩)，最后需要做的就是**把dist目录放在服务器上**进行访问。
 
 ![打包成功的终端界面](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS2.66aa97855v40.webp)
 
@@ -41,11 +41,22 @@ npm run build
 
 ![修改API&终端打包](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS4.4ffvl6fijuy0.webp)
 
+```
+npm run build:prod
+```
+
 #### 上传vue项目dist文件
 
 先创建一个目录放上传的项目文件
 
 ![创建文件夹](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS3.705t24hmkkw0.webp)
+
+```
+cd /usr 
+mkdir app
+cd app
+
+```
 
 接着使用xftp将dist文件拖进服务器文件夹里
 
@@ -57,13 +68,35 @@ npm run build
 
 ![创建.conf文件](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS6.286s8o34zpno.webp)
 
+```
+cd /etc/nginx/conf.d
+vim vue.conf
+
+```
+
 ![编辑.conf文件](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS7.554ctcz7t4g0.webp)
+
+```
+server {
+    listen 80;
+    server_name locahost;
+    location / {
+        root /usr/app/dist;
+        index index.html;
+    }
+}
+```
 
 其中，localhost处是自己的域名，location里面的index.html是自己的首页。
 
 接着输入指令加载配置，然后再去访问公网IP，页面就会变化(此时是登录不进去的，还没连上后台)
 
 ![使配置生效](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS8.mteiydw3z28.webp)
+
+```
+nginx -s reload
+
+```
 
 ![页面内容变化](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS9.7756oskvjmw0.webp)
 
@@ -98,6 +131,18 @@ npm run build
 在服务器终端执行命令，加载jar包(记得修改jar包的名字变成自己的)
 
 ![启动java项目，查看日志文件](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS14.1k15ew7qmvk0.webp)
+
+```
+cd /usr/app
+ls
+
+```
+
+```
+nohup java -jar projectName-0.0.1-SNAPSHOT.jar > logName.log 2>&1 &
+ls
+cat logName.log
+```
 
 {{< admonition example "注意">}}
 
