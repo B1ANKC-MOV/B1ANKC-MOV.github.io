@@ -1,56 +1,90 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>后端 - Tag - VVulpes</title>
+        <title>后端 - 标签 - VVulpes</title>
         <link>https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/</link>
-        <description>后端 - Tag - VVulpes</description>
+        <description>后端 - 标签 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Tue, 05 Dec 2023 16:55:12 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
-    <title>全栈学习·MybatisPlus多表查询及分页查询</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootp7.html/</link>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>【Java全栈学习】十九、Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)</title>
+    <link>https://b1ankc-mov.github.io/posts/springbootvuep20/</link>
+    <pubDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/springbootvuep20/</guid>
+    <description><![CDATA[注意 在部署前后端项目之前，首先需要保证nginx服务是开启的： 1 systemctl start nginx #开启nginx服务 接着将服务器的公网IP地址粘到浏览器中，如果能看见]]></description>
+</item>
+<item>
+    <title>【Java全栈学习】十八、Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)</title>
+    <link>https://b1ankc-mov.github.io/posts/springbootvuep19/</link>
+    <pubDate>Fri, 12 Jan 2024 13:55:11 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/springbootvuep19/</guid>
+    <description><![CDATA[云端环境准备 注意 以下部署基于Centos7 系统环境 切换目录 打开XShell连接服务器后是在root目录下，切换到usr目录。 1 2 3 pwd cd /usr/ ls 创]]></description>
+</item>
+<item>
+    <title>【Java全栈学习】十七、阿里云服务器的配置&amp;搭建&amp;购买&amp;使用</title>
+    <link>https://b1ankc-mov.github.io/posts/springbootvuep18/</link>
+    <pubDate>Thu, 11 Jan 2024 15:46:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/springbootvuep18/</guid>
+    <description><![CDATA[云服务器介绍 云服务器概念 云服务器(Elastic Compute Service, ECS)是一种简单高效、安全可靠、处理能力可弹性伸缩的计算服务。其管理方式比物理服务器更]]></description>
+</item>
+<item>
+    <title>【Java全栈学习】十六、SpringBoot&#43;vue-element-template(前后端集成)</title>
+    <link>https://b1ankc-mov.github.io/posts/springbootvuep17/</link>
+    <pubDate>Thu, 11 Jan 2024 13:44:38 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/springbootvuep17/</guid>
+    <description><![CDATA[将后台管理模板与项目前端进行集成，简单修改前端API接口与后端相连。]]></description>
+</item>
+<item>
+    <title>【Java全栈学习】十五、JWT跨域认证</title>
+    <link>https://b1ankc-mov.github.io/posts/springbootp16/</link>
+    <pubDate>Thu, 11 Jan 2024 10:16:27 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/springbootp16/</guid>
+    <description><![CDATA[Session认证 互联网服务离不开用户认证。一般流程是下面这样： 用户向服务器发送用户名和密码。 服务器验证通过后，在当前对话（session）]]></description>
+</item>
+<item>
+    <title>[Java] Mybatis向Mysql插入主副表JSON数据</title>
+    <link>https://b1ankc-mov.github.io/posts/mybatisplusmysql/</link>
+    <pubDate>Mon, 08 Jan 2024 08:55:39 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/mybatisplusmysql/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240124/MybatisMysqlJson.1tvmck88b64g.webp" referrerpolicy="no-referrer">
+            </div>使用MybatisPlus中的注解与语句，接收主子表JSON格式信息，向Mysql数据库中同时插入主表和与子表的数据，子表外键与主表相连。(编译器使用IDEA，接口测试使用POSTMAN)]]></description>
+</item>
+<item>
+    <title>【Java全栈学习】十、Axios网络请求</title>
+    <link>https://b1ankc-mov.github.io/posts/vuep11/</link>
+    <pubDate>Fri, 29 Dec 2023 08:47:13 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/vuep11/</guid>
+    <description><![CDATA[Axios的使用 Axios简介 使用背景：在实际项目开发中，前端页面所需要的数据往往需要从服务器端获取，这必然涉及与服务器的通信。 Axios主]]></description>
+</item>
+<item>
+    <title>【Java全栈学习】六、MybatisPlus多表查询及分页查询</title>
+    <link>https://b1ankc-mov.github.io/posts/springbootp7/</link>
     <pubDate>Tue, 05 Dec 2023 16:55:12 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootp7.html/</guid>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/springbootp7/</guid>
     <description><![CDATA[Mybatis多表查询 实现复杂关系映射，可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置]]></description>
 </item>
 <item>
-    <title>全栈学习·Mybatis-Plus增/删/改</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootp6.html/</link>
+    <title>【Java全栈学习】五、MybatisPlus增/删/改</title>
+    <link>https://b1ankc-mov.github.io/posts/springbootp6/</link>
     <pubDate>Mon, 04 Dec 2023 16:41:14 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootp6.html/</guid>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/springbootp6/</guid>
     <description><![CDATA[ORM ORM (Object Relational Mapping,对象关系映射）是为了解决面向对象与关系数据库存在的互不匹配现象的一种技术。 ORM通过使用描述对象和数据库之间映射的元]]></description>
 </item>
 <item>
-    <title>全栈学习·RESTful服务&#43;Swagger</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootp5.html/</link>
+    <title>【Java全栈学习】四、RESTful服务&#43;Swagger</title>
+    <link>https://b1ankc-mov.github.io/posts/springbootp5/</link>
     <pubDate>Sun, 03 Dec 2023 16:01:03 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootp5.html/</guid>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/springbootp5/</guid>
     <description><![CDATA[RESTful服务 RESTful介绍 RESTful是一种软件服务架构设计风格 RESTful特点 例如，将请求清晰分类，GET用于获取，POST]]></description>
-</item>
-<item>
-    <title>全栈学习·SpringBoot文件上传&amp;拦截器</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootp4.html/</link>
-    <pubDate>Sat, 02 Dec 2023 10:50:38 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootp4.html/</guid>
-    <description><![CDATA[Web开发进阶 静态资源访问 前后端分离static是不会存放内容的 实操 当没有配置静态资源时，直接 “/” 后接 静态资源 名称即可访问（例：local]]></description>
-</item>
-<item>
-    <title>全栈学习·Springboot控制器/映射/前端传参&amp;APIPOST的应用</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootp3.html/</link>
-    <pubDate>Fri, 01 Dec 2023 16:55:34 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootp3.html/</guid>
-    <description><![CDATA[Web入门 Spring Web提供了启动器starter，主要包含了三个组件：mvc、json、tomcat。 webmvc组件主要提供web开发的注解（]]></description>
-</item>
-<item>
-    <title>全栈学习·SpringBoot介绍/特点/创建/结构&amp;热部署</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootp2.html/</link>
-    <pubDate>Thu, 30 Nov 2023 14:30:35 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootp2.html/</guid>
-    <description><![CDATA[SpringBoot快速上手 Springboot的介绍 Springboot旨在简化SSM（Spring\SpringMVC\Mybatis）]]></description>
 </item>
 </channel>
 </rss>

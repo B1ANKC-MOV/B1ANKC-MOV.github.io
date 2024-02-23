@@ -20,3 +20,33 @@ function runtime() {
         + ((seconds < 10) ? '0' : '') + seconds + ' 秒 ';
 }
 runtime();
+/* 离开当前页面时修改网页标题，回到当前页面时恢复原来标题 */
+window.onload = function() {
+	var OriginTitile = document.title;
+	var titleTime;
+	document.addEventListener('visibilitychange', function() {
+	  if(document.hidden) {
+		$('[rel="icon"]').attr('href', "/foy.ico");
+		$('[rel="shortcut icon"]').attr('href', "/foy.ico");
+		document.title = '(∪.∪ )...zzz';
+		clearTimeout(titleTime);
+	  } else {
+		$('[rel="icon"]').attr('href', "/foz.ico");
+		$('[rel="shortcut icon"]').attr('href', "/foz.ico");
+		document.title = 'q(≧▽≦q)';
+		titleTime = setTimeout(function() {
+		  document.title = OriginTitile;
+		}, 2000);
+	  }
+	});
+  }
+/* 轮播背景图片 */
+// $(function () {
+// 	$.backstretch([
+// 		  "/images/background/DNC.jpg",
+// 		  "/images/background/SAM.jpg",
+// 		  "/images/background/ninja.jpg"
+// 	], { duration: 6000, fade: 15000 });
+// });
+
+

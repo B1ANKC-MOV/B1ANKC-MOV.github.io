@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>【Java全栈学习】十三、前端数据模拟MockJS - VVulpes</title><meta name="Description" content="数据模拟器Mock.js"><meta property="og:title" content="【Java全栈学习】十三、前端数据模拟MockJS" />
+<meta property="og:description" content="数据模拟器Mock.js" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://b1ankc-mov.github.io/posts/vuep14/" /><meta property="og:image" content="https://b1ankc-mov.github.io/47"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-08T08:47:21+08:00" />
+<meta property="article:modified_time" content="2024-01-08T08:47:21+08:00" /><meta property="og:site_name" content="Vulpes的博客" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://b1ankc-mov.github.io/47"/>
+
+<meta name="twitter:title" content="【Java全栈学习】十三、前端数据模拟MockJS"/>
+<meta name="twitter:description" content="数据模拟器Mock.js"/>
+<meta name="application-name" content="VVulpes Blog">
+<meta name="apple-mobile-web-app-title" content="VVulpes Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/fox.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://b1ankc-mov.github.io/posts/vuep14/" /><link rel="prev" href="https://b1ankc-mov.github.io/posts/vuep13/" /><link rel="next" href="https://b1ankc-mov.github.io/posts/vuep15/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "【Java全栈学习】十三、前端数据模拟MockJS",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/b1ankc-mov.github.io\/posts\/vuep14\/"
+        },"genre": "posts","keywords": "个人学习, 前端","wordcount":  6393 ,
+        "url": "https:\/\/b1ankc-mov.github.io\/posts\/vuep14\/","datePublished": "2024-01-08T08:47:21+08:00","dateModified": "2024-01-08T08:47:21+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Vulpes"
+            },"description": "数据模拟器Mock.js"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+    <a href="https://github.com/B1ANKC-MOV" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="3.5rem" height="3.5rem" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+        <div class="header-title">
+            <a href="/" title="VVulpes"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/foy.png"
+        data-srcset="/foy.png, /foy.png 1.5x, /foy.png 2x"
+        data-sizes="auto"
+        alt="/foy.png"
+        title="Just a fox sleeping here." />VVulpes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/" title="Home Page"><i class='fa fa-home'></i> 首页 </a><a class="menu-item" href="/posts/" title="All Posts"><i class='fa fa-quote-left'></i> 文档 </a><a class="menu-item" href="/categories/" title="All Categories"><i class='fa fa-archive'></i> 分类 </a><a class="menu-item" href="/tags/" title="All tags"><i class='fa fa-tags'></i> 标签 </a><a class="menu-item" href="/friends/" title="friends&#39; URL"><i class='fa fa-paper-plane'></i> 友链 </a><a class="menu-item" href="/website/" title="website notebook"><i class='fa fa-cog'></i> 站点 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="VVulpes"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/foy.png"
+        data-srcset="/foy.png, /foy.png 1.5x, /foy.png 2x"
+        data-sizes="auto"
+        alt="/foy.png"
+        title="/foy.png" />VVulpes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title="Home Page"><i class='fa fa-home'></i>首页</a><a class="menu-item" href="/posts/" title="All Posts"><i class='fa fa-quote-left'></i>文档</a><a class="menu-item" href="/categories/" title="All Categories"><i class='fa fa-archive'></i>分类</a><a class="menu-item" href="/tags/" title="All tags"><i class='fa fa-tags'></i>标签</a><a class="menu-item" href="/friends/" title="friends&#39; URL"><i class='fa fa-paper-plane'></i>友链</a><a class="menu-item" href="/website/" title="website notebook"><i class='fa fa-cog'></i>站点</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">【Java全栈学习】十三、前端数据模拟MockJS</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2024-01-08">2024-01-08</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2024-01-08">2024-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 6393 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 13 分钟&nbsp;<span id="/posts/vuep14/" class="leancloud_visitors" data-flag-title="【Java全栈学习】十三、前端数据模拟MockJS">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;
+                    <a href="#comments" id="post-meta-vcount" title="查看评论">
+                        <i class="fas fa-comment fa-fw"></i>&nbsp;<span id="/posts/vuep14/" class="valine-comment-count"></span>0&nbsp;条评论
+                    </a></div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#mockjs介绍">mockjs介绍</a></li>
+    <li><a href="#基本使用">基本使用</a></li>
+    <li><a href="#核心方法">核心方法</a>
+      <ol>
+        <li><a href="#具体使用">具体使用</a></li>
+        <li><a href="#设置延时请求到数据">设置延时请求到数据</a></li>
+      </ol>
+    </li>
+    <li><a href="#数据生成规则">数据生成规则</a>
+      <ol>
+        <li><a href="#数据模板dtd">数据模板DTD</a>
+          <ol>
+            <li><a href="#基本语法">基本语法</a></li>
+            <li><a href="#生成规则和示例">生成规则和示例</a>
+              <ol>
+                <li><a href="#属性值是字符串string">属性值是字符串String</a></li>
+                <li><a href="#属性值是数字number">属性值是数字Number</a></li>
+                <li><a href="#属性值是布尔型boolean">属性值是布尔型Boolean</a></li>
+                <li><a href="#属性值是对象object">属性值是对象Object</a></li>
+                <li><a href="#属性值是数组array">属性值是数组Array</a></li>
+                <li><a href="#属性值是函数function">属性值是函数Function</a></li>
+                <li><a href="#属性值是正则表达式regexp">属性值是正则表达式RegExp</a></li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li><a href="#数据占位符dpd">数据占位符DPD</a></li>
+        <li><a href="#用例">用例</a>
+          <ol>
+            <li><a href="#基础随机内容的生成">基础随机内容的生成</a></li>
+            <li><a href="#列表数据">列表数据</a></li>
+            <li><a href="#图片">图片</a></li>
+          </ol>
+        </li>
+        <li><a href="#mockrandom">Mock.Random</a>
+          <ol>
+            <li><a href="#basic">Basic</a></li>
+            <li><a href="#image">Image</a></li>
+            <li><a href="#color">Color</a></li>
+            <li><a href="#text">Text</a></li>
+            <li><a href="#name">Name</a></li>
+            <li><a href="#web">Web</a></li>
+            <li><a href="#address">Address</a></li>
+            <li><a href="#helper">Helper</a></li>
+            <li><a href="#miscellaneous">Miscellaneous</a></li>
+            <li><a href="#扩展">扩展</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav></div>
+            </div>
+        <div class="content" id="content"><h2 id="mockjs介绍">mockjs介绍</h2>
+<p>Mock.js 是一款前端开发中拦截Ajax请求再生成随机数据响应的工具，可以用来模拟服务器响应，优点是非常简单方便, 无侵入性, 基本覆盖常用的接口数据类型</p>
+<ul>
+<li>前后端分离</li>
+<li>开发无侵入（不需要修改既有代码，就可以拦截Ajax请求，返回模拟的响应数据）</li>
+<li>数据类型丰富（支持生成随机的文本、数字、布尔值、日期、邮箱、链接、图片、颜色等）</li>
+<li>增加单元测试的真实性（通过随机数据，模拟各种场景）</li>
+<li>用法简单、符合直接的接口</li>
+<li>方便扩展（支持扩展更多数据类型，支持自定义函数和正则）</li>
+</ul>
+<p>安装：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npm install mockjs
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="基本使用">基本使用</h2>
+<ol>
+<li>在项目中创建mock目录，新建index.js文件</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 引入mockjs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="nx">Mock</span> <span class="nx">from</span> <span class="s1">&#39;mockjs&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 使用mockjs模拟数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Mock</span><span class="p">.</span><span class="nx">mock</span><span class="p">(</span><span class="s1">&#39;/product/search&#39;</span><span class="p">,{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;ret&#34;</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;data&#34;</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;mtime&#34;</span><span class="o">:</span><span class="s2">&#34;@datetime&#34;</span><span class="p">,</span><span class="c1">// 随机生成日期时间
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="s2">&#34;score|1-800&#34;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="c1">// 随机生成1-800的数字
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="s2">&#34;rank|1-100&#34;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="c1">// 随机生成1-100的数字
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="s2">&#34;stars|1-5&#34;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="c1">// 随机生成1-5的数字
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="s2">&#34;nickname&#34;</span><span class="o">:</span><span class="s2">&#34;@cname&#34;</span><span class="p">,</span><span class="c1">// 随机生成中文名字
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// 生成图片
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="s2">&#34;img&#34;</span><span class="o">:</span><span class="s2">&#34;@image(&#39;200x100&#39;,&#39;#ffcc33&#39;,&#39;#FFF&#39;,&#39;png&#39;,&#39;Fast Mock&#39;)&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>main.js里面引入</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="s1">&#39;./mock&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>组件（xxx.vue文件）中调用mock.js中模拟的数据接口，这时返回的response就是mock.js中用Mock.mock(‘url’,data）中设置的data</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s1">&#39;axios&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">mounted</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;/product/search&#34;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>注意，如果<code>get</code>请求带参数，会以<code>?a=b&amp;c=d</code>形式拼接到url上，这时mock请把接口url写为正则匹配<code>Mock.mock(RegExp(API_URL + &quot;.*&quot;))</code>，否则匹配不到就报错，如：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s1">&#39;axios&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">mounted</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// /product/search?id=2
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;/product/search&#34;</span><span class="p">,{</span><span class="nx">params</span><span class="o">:</span><span class="p">{</span><span class="nx">id</span><span class="o">:</span><span class="mi">2</span><span class="p">}}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在url后面加上<code>.*</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">mockjs</span><span class="p">.</span><span class="nx">mock</span><span class="p">(</span><span class="nb">RegExp</span><span class="p">(</span><span class="s2">&#34;/product/search&#34;</span> <span class="o">+</span> <span class="s2">&#34;.*&#34;</span><span class="p">),</span><span class="s1">&#39;get&#39;</span><span class="p">,</span><span class="nx">option</span> <span class="p">=&gt;{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">option</span><span class="p">.</span><span class="nx">url</span><span class="p">)</span><span class="c1">// 请求的url
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">option</span><span class="p">.</span><span class="nx">body</span><span class="p">)</span><span class="c1">// body为post请求参数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">return</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">status</span><span class="o">:</span><span class="mi">200</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">message</span><span class="o">:</span><span class="s2">&#34;获取数据成功&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="核心方法">核心方法</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">Mock</span><span class="p">.</span><span class="nx">mock</span><span class="p">(</span> <span class="nx">rurl</span><span class="o">?</span><span class="p">,</span> <span class="nx">rtype</span><span class="o">?</span><span class="p">,</span> <span class="nx">template</span><span class="o">|</span><span class="kd">function</span><span class="p">(</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这是mock的核心方法，根据数据模板生成模拟数据。</p>
+<ul>
+<li>
+<p>rurl，可选。</p>
+<p>表示需要拦截的 URL，可以是 URL 字符串或 URL 正则。例如：正则+变量写法→<code>RegExp(API_URL.LOGIN + &quot;.*&quot;)</code>,正则写法→<code>/\/domain\/list\.json/</code>，字符串写法→<code>'/domian/list.json'</code>。</p>
+</li>
+<li>
+<p>rtype，可选。</p>
+<p>表示需要拦截的 Ajax 请求类型。例如 <code>GET</code>、<code>POST</code>、<code>PUT</code>、<code>DELETE</code> 等</p>
+</li>
+<li>
+<p>template，可选。</p>
+<p>表示数据模板，可以是对象或字符串。例如<code>{'data|1-10':[{}]}</code>、<code>'@EMAIL'</code>。</p>
+</li>
+<li>
+<p>function，可选。</p>
+<p>表示用于生成响应数据的函数。</p>
+</li>
+<li>
+<p>options</p>
+<p>指向本次请求的Ajax选项集，含有<code>url</code>、<code>type</code>、<code>body</code>三个属性。</p>
+</li>
+</ul>
+<h3 id="具体使用">具体使用</h3>
+<ul>
+<li>Mock.mock(template):根据数据模板生成模拟数据</li>
+<li>Mock.mock(rurl,template):记录数据模板，当拦截到匹配<code>rurl</code>的Ajax请求时，将根据数据模板<code>template</code>生成模拟数据，并作为响应数据返回。</li>
+<li>Mock.mock(rurl,function(options)):记录用于生成响应数据的函数。当拦截到匹配<code>rurl</code>的Ajax请求时，函数<code>function(options)</code>将被执行，并把执行结果作为响应数据返回。</li>
+<li>Mock.mock(rurl,rtype,template):记录数据模板。当拦截到匹配<code>rurl</code>和<code>rtype</code>的Ajax请求时，将根据数据模板<code>template</code>生成模拟数据，并作为记录返回。</li>
+<li>Mock.mock(rurl,rtype,function(options)):记录用于生成响应数据的函数，当拦截到匹配<code>rurl</code>和<code>rtype</code>的Ajax请求时，函数<code>function(options)</code>将被执行，并把执行结果作为响应数据返回。</li>
+</ul>
+<h3 id="设置延时请求到数据">设置延时请求到数据</h3>
+<p>不设置延时很有可能遇到坑，这里需要留意，因为真实的请求是需要时间的，mock不设置延时则是马上拿到数据返回，这两个情况不同可能导致在接口联调时出现问题，所以最好要先设置延时请求到数据。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 延时400ms请求到数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Mock</span><span class="p">.</span><span class="nx">setup</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">timeout</span><span class="o">:</span><span class="mi">400</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 延时200-600毫秒请求到数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Mock</span><span class="p">.</span><span class="nx">setup</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">timeout</span><span class="o">:</span><span class="s1">&#39;200-600&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="数据生成规则">数据生成规则</h2>
+<h3 id="数据模板dtd">数据模板DTD</h3>
+<p>mock的语法规范包含两层规范:</p>
+<ul>
+<li>数据模板 （DTD）</li>
+<li>数据占位符 （DPD）</li>
+</ul>
+<h4 id="基本语法">基本语法</h4>
+<ul>
+<li>数据模板中的每个属性由 3 部分构成：属性名name、生成规则rule、属性值value：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="s1">&#39;name|rule&#39;</span><span class="o">:</span><span class="nx">value</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>属性名和生成规则之间用竖线 | 分隔，生成规则是可选的，有 7 种格式：
+<ul>
+<li>生成规则的含义需要依赖属性值的类型才能确定</li>
+<li>属性值中可以含有<code>@占位符</code></li>
+<li>属性值还指定了最终值的初始值和类型</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="s1">&#39;name|min-max&#39;</span><span class="o">:</span><span class="nx">value</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;name|count&#39;</span><span class="o">:</span><span class="nx">value</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;name|min-max,dmin-dmax&#39;</span><span class="o">:</span><span class="nx">value</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;name|min-max.dcount&#39;</span><span class="o">:</span><span class="nx">value</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;name|count.dmin-dmax&#39;</span><span class="o">:</span><span class="nx">value</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;name|count.dcount&#39;</span><span class="o">:</span><span class="nx">value</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;name|+step&#39;</span><span class="o">:</span><span class="nx">value</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="生成规则和示例">生成规则和示例</h4>
+<h5 id="属性值是字符串string">属性值是字符串String</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 通过重复string生成一个字符串，重复次数大于等于min，小于等于max
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s1">&#39;name|min-max&#39;</span><span class="o">:</span><span class="nx">string</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 通过重复string生成一个字符串，重复次数等于count
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s1">&#39;name|count&#39;</span><span class="o">:</span><span class="nx">string</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">Mock</span><span class="p">.</span><span class="nx">mock</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">	<span class="s1">&#39;name1|1-3&#39;</span><span class="o">:</span><span class="s1">&#39;a&#39;</span><span class="p">,</span>	<span class="c1">//重复生成1到3个a(随机)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="s1">&#39;name2|2&#39;</span><span class="o">:</span><span class="s1">&#39;b&#39;</span>	<span class="c1">//生成bb
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="属性值是数字number">属性值是数字Number</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 属性值自动加1，初始值为number
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s1">&#39;name|+1&#39;</span><span class="o">:</span><span class="nx">number</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 生成一个大于等于min、小于等于max的整数，属性值number只是用来确定类型
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s1">&#39;name|min-max&#39;</span><span class="o">:</span><span class="nx">number</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 生成一个浮点数，整数部分大于等于min、小于等于max，小数部分保留dmin到dmax位
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s1">&#39;name|min-max.dmin-dmax&#39;</span><span class="o">:</span><span class="nx">number</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">Mock</span><span class="p">.</span><span class="nx">mock</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">	<span class="s1">&#39;number1|1-100.1-10&#39;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s1">&#39;number2|123.1-10&#39;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s1">&#39;number3|123.3&#39;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s1">&#39;number4|123.10&#39;</span><span class="o">:</span><span class="mf">1.123</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//结果：
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;number1&#34;</span><span class="o">:</span><span class="mf">12.92</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;number2&#34;</span><span class="o">:</span><span class="mf">123.51</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;number3&#34;</span><span class="o">:</span><span class="mf">123.777</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;number4&#34;</span><span class="o">:</span><span class="mf">123.1231091814</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">Mock</span><span class="p">.</span><span class="nx">mock</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;name1|+1&#39;</span><span class="o">:</span><span class="mi">4</span><span class="p">,</span>	<span class="c1">//生成4，如果循环每次加1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="s1">&#39;name2|1-7&#39;</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>	<span class="c1">//生成一个数字，1到7之间
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="s1">&#39;name3|1-4.5-8&#39;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>	<span class="c1">//生成一个小数，整数部分1到4，小数部分5到8位，数字1只是为了确定类型
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="属性值是布尔型boolean">属性值是布尔型Boolean</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 随机生成一个布尔值，值为true的概率是1/2，值为false的概率同样是1/2
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s1">&#39;name|1&#39;</span><span class="o">:</span><span class="kr">boolean</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 随机生成一个布尔值，值为value的概率是min/(min+max)，值为!value的概率是max/(min+max)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s1">&#39;name|min-max&#39;</span><span class="o">:</span><span class="nx">value</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">Mock</span><span class="p">.</span><span class="nx">mock</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;name|1&#39;</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>	<span class="c1">// 生成一个布尔值，各一半
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="s1">&#39;name1|1-3&#39;</span><span class="o">:</span><span class="kc">true</span>	<span class="c1">//1/4是true，3/4是false
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="属性值是对象object">属性值是对象Object</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 从属性值object中随机选取count个属性
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s1">&#39;name|count&#39;</span><span class="o">:</span><span class="nx">object</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 从属性值object中随机选取min到max个属性
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s1">&#39;name|min-max&#39;</span><span class="o">:</span><span class="nx">object</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">a</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">b</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">c</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">d</span><span class="o">:</span><span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">Mock</span><span class="p">.</span><span class="nx">mock</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;name|1-3&#39;</span><span class="o">:</span><span class="nx">obj</span><span class="p">,</span>	<span class="c1">// 随机从obj中寻找到1到3个属性，新对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="s1">&#39;name|2&#39;</span><span class="o">:</span><span class="nx">obj</span>	<span class="c1">// 随机从obj中找到两个属性，新对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="属性值是数组array">属性值是数组Array</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 从属性值array中随机选取1个元素，作为最终值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s1">&#39;name|1&#39;</span><span class="o">:</span><span class="nx">array</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 从属性值array中顺序选取1个元素，作为最终值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s1">&#39;name|+1&#39;</span><span class="o">:</span><span class="nx">array</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 通过重复属性值array生成一个新数组，重复次数大于等于min，小于等于max
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s1">&#39;name|min-max&#39;</span><span class="o">:</span><span class="nx">array</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 通过重复属性值array生成一个数组，重复次数为count
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s1">&#39;name|count&#39;</span><span class="o">:</span><span class="nx">array</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">Mock</span><span class="p">.</span><span class="nx">mock</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 通过重复属性值array生成一个新数组，重复次数为1-3次
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="s2">&#34;favorite_games|1-3&#34;</span><span class="o">:</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="mi">45</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="属性值是函数function">属性值是函数Function</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 执行函数function，取其返回值作为最终的属性值，函数的上下文属性&#39;name&#39;所在的对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s1">&#39;name&#39;</span><span class="o">:</span><span class="kd">function</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">x</span><span class="o">+</span><span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">Mock</span><span class="p">.</span><span class="nx">mock</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;name&#39;</span><span class="o">:</span><span class="nx">fun</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>	<span class="c1">// 返回函数的返回值20
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="属性值是正则表达式regexp">属性值是正则表达式RegExp</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 根据正则表达式regexp反向生成可以匹配它的字符串，用于生成自定义格式的字符串
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s1">&#39;name&#39;</span><span class="o">:</span><span class="nx">regexp</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">Mock</span><span class="p">.</span><span class="nx">mock</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;regexp1&#39;</span><span class="o">:</span><span class="sr">/[a-z][A-Z][0-9]/</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;regexp2&#39;</span><span class="o">:</span><span class="sr">/\w\W\s\S\d\D/</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;regexp3&#39;</span><span class="o">:</span><span class="sr">/\d{S,10}/</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// =&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;regexp1&#34;</span><span class="o">:</span><span class="s2">&#34;pJ7&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;regexp2&#34;</span><span class="o">:</span><span class="s2">&#34;F)\fp1G&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;regexp3&#34;</span><span class="o">:</span><span class="s2">&#34;561659409&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="数据占位符dpd">数据占位符DPD</h3>
+<p>占位符只是在属性值字符串中占个位置，并不出现在最终的属性值中</p>
+<p>占位符的格式为:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="err">@</span><span class="nx">占位符</span>
+</span></span><span class="line"><span class="cl"><span class="err">@</span><span class="nx">占位符</span><span class="p">(</span><span class="nx">参数</span><span class="p">[,</span><span class="nx">参数</span><span class="p">])</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>关于占位符需要知道以下几点</p>
+<ul>
+<li>用<code>@</code>标识符标识后面的字符串是占位符</li>
+<li>占位符引用的是<code>Mock.Random</code>中的方法</li>
+<li>可以通过<code>Mock.Random.extend()</code>来扩展自定义占位符</li>
+<li>占位符<em>也可以引用</em>数据模板中的属性</li>
+<li>占位符<em>会优先引用</em>数据模板中的属性</li>
+<li>占位符支持<strong>相对路径</strong>和<strong>绝对路径</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 引入mockjs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="nx">Mock</span> <span class="nx">from</span> <span class="s1">&#39;mockjs&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 使用mockjs模拟数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Mock</span><span class="p">.</span><span class="nx">mock</span><span class="p">(</span><span class="s1">&#39;/api/msdk/proxy/query_common_credit&#39;</span><span class="p">,{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;ret&#34;</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;data&#34;</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;mtime&#34;</span><span class="o">:</span><span class="s2">&#34;@datetime&#34;</span><span class="p">,</span><span class="c1">// 随机生成日期时间
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="s2">&#34;score&#34;</span><span class="o">:</span><span class="s2">&#34;@natural(1,800)&#34;</span><span class="p">,</span><span class="c1">// 随机生成1-800的数字
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="s2">&#34;rank&#34;</span><span class="o">:</span><span class="s2">&#34;@natural(1,100)&#34;</span><span class="p">,</span><span class="c1">// 随机生成1-100的数字
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="s2">&#34;stars&#34;</span><span class="o">:</span><span class="s2">&#34;@natural(0,5)&#34;</span><span class="p">,</span><span class="c1">// 随机生成1-5的数字
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="s2">&#34;nickname&#34;</span><span class="o">:</span><span class="s2">&#34;@cname&#34;</span><span class="p">,</span><span class="c1">// 随机生成中文名字
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="用例">用例</h3>
+<h4 id="基础随机内容的生成">基础随机内容的生成</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;string|1-10&#34;</span><span class="o">:</span><span class="s2">&#34;=&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;string2|3&#34;</span><span class="o">:</span><span class="s2">&#34;=&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;number|+1&#34;</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;number2|1-00.1-3&#34;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;boolean&#34;</span><span class="o">:</span><span class="s2">&#34;@boolean(1,2,true)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;name&#34;</span><span class="o">:</span><span class="s2">&#34;@cname&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;firstname&#34;</span><span class="o">:</span><span class="s2">&#34;@cfirst&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;int&#34;</span><span class="o">:</span><span class="s2">&#34;@integer(1,10)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;float&#34;</span><span class="o">:</span><span class="s2">&#34;@float(1,2,3,4)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;range&#34;</span><span class="o">:</span><span class="s2">&#34;@range(1,100,10)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;natural&#34;</span><span class="o">:</span><span class="s2">&#34;@natural(60,100)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;email&#34;</span><span class="o">:</span><span class="s2">&#34;@email&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;ip&#34;</span><span class="o">:</span><span class="s2">&#34;@ip&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;datatime&#34;</span><span class="o">:</span><span class="s2">&#34;@date(&#39;yy-MM-dd hh:mm:ss&#39;)&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// ......
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="列表数据">列表数据</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;code&#34;</span><span class="o">:</span><span class="s2">&#34;0000&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;data&#34;</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;pageNo&#34;</span><span class="o">:</span><span class="s2">&#34;@integer(1,100)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;totalRecord&#34;</span><span class="o">:</span><span class="s2">&#34;@integer(100,1000)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;pageSize&#34;</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;list|10&#34;</span><span class="o">:</span><span class="p">[{</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;id|+1&#34;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;name&#34;</span><span class="o">:</span><span class="s2">&#34;@cword(10)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;title&#34;</span><span class="o">:</span><span class="s2">&#34;@cword(20)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;descript&#34;</span><span class="o">:</span><span class="s2">&#34;@csentence(20,50)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;price&#34;</span><span class="o">:</span><span class="s2">&#34;@float(10,100,10,100)&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;desc&#34;</span><span class="o">:</span><span class="s2">&#34;成功&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="图片">图片</h4>
+<p>mockjs可以生成任意大小，任意颜色块，且用文字填充内容的图片，使我们不用到处找图片资源就能轻松实现图片的模拟展示</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;code&#34;</span><span class="o">:</span><span class="s2">&#34;0000&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;data&#34;</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;pageNo&#34;</span><span class="o">:</span><span class="s2">&#34;@integer(1,100)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;totalRecord&#34;</span><span class="o">:</span><span class="s2">&#34;@integer(100,1000)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;pageSize&#34;</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;list|10&#34;</span><span class="o">:</span><span class="p">[{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 参数从左到右依次为，图片尺寸，背景色，前景色(及文字颜色)，图片格式，图片中间的填充文字内容
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="s2">&#34;image&#34;</span><span class="o">:</span><span class="s2">&#34;@image(&#39;200x100&#39;,&#39;#ffcc33&#39;,&#39;#FFF&#39;,&#39;png&#39;,&#39;Fast Mock&#39;)&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;desc&#34;</span><span class="o">:</span><span class="s2">&#34;成功&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="mockrandom">Mock.Random</h3>
+<p>Mock.Random是一个工具类，用于生成各种随机数据</p>
+<p>Mock.Random的方法在数据模板中称为<em>占位符</em>，书写格式为<code>@占位符(参数[,参数])</code></p>
+<p>用法示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">Random</span> <span class="o">=</span> <span class="nx">Mock</span><span class="p">.</span><span class="nx">Random</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Random</span><span class="p">.</span><span class="nx">email</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// =&gt;&#34;n.clark@miller.io&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Mock</span><span class="p">.</span><span class="nx">mock</span><span class="p">(</span><span class="s1">&#39;@email&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// =&gt;&#34;y.lee@lewis.org&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Mock</span><span class="p">.</span><span class="nx">mock</span><span class="p">({</span><span class="nx">email</span><span class="o">:</span><span class="s1">&#39;@email&#39;</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// =&gt;{email:&#34;v.lewis@hall.gov&#34;}
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>Mock.Random提供的完整方法(占位符)如下：</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic</td>
+<td>boolean,natural,integer,float,character,string,range,date,time,datetime,now</td>
+</tr>
+<tr>
+<td>Image</td>
+<td>image,dataImage</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>color</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>paragraph,sentence,word,title,cparagraph,csentence,cword,ctitle</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>first,last,name,cfirst,clast,cname</td>
+</tr>
+<tr>
+<td>Web</td>
+<td>url,domain,email,ip,tId</td>
+</tr>
+<tr>
+<td>Address</td>
+<td>area,region</td>
+</tr>
+<tr>
+<td>Helper</td>
+<td>capitalize,upper,lower,pick,shuffle</td>
+</tr>
+<tr>
+<td>Miscellaneous</td>
+<td>guid,id</td>
+</tr>
+</tbody>
+</table>
+<h4 id="basic">Basic</h4>
+<p><strong>Random.boolean(min?max?current?)</strong></p>
+<p>随机生成布尔值</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">bool1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="kr">boolean</span><span class="p">();</span> <span class="c1">//true false各一半
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">bool2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="kr">boolean</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="err">，</span><span class="kc">false</span><span class="p">)</span> <span class="c1">//1/3的可能性是false 2/3是true
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.natural(min?,max?)</strong></p>
+<p>随机生成一个自然数，什么叫自然数，就是大于等于0的</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">natural1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">natural</span><span class="p">();</span> <span class="c1">//默认值最大为 9007199254740992
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">natural2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">natural</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span> <span class="c1">//随机出来的最小值是4
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">natural3</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">natural</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.Integer(min?,max?)</strong></p>
+<p>生成一个随机的整数，可以是负数。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">integer1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">integer</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">integer2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">integer</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">);</span> <span class="c1">//随机最小值是-10
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">integer3</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">integer</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.float(min?,max?,dmin?,dmax?)</strong></p>
+<p>随机生成一个小数浮点数,四个参数分别为，整数部分最小值最大值，小数部分最小值最大值。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">float1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="kr">float</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">float2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="kr">float</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">float3</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="kr">float</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.character(pool?)</strong></p>
+<p>随机生成一个字符,pool的值可以是：</p>
+<ol>
+<li>upper: 26个大写字母</li>
+<li>lower: 26个小写字母</li>
+<li>number: 0到9十个数字</li>
+<li>sympol: &ldquo;!@#$%^&amp;*()[]&rdquo;</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">character1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">character</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">character2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">character</span><span class="p">(</span><span class="s1">&#39;lower&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">character3</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">character</span><span class="p">(</span><span class="s1">&#39;upper&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">character4</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">character</span><span class="p">(</span><span class="s1">&#39;symbol&#39;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.string(pool?,min?,max?)</strong></p>
+<p>随机生成一个字符串，pool的值同上边四个。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">str1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">string</span><span class="p">();</span> <span class="c1">//长度3到7位
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">str2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span> <span class="c1">//长度5位
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">str3</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span><span class="mi">7</span><span class="p">);</span> <span class="c1">//长度7位，小写
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">str4</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">);</span> <span class="c1">//长度4到
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">str5</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="s1">&#39;新的字符串会从这里选择4到5位&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">);</span> <span class="c1">//从第一个参数里选择4到5
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">位</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.range(start?,stop,step?)</strong></p>
+<p>返回一个整型数组</p>
+<ol>
+<li>start,可选，数组起始值，闭区间</li>
+<li>stop,必选，数据结束值，开区间</li>
+<li>step,可选，数据每一项间隔值</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">range1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">range</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="c1">//[0,1,2,3,4,5,6,7,8,9]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">range2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">range</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span> <span class="c1">//[14,15,16,17,18,19]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">range3</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span> <span class="c1">//[3,5,7,9,11]
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.date(format?)</strong></p>
+<p>返回一个随机日期的字符串
+format的格式是‘yyyy-MM-dd’,可以随机组合</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">date1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">date</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">date2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">date</span><span class="p">(</span><span class="s1">&#39;yyyy-MM-dd&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">date3</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">date</span><span class="p">(</span><span class="s1">&#39;y-M-d&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">date4</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">date</span><span class="p">(</span><span class="s1">&#39;yy-MM-dd&#39;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.time(format?)</strong></p>
+<p>返回时间字符串
+format的格式是‘HH-mm-ss’</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">time1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">time</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">time2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">time</span><span class="p">(</span><span class="s1">&#39;HH-mm-ss&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">time3</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">time</span><span class="p">(</span><span class="s1">&#39;J-m-s&#39;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.datetime(format?)</strong></p>
+<p>上边两个的结合版</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">dt1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">datetime</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">dt2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">datetime</span><span class="p">(</span><span class="s1">&#39;yyyy-MM-dd HH-mm-ss&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Random</span><span class="p">.</span><span class="nx">now</span><span class="p">(</span><span class="nx">unit</span><span class="o">?</span><span class="p">,</span><span class="nx">format</span><span class="o">?</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>返回当前时间的字符串</p>
+<h4 id="image">Image</h4>
+<blockquote>
+<p>一般情况下，使用dataImage更好,因为更简单，但是如果要生成高度自定义的图片，则最好用image。另外，dataImage生成的是base64编码</p>
+</blockquote>
+<p><strong>Random.image(size?,background?,foreground?,format?text?)</strong></p>
+<ol>
+<li>size 图片宽高，格式是&rsquo;宽x高'</li>
+<li>background:图片的背景色，默认值#000000</li>
+<li>foreground：图片的文字前景色，默认#FFFFFF</li>
+<li>format：图片的格式，默认&rsquo;.png'</li>
+<li>text:图片上的默认文字，默认值为参数size</li>
+</ol>
+<p>其中size的取值范围是</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">[</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;300x250&#39;</span><span class="p">,</span> <span class="s1">&#39;250x250&#39;</span><span class="p">,</span> <span class="s1">&#39;240x400&#39;</span><span class="p">,</span> <span class="s1">&#39;336x280&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;180x150&#39;</span><span class="p">,</span> <span class="s1">&#39;720x300&#39;</span><span class="p">,</span> <span class="s1">&#39;468x60&#39;</span><span class="p">,</span> <span class="s1">&#39;234x60&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;88x31&#39;</span><span class="p">,</span> <span class="s1">&#39;120x90&#39;</span><span class="p">,</span> <span class="s1">&#39;120x60&#39;</span><span class="p">,</span> <span class="s1">&#39;120x240&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;125x125&#39;</span><span class="p">,</span> <span class="s1">&#39;728x90&#39;</span><span class="p">,</span> <span class="s1">&#39;160x600&#39;</span><span class="p">,</span> <span class="s1">&#39;120x600&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;300x600&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>图片的格式可以选择<code>.png</code> 、<code> .gif</code> 、<code> .jpg</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">image1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">image</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">image2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">image</span><span class="p">(</span><span class="s1">&#39;128x90&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">image3</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">image</span><span class="p">(</span><span class="s1">&#39;120x660&#39;</span><span class="p">,</span><span class="s1">&#39;#ccc&#39;</span><span class="p">);</span> <span class="c1">//前景色#ccc
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">image4</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">image</span><span class="p">(</span><span class="s1">&#39;226x280&#39;</span><span class="p">,</span><span class="s1">&#39;#eee&#39;</span><span class="p">,</span><span class="s1">&#39;第三个参数是文字不是前景色&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">image5</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">image</span><span class="p">(</span><span class="s1">&#39;66x31&#39;</span><span class="p">,</span><span class="s1">&#39;#ddd&#39;</span><span class="p">,</span><span class="s1">&#39;#123456&#39;</span><span class="p">,</span><span class="s1">&#39;四个参数的时候第三个参数是前景
+</span></span></span><span class="line"><span class="cl"><span class="s1">色&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">image6</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">image</span><span class="p">(</span><span class="s1">&#39;240x400&#39;</span><span class="p">,</span><span class="s1">&#39;#333&#39;</span><span class="p">,</span><span class="s1">&#39;#1483dc&#39;</span><span class="p">,</span><span class="s1">&#39;.gif&#39;</span><span class="p">,</span><span class="s1">&#39;全部参数的情况下&#39;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.dataImage(size?,text?)</strong></p>
+<p>返回一段base64编码，两个参数同上。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">di1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">dataImage</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">di2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">datImage</span><span class="p">(</span><span class="s1">&#39;300x600&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">di3</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">dataImage</span><span class="p">(</span><span class="s1">&#39;180x150&#39;</span><span class="p">,</span><span class="s1">&#39;hahahaha&#39;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="color">Color</h4>
+<p><strong>Random.color()</strong></p>
+<p>有好几个相关的方法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">color</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">color</span><span class="p">();</span> <span class="c1">//格式&#39;#rrggbb&#39;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">hex</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">hex</span><span class="p">();</span> <span class="c1">//好像和color没什么不同
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">rgb</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">rgb</span><span class="p">();</span> <span class="c1">//生成格式如rgb(133,233,244)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">rgba</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">rgba</span><span class="p">();</span> <span class="c1">//生成个事如rgba(111,222,233,0.5)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">hsl</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">hsl</span><span class="p">();</span> <span class="c1">//生成格式(345,82,71)
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="text">Text</h4>
+<p><strong>Random.paragraph(in?,max?,len?)</strong></p>
+<p>随机生成一段文本</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">para1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">paragraph</span><span class="p">();</span> <span class="c1">//随机生成一短文本，范围3到7
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">para2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">paragraph</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="c1">//随机生成长度是10的文本
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">para3</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">paragraph</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">12</span><span class="p">);</span> <span class="c1">//随机生成9到11位长度的文本
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.sentence(min?,max?,len?)</strong></p>
+<p>随机生成一个句子，第一个单词的首字母大写</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">sen1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">sentence</span><span class="p">();</span> <span class="c1">//默认长度12到18
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">sen2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">sentence</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="c1">//随机生成一个单词个数为10的句子
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">sen3</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">sentence</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span> <span class="c1">//随机生成一个5到9单词个数的句子
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.word(min?,max?,len?)</strong></p>
+<p>随机生成一个单词</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">word1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">word</span><span class="p">();</span> <span class="c1">//默认长度3到10
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">word2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">word</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span> <span class="c1">//随机生成长度是7的单词
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">word3</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">word</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">12</span><span class="p">);</span> <span class="c1">//随机生成2到11位长度的单词
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.title(min?,max?,len?)</strong></p>
+<p>随机生成一段标题，每个单词的首字母大写</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">title1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">title</span><span class="p">();</span> <span class="c1">//title中的单词个数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">title2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">title</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span> <span class="c1">//title六个单词
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">title3</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">title</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">12</span><span class="p">);</span> <span class="c1">//title7到11个单词
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>另外还有四个方法，四个方法前边加一个c ,返回中文内容</strong></p>
+<ol>
+<li><code>Random.cparagraph</code> , 返回中文文本</li>
+<li><code>Random.csentence </code>, 返回中文句子</li>
+<li><code>Random.cword</code> , 返回中文文字</li>
+<li><code>Random.ctitle </code>, 返回中文标题</li>
+</ol>
+<h4 id="name">Name</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">first</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">first</span><span class="p">();</span> <span class="c1">//随机生成常见英文名
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">last</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">last</span><span class="p">();</span> <span class="c1">//随机生成常见英文姓
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">name</span><span class="p">();</span> <span class="c1">//随机生成常见英文姓名
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">cfirst</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">cfirst</span><span class="p">();</span> <span class="c1">//随机生成常见中文姓
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">clast</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">clast</span><span class="p">();</span> <span class="c1">//随机生成常见中文名
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">cname</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">cname</span><span class="p">();</span> <span class="c1">//随机生成一个常见中文姓名
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="web">Web</h4>
+<p><strong>Random.url(protocol?,host?)</strong></p>
+<p>随机生成一个url</p>
+<ol>
+<li><code>protocol</code> 可选参数，表示网络协议，如<code>http </code>。</li>
+<li><code>host</code> 表示域名和端口号</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">url1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">url</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">url2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">url</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">url3</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">url</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">,</span><span class="s1">&#39;58.com&#39;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.protocol()</strong></p>
+<p>随机生成一个域名</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">protocol</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">protocol</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>protocol可以选的值，&lsquo;http&rsquo;、&lsquo;ftp&rsquo;、&lsquo;gopher&rsquo;、&lsquo;mailto&rsquo;、&lsquo;mid&rsquo;、&lsquo;cid&rsquo;、&rsquo;news&rsquo;、&rsquo;nntp&rsquo;、&lsquo;prospero&rsquo;、&rsquo;telnet&rsquo;、&lsquo;rlogi
+n&rsquo;、&rsquo;tn3270&rsquo;、&lsquo;wais&rsquo;。</p>
+</blockquote>
+<p><strong>Random.domin()</strong></p>
+<p>随机生成一个域名</p>
+<p><strong>Random.tld()</strong></p>
+<p>随机生成一个顶级域名</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">domain</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">domain</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">tld</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">tld</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.email(domain?)</strong></p>
+<p>随机生成一个email地址，domain表示域名</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">email1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">email</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">email2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">email</span><span class="p">(</span><span class="s1">&#39;58.com&#39;</span><span class="p">)</span> <span class="c1">//生成xxxx@58.com
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.ip()</strong></p>
+<p>随机生成一个ip地址</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">ip</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">ip</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="address">Address</h4>
+<p><strong>Random.region()</strong></p>
+<p>随机生成一个中国的大区，如华北，西南</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">region</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">region</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.province()</strong></p>
+<p>随机生成一个中国省直辖市自治区特别行政区</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">province</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">province</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.city(prefix?)</strong></p>
+<p>随机生成一个中国城市，prefix布尔值，表示是否标注所在省</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">city1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">city</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">city2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">city</span><span class="p">(</span><span class="nx">ture</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Random</span><span class="p">.</span><span class="nx">country</span><span class="p">(</span><span class="nx">prefix</span><span class="o">?</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>随机生成一个中国县， <code>prefix</code> 布尔值，表示是否显示所属的省市</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">county1</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">county</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">county2</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">county</span><span class="p">(</span><span class="nx">ture</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.zip()</strong></p>
+<p>随机生成一个六位数邮政编码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">zip</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">zip</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="helper">Helper</h4>
+<p><strong>Random.capitlize(word)</strong></p>
+<p>把第一个字母转成大写</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">capitalize</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">capitalize</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.upper(str)</strong></p>
+<p>转成大写</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">upper</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">upper</span><span class="p">(</span><span class="s1">&#39;zhang&#39;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.lower(str)</strong></p>
+<p>转成小写</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">lower</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">lower</span><span class="p">(</span><span class="s1">&#39;JINGWEI&#39;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.pick(arr)</strong></p>
+<p>从数组中随机选取一个元素</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">pick</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">pick</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Random.shuffle(arr);</strong></p>
+<p>打乱数组的顺序并返回</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">shuffle</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">shuffle</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="miscellaneous">Miscellaneous</h4>
+<p><strong>Random.guid()</strong></p>
+<p>随机生成一个GUID</p>
+<p><strong>Random.id()</strong></p>
+<p>随机生成一个18位身份证id</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">guid</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">guid</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">id</span> <span class="o">=</span> <span class="nx">Random</span><span class="p">.</span><span class="nx">id</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="扩展">扩展</h4>
+<p>Mock.Random 中的方法与数据模板的<code> @占位符</code> 一一对应，在需要时还可以为 Mock.Random 扩展方
+法，然后在数据模板中通过<code> @扩展方法</code> 引用。例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">Random</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">constellation</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">date</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kd">var</span> <span class="nx">constellations</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;白羊座&#39;</span><span class="sb">`, &#39;金牛座&#39;, &#39;双子座&#39;, &#39;巨蟹座&#39;, &#39;狮子座&#39;, &#39;处女
+</span></span></span><span class="line"><span class="cl"><span class="sb">座&#39;, &#39;天秤座&#39;, &#39;天蝎座&#39;, &#39;射手座&#39;, &#39;摩羯座&#39;, &#39;水瓶座&#39;, &#39;双鱼座&#39;]
+</span></span></span><span class="line"><span class="cl"><span class="sb">		return this.pick(constellations)
+</span></span></span><span class="line"><span class="cl"><span class="sb">	}
+</span></span></span><span class="line"><span class="cl"><span class="sb">})
+</span></span></span><span class="line"><span class="cl"><span class="sb">Random.constellation()
+</span></span></span><span class="line"><span class="cl"><span class="sb">// =&gt; &#34;水瓶座&#34;
+</span></span></span><span class="line"><span class="cl"><span class="sb">Mock.mock(&#39;@CONSTELLATION&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="sb">// =&gt; &#34;天蝎座&#34;
+</span></span></span><span class="line"><span class="cl"><span class="sb">Mock.mock({
+</span></span></span><span class="line"><span class="cl"><span class="sb">	constellation: &#39;@CONSTELLATION&#39;
+</span></span></span><span class="line"><span class="cl"><span class="sb">})
+</span></span></span><span class="line"><span class="cl"><span class="sb">// =&gt; { constellation: &#34;射手座&#34; }
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition note open">
+			<div class="details-summary admonition-title">
+				<i class="icon fas fa-pencil-alt fa-fwnote"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+				</div>	
+				<div class="details-content">
+				<div class="admonition-content">
+					本文最后更新于 <span class="timeago" datetime="2024-01-08T08:47:21"  title="January 8, 2024">January 8, 2024</span>，若内容或图片失效，请留言反馈。部分素材来自网络，如不慎触及您的利益，请联系删除。</div>
+			</div></div>  
+<div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-01-08</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/vuep14/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://b1ankc-mov.github.io/posts/vuep14/" data-title="【Java全栈学习】十三、前端数据模拟MockJS" data-hashtags="个人学习,前端"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://b1ankc-mov.github.io/posts/vuep14/" data-hashtag="个人学习"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://b1ankc-mov.github.io/posts/vuep14/" data-title="【Java全栈学习】十三、前端数据模拟MockJS"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://b1ankc-mov.github.io/posts/vuep14/" data-title="【Java全栈学习】十三、前端数据模拟MockJS"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://b1ankc-mov.github.io/posts/vuep14/" data-title="【Java全栈学习】十三、前端数据模拟MockJS"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">个人学习</a>,&nbsp;<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/vuep13/" class="prev" rel="prev" title="【Java全栈学习】十二、状态管理VueX"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>【Java全栈学习】十二、状态管理VueX</a>
+            <a href="/posts/vuep15/" class="next" rel="next" title="【Java全栈学习】十四、vue-element-admin">【Java全栈学习】十四、vue-element-admin<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+    
+        
+        <script async src=" //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js "></script>
+    
+
+    
+        
+            <section>
+                
+                    <span id="busuanzi_container_value_site_pv"><i class="far fa-eye fa-fw"></i>
+                        
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+
+                
+                    &nbsp;|&nbsp;              
+                
+
+                
+                    <span id="busuanzi_container_value_site_uv"><i class="fa fa-user"></i>
+                        
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+            </section>
+        
+
+        
+        
+    
+
+<span id="run-time"></span>
+
+            
+
+            <i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Vulpes</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"valine":{"appId":"gqYOXwJxowCs0B6vVNrzR1kC-gzGzoHsz","appKey":"sE7odWIgmbpekKiXZaB1khda","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-CN","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"visitor":true}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script><script type="text/javascript" src="/js/custom.js"></script>
+
+
+</body>
+</html>
