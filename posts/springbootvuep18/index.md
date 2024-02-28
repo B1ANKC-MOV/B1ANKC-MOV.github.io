@@ -8,6 +8,8 @@
 - 云服务器(Elastic Compute Service, ECS)是一种简单高效、安全可靠、处理能力可弹性伸缩的计算服务。其管理方式比物理服务器更简单高效。
 - 用户无需提前购买硬件，即可迅速创建或释放任意多台云服务器。
 
+<!--more-->
+
 ![物理服务器vs云服务器](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240112/cloud.54ennbdcvg00.webp)
 
 ### 云服务器的特点

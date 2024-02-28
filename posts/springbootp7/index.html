@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://b1ankc-mov.github.io/posts/springbootp7/" /><meta property="og:image" content="https://b1ankc-mov.github.io/47"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-12-05T16:55:12+08:00" />
-<meta property="article:modified_time" content="2023-12-20T17:13:30+08:00" /><meta property="og:site_name" content="Vulpes的博客" />
+<meta property="article:modified_time" content="2023-12-20T17:13:30+08:00" /><meta property="og:site_name" content="VVulpes Blog" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://b1ankc-mov.github.io/47"/>
@@ -37,7 +37,7 @@
             },"description": "多表及分页查询大部分还是依赖Mybatis"
     }
     </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -132,7 +132,16 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ol>
-    <li><a href="#mybatis多表查询">Mybatis多表查询</a></li>
+    <li><a href="#mybatis多表查询">Mybatis多表查询</a>
+      <ol>
+        <li><a href="#实际使用"><strong>实际使用</strong></a>
+          <ol>
+            <li><a href="#条件查询"><strong>条件查询</strong>：</a></li>
+            <li><a href="#分页查询"><strong>分页查询</strong>：</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
   </ol>
 </nav></div>
             </div>
@@ -164,7 +173,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>实际使用</strong></p>
+<h3 id="实际使用"><strong>实际使用</strong></h3>
 <ol>
 <li>要查同一用户下的所有订单：加入一个字段orders，字段orders并不存在，其属性为List集合，存放的是订单对象Orders。</li>
 </ol>
@@ -265,7 +274,7 @@
 <pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">one</span><span class="o">=</span><span class="nd">@0ne</span><span class="p">(</span><span class="n">select</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;com.example.mpdemo.mapper .UserHapper.selectById&#34;</span><span class="p">)</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>条件查询</strong>：</p>
+</div><h4 id="条件查询"><strong>条件查询</strong>：</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -284,7 +293,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>分页查询</strong>：</p>
+</div><h4 id="分页查询"><strong>分页查询</strong>：</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1

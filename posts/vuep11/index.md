@@ -12,6 +12,8 @@ Axios主要是前端的一个网络请求框架，大部分基于***Ajax***
 https://www.axios-http.cn/
 ```
 
+<!--more-->
+
 ### Axios的安装和导入
 - 安装：输入
 ```

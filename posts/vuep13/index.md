@@ -18,6 +18,8 @@ npm install vuex@next
 https://v3.vuex.vuejs.org/zh/
 ```
 
+<!--more-->
+
 ## 状态管理
 
 - 每一个Vuex应用的核心都是一个store，与普通的全局对象不同的是，基于Vue数据与视图绑定的特点，当store中的状态发生变化时，与之绑定的视图也会被重新渲染。

@@ -10,9 +10,9 @@
     <pubDate>Mon, 08 Jan 2024 08:55:39 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/mybatisplusmysql/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240124/MybatisMysqlJson.1tvmck88b64g.webp" referrerpolicy="no-referrer">
-            </div>使用MybatisPlus中的注解与语句，接收主子表JSON格式信息，向Mysql数据库中同时插入主表和与子表的数据，子表外键与主表相连。(编译器使用IDEA，接口测试使用POSTMAN)]]></description>
+    <description><![CDATA[<h2 id="创建主表实体类">创建主表实体类</h2>
+<p>首先创建一个entity包下的主表实体类，这里命名为User。</p>
+<p>代码如下：</p>]]></description>
 </item>
 <item>
     <title>【Java全栈学习】六、MybatisPlus多表查询及分页查询</title>
@@ -20,7 +20,34 @@
     <pubDate>Tue, 05 Dec 2023 16:55:12 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/springbootp7/</guid>
-    <description><![CDATA[Mybatis多表查询 实现复杂关系映射，可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置]]></description>
+    <description><![CDATA[<h2 id="mybatis多表查询">Mybatis多表查询</h2>
+<p>实现复杂关系映射，可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">注解</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">@Reults</td>
+<td style="text-align:left">代替<resultMap>标签,该注解中可以加入单个或多个@Result注解</td>
+</tr>
+<tr>
+<td style="text-align:left">@Result</td>
+<td style="text-align:left">代替<id>标签和<Result>标签，@Result中可以使用以下属性: <br/>- column: 数据表的字段名称<br />- property:类中对应的属性名<br />- one:与@one注解配合，进行一对一的映射<br />- many: 与@Many注解配合，进行一对多的映射</td>
+</tr>
+<tr>
+<td style="text-align:left">@One</td>
+<td style="text-align:left">代替<assocation>标签，用于指定查询中返回的单一对象<br />通过select属性指定用于多表查询的方法<br />使用格式:@Result(column=&quot;&quot;,property=&quot;&quot;,one=@one(select=&quot;&quot;))</td>
+</tr>
+<tr>
+<td style="text-align:left">@Many</td>
+<td style="text-align:left">代替<collection>标签,用于指定查询中返回的集合对象<br />使用格式:@Result(column=&quot;&quot;,property=&quot;&quot;,many=@Many(select=&quot;&quot;))</td>
+</tr>
+</tbody>
+</table>]]></description>
 </item>
 <item>
     <title>【Java全栈学习】五、MybatisPlus增/删/改</title>
@@ -28,7 +55,12 @@
     <pubDate>Mon, 04 Dec 2023 16:41:14 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/springbootp6/</guid>
-    <description><![CDATA[ORM ORM (Object Relational Mapping,对象关系映射）是为了解决面向对象与关系数据库存在的互不匹配现象的一种技术。 ORM通过使用描述对象和数据库之间映射的元]]></description>
+    <description><![CDATA[<h2 id="orm">ORM</h2>
+<ol>
+<li>ORM (Object Relational Mapping,对象关系映射）是为了解决面向对象与关系数据库存在的互不匹配现象的一种技术。</li>
+<li>ORM通过使用描述对象和数据库之间映射的元数据将程序中的对象自动持久化到关系数据库中。</li>
+<li>ORM框架的本质是简化编程中操作数据库的编码。</li>
+</ol>]]></description>
 </item>
 </channel>
 </rss>

@@ -18,6 +18,8 @@ Mock.js 是一款前端开发中拦截Ajax请求再生成随机数据响应的�
 npm install mockjs
 ```
 
+<!--more-->
+
 ## 基本使用
 
 1. 在项目中创建mock目录，新建index.js文件

@@ -12,6 +12,9 @@ npm install vue-router@4
 ```
 https://v3.router.vuejs.org/zh/guide/
 ```
+
+<!--more-->
+
 ### vue-router安装
 1. cmd输入
 

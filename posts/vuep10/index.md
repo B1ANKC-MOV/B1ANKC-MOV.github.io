@@ -13,6 +13,8 @@ vue create component-demo
 3. 选择Vue2
 4. 创建
 
+<!--more-->
+
 **Vue2与Vue3的差异**（主要在main.js中）：
 
 - Vue3通过create app创建Vue对象，Vue2通过new Vue创建Vue对象

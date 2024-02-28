@@ -8,6 +8,9 @@
 - vue是一套用于构建用户界面的渐进式框架。
 - vue.js提供了MVVM数据绑定和一个可组合的组件系统，具有简单、灵活的API。
 - 其目标是通过尽可能简单的API实现响应式的数据绑定和可组合的视图组件。
+
+<!--more-->
+
 ## MVVM模式
 MVVM基于MVC（Model-View-Controller)但是在Controller上作了修改
 - MVVM是Model-View-ViewModel的缩写，它是一种基于前端开发的架构模式，其核心是提供对View和ViewModel的双向数据绑定。

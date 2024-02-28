@@ -5,6 +5,9 @@
 - NPM (Node Package Manager)是一个NodeJS包管理和分发工具。
 - NPM以其优秀的依赖管理机制和庞大的用户群体，目前已经发展成为整个JS领域的依赖管理工具
 - NPM最常见的用法就是用于安装和更新依赖。要使用NPM，首先要安装**Node工具**。
+
+<!--more-->
+
 ## NPM&Vue下载安装
 1. 进入```https://nodejs.org/en```网站下载Node.js
 2. 打开msi安装包一直点击next完成安装

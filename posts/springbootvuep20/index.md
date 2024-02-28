@@ -15,6 +15,8 @@ systemctl start nginx #开启nginx服务
 
 {{< /admonition >}}
 
+<!--more-->
+
 ## 项目部署
 
 ### 前端vue项目部署
@@ -163,7 +165,14 @@ no main manifest attribute, in projectName-0.0.1-SNAPSHOT.jar
 
 ![启动成功的日志](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS16.1tgcx3qkfwjk.webp)
 
-[笔者部署完之后无法成功登录老是neterror不知道什么情况，改天再解决一下]
+{{< admonition bug >}}
+
+我部署完之后无法成功登录，点击登录按钮后老是报Network Error，具体报错信息是
+```
+    /#/login?redirect=%2Fdashboard:1 Access to XMLHttpRequest at 'http://47.98.46.117:8080/user/login' from origin 'http://47.98.46.117' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+```
+可能需要后续再使用插件直接跳跨域问题或者用其他方法解决，目前没有很好的方法，因为项目文件也是都使用过加注解或者配置跨域类的方法试过了，没有用，要是有可行的方法欢迎评论留言！
+{{< /admonition >}}
 
 ## 本篇流程总结
 

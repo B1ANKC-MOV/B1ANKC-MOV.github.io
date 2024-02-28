@@ -13,6 +13,9 @@ spring.mvc.static-path-pattern=/images/**
 ```properties
 spring.web.resources.static-locations=classpath:/css
 ```
+
+<!--more-->
+
 ## 文件上传
 ### 文件上传原理
 传输文件必须要把表单中的enctype（编码类型）改成form-data的类型。

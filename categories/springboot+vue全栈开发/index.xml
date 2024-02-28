@@ -10,7 +10,29 @@
     <pubDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/springbootvuep20/</guid>
-    <description><![CDATA[注意 在部署前后端项目之前，首先需要保证nginx服务是开启的： 1 systemctl start nginx #开启nginx服务 接着将服务器的公网IP地址粘到浏览器中，如果能看见]]></description>
+    <description><![CDATA[<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>在部署前后端项目之前，首先需要保证nginx服务是开启的：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">systemctl start nginx <span class="c1">#开启nginx服务</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>接着将服务器的公网IP地址粘到浏览器中，如果能看见如下界面，说明nginx可以访问。(这个访问的是80端口，需要保证安全组的80端口是开启的)</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS1.755p8emc61c0.webp" title="nginx成功界面" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS1.755p8emc61c0.webp" data-sub-html="<h2> </h2><p>nginx成功界面</p>">
+        
+    </a><figcaption class="image-caption">nginx成功界面</figcaption>
+    </figure></p>
+</div>
+        </div>
+    </div>]]></description>
 </item>
 <item>
     <title>【Java全栈学习】十八、Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)</title>
@@ -18,7 +40,15 @@
     <pubDate>Fri, 12 Jan 2024 13:55:11 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/springbootvuep19/</guid>
-    <description><![CDATA[云端环境准备 注意 以下部署基于Centos7 系统环境 切换目录 打开XShell连接服务器后是在root目录下，切换到usr目录。 1 2 3 pwd cd /usr/ ls 创]]></description>
+    <description><![CDATA[<h2 id="云端环境准备">云端环境准备</h2>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">以下部署基于Centos7 系统环境</div>
+        </div>
+    </div>]]></description>
 </item>
 <item>
     <title>【Java全栈学习】十七、阿里云服务器的配置&amp;搭建&amp;购买&amp;使用</title>
@@ -26,7 +56,12 @@
     <pubDate>Thu, 11 Jan 2024 15:46:16 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/springbootvuep18/</guid>
-    <description><![CDATA[云服务器介绍 云服务器概念 云服务器(Elastic Compute Service, ECS)是一种简单高效、安全可靠、处理能力可弹性伸缩的计算服务。其管理方式比物理服务器更]]></description>
+    <description><![CDATA[<h2 id="云服务器介绍">云服务器介绍</h2>
+<h3 id="云服务器概念">云服务器概念</h3>
+<ul>
+<li>云服务器(Elastic Compute Service, ECS)是一种简单高效、安全可靠、处理能力可弹性伸缩的计算服务。其管理方式比物理服务器更简单高效。</li>
+<li>用户无需提前购买硬件，即可迅速创建或释放任意多台云服务器。</li>
+</ul>]]></description>
 </item>
 <item>
     <title>【Java全栈学习】十六、SpringBoot&#43;vue-element-template(前后端集成)</title>
@@ -42,7 +77,25 @@
     <pubDate>Thu, 11 Jan 2024 10:16:27 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/springbootp16/</guid>
-    <description><![CDATA[Session认证 互联网服务离不开用户认证。一般流程是下面这样： 用户向服务器发送用户名和密码。 服务器验证通过后，在当前对话（session）]]></description>
+    <description><![CDATA[<h2 id="session认证">Session认证</h2>
+<p>互联网服务离不开用户认证。一般流程是下面这样：</p>
+<ol>
+<li>
+<p>用户向服务器发送用户名和密码。</p>
+</li>
+<li>
+<p>服务器验证通过后，在当前对话（session）里面保存相关数据，比如用户角色、登录时间等。</p>
+</li>
+<li>
+<p>服务器向用户返回一个 session_id，写入用户的 Cookie。</p>
+</li>
+<li>
+<p>用户随后的每一次请求，都会通过 Cookie，将 session_id 传回服务器。</p>
+</li>
+<li>
+<p>服务器收到 session_id，找到前期保存的数据，由此得知用户的身份。</p>
+</li>
+</ol>]]></description>
 </item>
 <item>
     <title>【Java全栈学习】十四、vue-element-admin</title>
@@ -50,7 +103,12 @@
     <pubDate>Mon, 08 Jan 2024 08:47:33 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/vuep15/</guid>
-    <description><![CDATA[vue-element-admin介绍 vue-element-admin 是一个后台前端解决方案，它基于 vue 和 element-ui实现 内置了 i18 国际化解决方案，动态路由，权限验证]]></description>
+    <description><![CDATA[<h2 id="vue-element-admin介绍">vue-element-admin介绍</h2>
+<ul>
+<li>vue-element-admin 是一个后台前端解决方案，它基于 vue 和 element-ui实现</li>
+<li>内置了 i18 国际化解决方案，动态路由，权限验证，提炼了典型的业务模型，提供了丰富的功能组件</li>
+<li>可以快速搭建企业级中后台产品原型</li>
+</ul>]]></description>
 </item>
 <item>
     <title>【Java全栈学习】十三、前端数据模拟MockJS</title>
@@ -58,7 +116,26 @@
     <pubDate>Mon, 08 Jan 2024 08:47:21 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/vuep14/</guid>
-    <description><![CDATA[mockjs介绍 Mock.js 是一款前端开发中拦截Ajax请求再生成随机数据响应的工具，可以用来模拟服务器响应，优点是非常简单方便, 无侵入性, 基本覆盖常]]></description>
+    <description><![CDATA[<h2 id="mockjs介绍">mockjs介绍</h2>
+<p>Mock.js 是一款前端开发中拦截Ajax请求再生成随机数据响应的工具，可以用来模拟服务器响应，优点是非常简单方便, 无侵入性, 基本覆盖常用的接口数据类型</p>
+<ul>
+<li>前后端分离</li>
+<li>开发无侵入（不需要修改既有代码，就可以拦截Ajax请求，返回模拟的响应数据）</li>
+<li>数据类型丰富（支持生成随机的文本、数字、布尔值、日期、邮箱、链接、图片、颜色等）</li>
+<li>增加单元测试的真实性（通过随机数据，模拟各种场景）</li>
+<li>用法简单、符合直接的接口</li>
+<li>方便扩展（支持扩展更多数据类型，支持自定义函数和正则）</li>
+</ul>
+<p>安装：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npm install mockjs
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
 </item>
 <item>
     <title>【Java全栈学习】十二、状态管理VueX</title>
@@ -66,7 +143,34 @@
     <pubDate>Mon, 08 Jan 2024 08:47:10 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/vuep13/</guid>
-    <description><![CDATA[Vuex介绍 对于组件化开发来说，大型应用的状态往往跨越多个组件。在多层嵌套的父子组件之间传递状态已经十分麻烦，而Vue更是没有为兄弟组件提供]]></description>
+    <description><![CDATA[<h2 id="vuex介绍">Vuex介绍</h2>
+<ul>
+<li>对于组件化开发来说，大型应用的状态往往跨越多个组件。在多层嵌套的父子组件之间传递状态已经十分麻烦，而Vue更是没有为兄弟组件提供直接共享数据的办法。</li>
+<li>基于这个问题，许多框架提供了解决方案——使用全局的状态管理器，将所有分散的共享数据交由状态管理器保管，Vue也不例外。</li>
+<li>Vuex 是一个专为 Vue.js 应用程序开发的状态管理库，采用集中式存储管理应用的所有组件的状态。</li>
+<li>简单的说，Vuex用于管理分散在Vue各个组件中的数据。</li>
+<li>安装：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npm install vuex@next
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>官网</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://v3.vuex.vuejs.org/zh/
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
 </item>
 <item>
     <title>【Java全栈学习】十一、前端路由VueRouter</title>
@@ -74,7 +178,33 @@
     <pubDate>Mon, 08 Jan 2024 08:47:03 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/vuep12/</guid>
-    <description><![CDATA[VueRouter的安装与使用 Vue路由vue-router是官方的路由插件，能够轻松的管理 SPA 项目中组件的切换 Vue的单页面应用是基于路由和]]></description>
+    <description><![CDATA[<h2 id="vuerouter的安装与使用">VueRouter的安装与使用</h2>
+<ul>
+<li>Vue路由vue-router是官方的路由插件，能够轻松的管理 SPA 项目中组件的切换</li>
+<li>Vue的单页面应用是基于路由和组件的，路由用于设定访问路径，并将路径和组件映射起来</li>
+<li>vue-router 目前有 3.x 的版本和 4.x 的版本，vue-router 3.x 只能结合 vue2进行使用，vue-router 4.x 只能结合 vue3 进行使用</li>
+<li>安装：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npm install vue-router@4
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>官网：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://v3.router.vuejs.org/zh/guide/
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
 </item>
 <item>
     <title>【Java全栈学习】十、Axios网络请求</title>
@@ -82,7 +212,24 @@
     <pubDate>Fri, 29 Dec 2023 08:47:13 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/vuep11/</guid>
-    <description><![CDATA[Axios的使用 Axios简介 使用背景：在实际项目开发中，前端页面所需要的数据往往需要从服务器端获取，这必然涉及与服务器的通信。 Axios主]]></description>
+    <description><![CDATA[<h2 id="axios的使用">Axios的使用</h2>
+<h3 id="axios简介">Axios简介</h3>
+<p>使用背景：在实际项目开发中，前端页面所需要的数据往往需要从服务器端获取，这必然涉及与服务器的通信。
+Axios主要是前端的一个网络请求框架，大部分基于<em><strong>Ajax</strong></em></p>
+<ul>
+<li>Axios基于<strong>promise</strong>网络请求库，作用与node.js和浏览器中。</li>
+<li>Axios在浏览器端使用XMLHttpRequests发送网络请求，并能自动完成<strong>JSON</strong>数据的转换。</li>
+<li>地址</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://www.axios-http.cn/
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
 </item>
 </channel>
 </rss>

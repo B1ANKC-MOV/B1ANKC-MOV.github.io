@@ -13,6 +13,8 @@
 
 5. 服务器收到 session_id，找到前期保存的数据，由此得知用户的身份。
 
+<!--more-->
+
 ![session认证流程](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240111/Session.5jexftcj58o0.webp)
 
 session 认证的方式应用非常普遍，但也存在一些问题，扩展性不好，如果是服务器集群，或者是跨域的服务导向架构，就要求 session 数据共享，每台服务器都能够读取 session，针对此种问题一般有两种方案：

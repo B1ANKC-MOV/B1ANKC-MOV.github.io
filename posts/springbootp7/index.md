@@ -11,7 +11,9 @@
 |@One|代替<assocation>标签，用于指定查询中返回的单一对象<br />通过select属性指定用于多表查询的方法<br />使用格式:@Result(column="",property="",one=@one(select=""))|
 |@Many|代替<collection>标签,用于指定查询中返回的集合对象<br />使用格式:@Result(column="",property="",many=@Many(select=""))|
 
-**实际使用**
+<!--more-->
+
+### **实际使用**
 1.  要查同一用户下的所有订单：加入一个字段orders，字段orders并不存在，其属性为List集合，存放的是订单对象Orders。
 ``` java
 TableName("t_user")
@@ -57,7 +59,7 @@ List<Order> selettByUid(int uid);
 ```java
 one=@0ne(select = "com.example.mpdemo.mapper .UserHapper.selectById")
 ```
-**条件查询**：
+#### **条件查询**：
 ```java
 @GetMapping("/user/find")
 public List<User> findBycond(){
@@ -66,7 +68,7 @@ public List<User> findBycond(){
     return userMapper.selectList(queryWrapper);
 }
 ```
-**分页查询**：
+#### **分页查询**：
 
 ```java
 @GetMapping("/user/findByPage")

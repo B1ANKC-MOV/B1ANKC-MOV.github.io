@@ -5,16 +5,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>VVulpes</title><meta name="Description" content="Vulpes的博客"><meta property="og:title" content="VVulpes" />
-<meta property="og:description" content="Vulpes的博客" />
+        <title>VVulpes</title><meta name="Description" content="A simple Blog website."><meta property="og:title" content="VVulpes" />
+<meta property="og:description" content="A simple Blog website." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://b1ankc-mov.github.io/" /><meta property="og:image" content="https://b1ankc-mov.github.io/47"/><meta property="og:site_name" content="Vulpes的博客" />
+<meta property="og:url" content="https://b1ankc-mov.github.io/" /><meta property="og:image" content="https://b1ankc-mov.github.io/47"/><meta property="og:site_name" content="VVulpes Blog" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://b1ankc-mov.github.io/47"/>
 
 <meta name="twitter:title" content="VVulpes"/>
-<meta name="twitter:description" content="Vulpes的博客"/>
+<meta name="twitter:description" content="A simple Blog website."/>
 <meta name="application-name" content="VVulpes Blog">
 <meta name="apple-mobile-web-app-title" content="VVulpes Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/fox.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://b1ankc-mov.github.io/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="VVulpes">
     <link rel="feed" href="/index.xml" type="application/rss+xml" title="VVulpes"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -26,10 +26,10 @@
         "url": "https:\/\/b1ankc-mov.github.io\/","inLanguage": "zh-CN","author": {
                 "@type": "Person",
                 "name": "Vulpes"
-            },"description": "Vulpes的博客","name": "VVulpes"
+            },"description": "A simple Blog website.","name": "VVulpes"
     }
     </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -126,7 +126,33 @@
         <a href="/posts/vuep12/">【Java全栈学习】十一、前端路由VueRouter</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-01-08">2024-01-08</time>, 
             </span>&nbsp;<span class="post-publish">更新于 <time datetime="2024-01-08">2024-01-08</time>, 
-            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div><div class="content">VueRouter的安装与使用 Vue路由vue-router是官方的路由插件，能够轻松的管理 SPA 项目中组件的切换 Vue的单页面应用是基于路由和</div><div class="post-footer">
+            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div><div class="content"><h2 id="vuerouter的安装与使用">VueRouter的安装与使用</h2>
+<ul>
+<li>Vue路由vue-router是官方的路由插件，能够轻松的管理 SPA 项目中组件的切换</li>
+<li>Vue的单页面应用是基于路由和组件的，路由用于设定访问路径，并将路径和组件映射起来</li>
+<li>vue-router 目前有 3.x 的版本和 4.x 的版本，vue-router 3.x 只能结合 vue2进行使用，vue-router 4.x 只能结合 vue3 进行使用</li>
+<li>安装：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npm install vue-router@4
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>官网：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://v3.router.vuejs.org/zh/guide/
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer">
         <a href="/posts/vuep12/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">个人学习</a>,&nbsp;<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
@@ -142,7 +168,24 @@
         <a href="/posts/vuep11/">【Java全栈学习】十、Axios网络请求</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-12-29">2023-12-29</time>, 
             </span>&nbsp;<span class="post-publish">更新于 <time datetime="2023-12-29">2023-12-29</time>, 
-            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div><div class="content">Axios的使用 Axios简介 使用背景：在实际项目开发中，前端页面所需要的数据往往需要从服务器端获取，这必然涉及与服务器的通信。 Axios主</div><div class="post-footer">
+            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div><div class="content"><h2 id="axios的使用">Axios的使用</h2>
+<h3 id="axios简介">Axios简介</h3>
+<p>使用背景：在实际项目开发中，前端页面所需要的数据往往需要从服务器端获取，这必然涉及与服务器的通信。
+Axios主要是前端的一个网络请求框架，大部分基于<em><strong>Ajax</strong></em></p>
+<ul>
+<li>Axios基于<strong>promise</strong>网络请求库，作用与node.js和浏览器中。</li>
+<li>Axios在浏览器端使用XMLHttpRequests发送网络请求，并能自动完成<strong>JSON</strong>数据的转换。</li>
+<li>地址</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://www.axios-http.cn/
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer">
         <a href="/posts/vuep11/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">个人学习</a>,&nbsp;<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>,&nbsp;<a href="/tags/%E5%90%8E%E7%AB%AF/">后端</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
@@ -158,7 +201,28 @@
         <a href="/posts/vuep10/">【Java全栈学习】九、第三方组件（Element-UI）</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-12-12">2023-12-12</time>, 
             </span>&nbsp;<span class="post-publish">更新于 <time datetime="2023-12-20">2023-12-20</time>, 
-            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div><div class="content">组件间的传值 组件可以由内部的Data提供数据，也可以由父组件通过prop的方式传值 兄弟组件之间可以通过Vuex等统一数据源提供数据共享 项目创</div><div class="post-footer">
+            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div><div class="content"><h2 id="组件间的传值">组件间的传值</h2>
+<ul>
+<li>组件可以由内部的Data提供数据，也可以由父组件通过prop的方式传值</li>
+<li>兄弟组件之间可以通过Vuex等统一数据源提供数据共享</li>
+</ul>
+<p><strong>项目创建</strong>（Vue2）</p>
+<ol>
+<li>终端输入</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vue create component-demo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>把Linter取消选中</li>
+<li>选择Vue2</li>
+<li>创建</li>
+</ol></div><div class="post-footer">
         <a href="/posts/vuep10/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">个人学习</a>,&nbsp;<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
@@ -174,7 +238,13 @@
         <a href="/posts/vuep9/">【Java全栈学习】八、Vue组件化&模块化开发</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-12-11">2023-12-11</time>, 
             </span>&nbsp;<span class="post-publish">更新于 <time datetime="2023-12-20">2023-12-20</time>, 
-            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div><div class="content">NPM使用 NPM简介 NPM (Node Package Manager)是一个NodeJS包管理和分发工具。 NPM以其优秀的依赖管理机制和庞大的用户群体，目前已经发展成为</div><div class="post-footer">
+            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div><div class="content"><h2 id="npm使用">NPM使用</h2>
+<p><strong>NPM简介</strong></p>
+<ul>
+<li>NPM (Node Package Manager)是一个NodeJS包管理和分发工具。</li>
+<li>NPM以其优秀的依赖管理机制和庞大的用户群体，目前已经发展成为整个JS领域的依赖管理工具</li>
+<li>NPM最常见的用法就是用于安装和更新依赖。要使用NPM，首先要安装<strong>Node工具</strong>。</li>
+</ul></div><div class="post-footer">
         <a href="/posts/vuep9/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">个人学习</a>,&nbsp;<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
@@ -190,7 +260,20 @@
         <a href="/posts/vuep8/">【Java全栈学习】七、Vue框架介绍及应用</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-12-06">2023-12-06</time>, 
             </span>&nbsp;<span class="post-publish">更新于 <time datetime="2023-12-20">2023-12-20</time>, 
-            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div><div class="content">信息 需要前端基础html、css、js Vue框架介绍 vue是一套用于构建用户界面的渐进式框架。 vue.js提供了MVVM数据绑定和一个可组合</div><div class="post-footer">
+            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div><div class="content"><div class="details admonition info open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw" aria-hidden="true"></i>信息<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">需要前端基础html、css、js</div>
+        </div>
+    </div>
+<h2 id="vue框架介绍">Vue框架介绍</h2>
+<ul>
+<li>vue是一套用于构建用户界面的渐进式框架。</li>
+<li>vue.js提供了MVVM数据绑定和一个可组合的组件系统，具有简单、灵活的API。</li>
+<li>其目标是通过尽可能简单的API实现响应式的数据绑定和可组合的视图组件。</li>
+</ul></div><div class="post-footer">
         <a href="/posts/vuep8/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">个人学习</a>,&nbsp;<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
@@ -206,7 +289,34 @@
         <a href="/posts/springbootp7/">【Java全栈学习】六、MybatisPlus多表查询及分页查询</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-12-05">2023-12-05</time>, 
             </span>&nbsp;<span class="post-publish">更新于 <time datetime="2023-12-20">2023-12-20</time>, 
-            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div><div class="content">Mybatis多表查询 实现复杂关系映射，可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置</div><div class="post-footer">
+            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div><div class="content"><h2 id="mybatis多表查询">Mybatis多表查询</h2>
+<p>实现复杂关系映射，可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">注解</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">@Reults</td>
+<td style="text-align:left">代替<resultMap>标签,该注解中可以加入单个或多个@Result注解</td>
+</tr>
+<tr>
+<td style="text-align:left">@Result</td>
+<td style="text-align:left">代替<id>标签和<Result>标签，@Result中可以使用以下属性: <br/>- column: 数据表的字段名称<br />- property:类中对应的属性名<br />- one:与@one注解配合，进行一对一的映射<br />- many: 与@Many注解配合，进行一对多的映射</td>
+</tr>
+<tr>
+<td style="text-align:left">@One</td>
+<td style="text-align:left">代替<assocation>标签，用于指定查询中返回的单一对象<br />通过select属性指定用于多表查询的方法<br />使用格式:@Result(column=&quot;&quot;,property=&quot;&quot;,one=@one(select=&quot;&quot;))</td>
+</tr>
+<tr>
+<td style="text-align:left">@Many</td>
+<td style="text-align:left">代替<collection>标签,用于指定查询中返回的集合对象<br />使用格式:@Result(column=&quot;&quot;,property=&quot;&quot;,many=@Many(select=&quot;&quot;))</td>
+</tr>
+</tbody>
+</table></div><div class="post-footer">
         <a href="/posts/springbootp7/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">个人学习</a>,&nbsp;<a href="/tags/%E5%90%8E%E7%AB%AF/">后端</a>,&nbsp;<a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
@@ -277,7 +387,7 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/index.umd.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"个人计算机学习网站(´▽`ʃ♡ƪ)"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/index.umd.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"一个简单的私人博客网站(´▽`ʃ♡ƪ)"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script><script type="text/javascript" src="/js/custom.js"></script>
 
 

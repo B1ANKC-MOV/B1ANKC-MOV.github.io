@@ -10,9 +10,9 @@
     <pubDate>Mon, 08 Jan 2024 08:55:39 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/mybatisplusmysql/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240124/MybatisMysqlJson.1tvmck88b64g.webp" referrerpolicy="no-referrer">
-            </div>使用MybatisPlus中的注解与语句，接收主子表JSON格式信息，向Mysql数据库中同时插入主表和与子表的数据，子表外键与主表相连。(编译器使用IDEA，接口测试使用POSTMAN)]]></description>
+    <description><![CDATA[<h2 id="创建主表实体类">创建主表实体类</h2>
+<p>首先创建一个entity包下的主表实体类，这里命名为User。</p>
+<p>代码如下：</p>]]></description>
 </item>
 </channel>
 </rss>

@@ -9,6 +9,8 @@
 
 {{< /admonition >}}
 
+<!--more-->
+
 ### 切换目录
 
 打开XShell连接服务器后是在root目录下，切换到usr目录。
