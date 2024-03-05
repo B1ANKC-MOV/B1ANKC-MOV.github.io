@@ -20,5 +20,11 @@
 {{<friend name="Stilig's blog" url="https://stilig.me" logo="https://stilig.me/webhead.png" word="一个分享自己杂七杂八知识的网站" border-animation="borderFlash" primary-color="linear-red"
 >}}
 </div>
-</div> 
+</div>
+
+### 本站友链
+```
+friend name="VVulpes" url="https://b1ankc-mov.github.io/" logo="https://b1ankc-mov.github.io/fox.png" word="一个简单的私人博客网站"
+```
+
 
