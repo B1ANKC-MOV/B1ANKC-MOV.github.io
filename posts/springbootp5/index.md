@@ -104,5 +104,5 @@ public class SwaggerConfig {
 
 
 ### 使用Swagger2进行接口测试
-启动项目访问http://127.0.0.1:8080/swagger-ui.html，即可打开自动生成的可视化测试页面
+启动项目访问 `http://127.0.0.1:8080/swagger-ui.html` ，即可打开自动生成的可视化测试页面
 

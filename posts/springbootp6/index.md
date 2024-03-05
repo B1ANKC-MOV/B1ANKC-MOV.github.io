@@ -15,38 +15,37 @@
 ### 配置
 1. 添加依赖到pom.xml：（MybatisPlus其实依赖了Mybatis）（需要准备好Mysql数据库）
 ```xml
-<!--MyBatisP1us依赖-->
+<!--MyBatisPlus依赖-->
 <dependency>
     <groupId>com.baomidou</groupId>
     <artifactId>mybatis-plus-boot-starter</artifactId>
     <version>3.4.2</version>
 </dependency>
-<! -- mysq1驱动依赖-->
+<!--mysql驱动依赖-->
 <dependency>
     <groupId>mysql</groupId>
-    <artifactId>mysq1-connector-java</artifactId>
+    <artifactId>mysql-connector-java</artifactId>
     <version>5.1.47</version>
 </dependency>
 <!--数据连接池druid-->
 <dependency>
-    <groupId>com.a1ibaba</groupId>
+    <groupId>com.alibaba</groupId>
     <artifactid>druid-spring-boot-starter</artifactId>
     <version>1.1.20</version>
 </dependency>
 
 ```
-2. 加入配置（在.properties)：（使用什么连接池\数据库、数据库在哪、账号\密码、日志输出格式）（数据库的组件都在mapper包里，需要给出mapper包路径）
+2. 加入配置（在.properties)：使用什么连接池\数据库、数据库在哪、账号\密码、日志输出格式等等（数据库的组件都在mapper包里，需要给出mapper包路径）
 ### 实操
-1. 加入控制器
-2. 定义mapper相关的组件（要创建的是接口，不是类，名称都以要操作的表+mapper命名）（sql语句都用@注解来实现）
-3. 新建user类，存储表中有的字段。（按住alt+insert加入get/set方法）（再加一个toString方法）
-4. 加入注解使得方法生效@select("select * from user")(记得加入@mapper)
-5. 通过@autowired注入参数usermapper内容，再使用find()方法返回用户列表。
-6. 改成JSON
-7. 插入user对象
-8. int insert()代表插入几条记录，插入失败返回值为0
+1. 加入**控制器**
+2. 定义**mapper**相关的**组件**（要创建的是接口，不是类，名称都以要操作的表+mapper命名）（sql语句都用@注解来实现）
+3. **新建**user**类**，存储表中有的字段。（按住<kbd>alt</kbd>+<kbd>insert</kbd>加入get、set、toString方法）
+4. **加入注解**使得方法生效`@select("select * from user")`(记得加入`@mapper`)
+5. 通过`@autowired`注入参数usermapper内容，再使用find()方法返回用户列表。
+6. 改成**JSON**
+7. 插入user**对象**
+8. `int insert()`代表插入几条记录，插入失败返回值为0
 9. mysql插入会自增
-10. mybatis会自动帮助你增删改，不需要再自写方法了，只需要告诉其user类
-11. mybatis-plus：当表明与类名不一样时@TableName("表名“），（以告知mybatis）如果需要id作为组件自增@TableId(type=IdType.AUTO)。
-    如果不加的话，数据库里面的id可能是自增的值，但是代码print不出来id的值
-    
+10. mybatis会**自动**帮助你**增删改**，不需要再自写方法了，只需要**告诉其**user**类**
+11. **mybatis-plus**当表名与类名不一样时使用`@TableName("表名")`告知mybatis需要操作的表名，如果需要id作为组件自增则使用`@TableId(type=IdType.AUTO)`。
+    如果不加的话，数据库里面的id可能是自增的值，但是代码print不出来id的值。

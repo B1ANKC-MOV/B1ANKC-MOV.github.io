@@ -28,7 +28,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/b1ankc-mov.github.io\/posts\/springbootp6\/"
-        },"genre": "posts","keywords": "个人学习, 后端, 数据库","wordcount":  997 ,
+        },"genre": "posts","keywords": "个人学习, 后端, 数据库","wordcount":  1006 ,
         "url": "https:\/\/b1ankc-mov.github.io\/posts\/springbootp6\/","datePublished": "2023-12-04T16:41:14+08:00","dateModified": "2023-12-20T17:13:30+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -118,8 +118,8 @@
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">【Java全栈学习】五、MybatisPlus增/删/改</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2023-12-04">2023-12-04</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2023-12-20">2023-12-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 997 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/springbootp6/" class="leancloud_visitors" data-flag-title="【Java全栈学习】五、MybatisPlus增/删/改">
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2023-12-04">2023-12-04</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2023-12-20">2023-12-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1006 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/springbootp6/" class="leancloud_visitors" data-flag-title="【Java全栈学习】五、MybatisPlus增/删/改">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;
                     <a href="#comments" id="post-meta-vcount" title="查看评论">
@@ -182,43 +182,43 @@
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="c">&lt;!--MyBatisP1us依赖--&gt;</span>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="c">&lt;!--MyBatisPlus依赖--&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="nt">&lt;dependency&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;groupId&gt;</span>com.baomidou<span class="nt">&lt;/groupId&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;artifactId&gt;</span>mybatis-plus-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;version&gt;</span>3.4.2<span class="nt">&lt;/version&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="nt">&lt;/dependency&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="cp">&lt;! -- mysq1驱动依赖--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--mysql驱动依赖--&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="nt">&lt;dependency&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;groupId&gt;</span>mysql<span class="nt">&lt;/groupId&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;artifactId&gt;</span>mysq1-connector-java<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;artifactId&gt;</span>mysql-connector-java<span class="nt">&lt;/artifactId&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;version&gt;</span>5.1.47<span class="nt">&lt;/version&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="nt">&lt;/dependency&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="c">&lt;!--数据连接池druid--&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="nt">&lt;dependency&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;groupId&gt;</span>com.a1ibaba<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;groupId&gt;</span>com.alibaba<span class="nt">&lt;/groupId&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;artifactid&gt;</span>druid-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;version&gt;</span>1.1.20<span class="nt">&lt;/version&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="nt">&lt;/dependency&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="2">
-<li>加入配置（在.properties)：（使用什么连接池\数据库、数据库在哪、账号\密码、日志输出格式）（数据库的组件都在mapper包里，需要给出mapper包路径）</li>
+<li>加入配置（在.properties)：使用什么连接池\数据库、数据库在哪、账号\密码、日志输出格式等等（数据库的组件都在mapper包里，需要给出mapper包路径）</li>
 </ol>
 <h3 id="实操">实操</h3>
 <ol>
-<li>加入控制器</li>
-<li>定义mapper相关的组件（要创建的是接口，不是类，名称都以要操作的表+mapper命名）（sql语句都用@注解来实现）</li>
-<li>新建user类，存储表中有的字段。（按住alt+insert加入get/set方法）（再加一个toString方法）</li>
-<li>加入注解使得方法生效@select(&ldquo;select * from user&rdquo;)(记得加入@mapper)</li>
-<li>通过@autowired注入参数usermapper内容，再使用find()方法返回用户列表。</li>
-<li>改成JSON</li>
-<li>插入user对象</li>
-<li>int insert()代表插入几条记录，插入失败返回值为0</li>
+<li>加入<strong>控制器</strong></li>
+<li>定义<strong>mapper</strong>相关的<strong>组件</strong>（要创建的是接口，不是类，名称都以要操作的表+mapper命名）（sql语句都用@注解来实现）</li>
+<li><strong>新建</strong>user<strong>类</strong>，存储表中有的字段。（按住<kbd>alt</kbd>+<kbd>insert</kbd>加入get、set、toString方法）</li>
+<li><strong>加入注解</strong>使得方法生效<code>@select(&quot;select * from user&quot;)</code>(记得加入<code>@mapper</code>)</li>
+<li>通过<code>@autowired</code>注入参数usermapper内容，再使用find()方法返回用户列表。</li>
+<li>改成<strong>JSON</strong></li>
+<li>插入user<strong>对象</strong></li>
+<li><code>int insert()</code>代表插入几条记录，插入失败返回值为0</li>
 <li>mysql插入会自增</li>
-<li>mybatis会自动帮助你增删改，不需要再自写方法了，只需要告诉其user类</li>
-<li>mybatis-plus：当表明与类名不一样时@TableName(&ldquo;表名“），（以告知mybatis）如果需要id作为组件自增@TableId(type=IdType.AUTO)。
-如果不加的话，数据库里面的id可能是自增的值，但是代码print不出来id的值</li>
+<li>mybatis会<strong>自动</strong>帮助你<strong>增删改</strong>，不需要再自写方法了，只需要<strong>告诉其</strong>user<strong>类</strong></li>
+<li><strong>mybatis-plus</strong>当表名与类名不一样时使用<code>@TableName(&quot;表名&quot;)</code>告知mybatis需要操作的表名，如果需要id作为组件自增则使用<code>@TableId(type=IdType.AUTO)</code>。
+如果不加的话，数据库里面的id可能是自增的值，但是代码print不出来id的值。</li>
 </ol><div class="details admonition note open">
 			<div class="details-summary admonition-title">
 				<i class="icon fas fa-pencil-alt fa-fwnote"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>

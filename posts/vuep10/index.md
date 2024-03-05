@@ -54,7 +54,7 @@ import 'font-awesome/css/font-awesome.min.css'
 ```
 
 ## 实操代码
-<u>**App.vue文件**</u>
+**App.vue文件**
 
 ```
 <template>
@@ -100,7 +100,7 @@ export default {
 }
 </style>
 ```
-<u>**Movie.vue文件**</u>
+**Movie.vue文件**
 
 ```
 <template>
@@ -134,7 +134,7 @@ export default {//导出，vue.app做导入，正好对应
 }
 </script>
 ```
-<u>**hello.vue文件**</u>
+**hello.vue文件**
 
 ```
 <template>
