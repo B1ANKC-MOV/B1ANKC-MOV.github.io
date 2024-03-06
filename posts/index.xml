@@ -4,7 +4,49 @@
         <link>https://b1ankc-mov.github.io/posts/</link>
         <description>所有文章 | VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Wed, 06 Mar 2024 15:07:37 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法</title>
+    <link>https://b1ankc-mov.github.io/posts/tdengine_timestamp/</link>
+    <pubDate>Wed, 06 Mar 2024 15:07:37 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/tdengine_timestamp/</guid>
+    <description><![CDATA[<h2 id="实体类">实体类</h2>
+<p>定义实体类，插入数据分别代表<code>打卡时间</code>、<code>员工id</code>，</p>
+<p>打卡时间最后需要插入时序数据库中的<strong>时间戳类型字段</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Daily</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">collect_time</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item>
+<item>
+    <title>在VS code中打开VS studio的cpp文件并调试运行（弹出独立窗口）</title>
+    <link>https://b1ankc-mov.github.io/posts/vsstudio_vscode/</link>
+    <pubDate>Wed, 06 Mar 2024 08:44:18 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/vsstudio_vscode/</guid>
+    <description><![CDATA[<p>在电脑上复现以前的C++项目的时候，自觉VS studio太繁重，准备重新拿VS code编译，没想到还是有很多地方需要注意的，在这里记录一下。</p>
+<h2 id="安装扩展">安装扩展</h2>
+<p>为了编译打开C++文件，需要在VS code上面先安装一些拓展，如下图：</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240306/VSCODE4.19r4f0j3lfmo.webp" title="安装的扩展" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240306/VSCODE4.19r4f0j3lfmo.webp" data-sub-html="<h2> </h2><p>安装的扩展</p>">
+        
+    </a><figcaption class="image-caption">安装的扩展</figcaption>
+    </figure></p>]]></description>
+</item>
+<item>
     <title>【Java全栈学习】十九、Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)</title>
     <link>https://b1ankc-mov.github.io/posts/springbootvuep20/</link>
     <pubDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</pubDate>
@@ -120,29 +162,6 @@
 <p>服务器收到 session_id，找到前期保存的数据，由此得知用户的身份。</p>
 </li>
 </ol>]]></description>
-</item>
-<item>
-    <title>[Java] Mybatis向Mysql插入主副表JSON数据</title>
-    <link>https://b1ankc-mov.github.io/posts/mybatisplusmysql/</link>
-    <pubDate>Mon, 08 Jan 2024 08:55:39 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/mybatisplusmysql/</guid>
-    <description><![CDATA[<h2 id="创建主表实体类">创建主表实体类</h2>
-<p>首先创建一个entity包下的主表实体类，这里命名为User。</p>
-<p>代码如下：</p>]]></description>
-</item>
-<item>
-    <title>【Java全栈学习】十四、vue-element-admin</title>
-    <link>https://b1ankc-mov.github.io/posts/vuep15/</link>
-    <pubDate>Mon, 08 Jan 2024 08:47:33 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/vuep15/</guid>
-    <description><![CDATA[<h2 id="vue-element-admin介绍">vue-element-admin介绍</h2>
-<ul>
-<li>vue-element-admin 是一个后台前端解决方案，它基于 vue 和 element-ui实现</li>
-<li>内置了 i18 国际化解决方案，动态路由，权限验证，提炼了典型的业务模型，提供了丰富的功能组件</li>
-<li>可以快速搭建企业级中后台产品原型</li>
-</ul>]]></description>
 </item>
 </channel>
 </rss>

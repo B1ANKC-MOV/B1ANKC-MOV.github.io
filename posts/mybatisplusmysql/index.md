@@ -120,7 +120,7 @@ public class UserOrderController {
 
     // 由于传入数据为JSON格式，需要加一个@RequestBody注解
     @PostMapping("/insertuserorder")
-    public GeneralResponse save(@RequestBody User user){
+    public String save(@RequestBody User user){
         // 插入数据，i代表着插入的数据条数
         int i= userMapper.insert(user);
         List<Order> orders = User.getOrders();

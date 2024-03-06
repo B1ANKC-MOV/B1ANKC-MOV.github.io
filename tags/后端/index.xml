@@ -4,7 +4,34 @@
         <link>https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/</link>
         <description>后端 - 标签 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Wed, 06 Mar 2024 15:07:37 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法</title>
+    <link>https://b1ankc-mov.github.io/posts/tdengine_timestamp/</link>
+    <pubDate>Wed, 06 Mar 2024 15:07:37 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/tdengine_timestamp/</guid>
+    <description><![CDATA[<h2 id="实体类">实体类</h2>
+<p>定义实体类，插入数据分别代表<code>打卡时间</code>、<code>员工id</code>，</p>
+<p>打卡时间最后需要插入时序数据库中的<strong>时间戳类型字段</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Daily</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">collect_time</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item>
+<item>
     <title>【Java全栈学习】十九、Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)</title>
     <link>https://b1ankc-mov.github.io/posts/springbootvuep20/</link>
     <pubDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</pubDate>
@@ -179,25 +206,6 @@ Axios主要是前端的一个网络请求框架，大部分基于<em><strong>Aja
 <li>ORM通过使用描述对象和数据库之间映射的元数据将程序中的对象自动持久化到关系数据库中。</li>
 <li>ORM框架的本质是简化编程中操作数据库的编码。</li>
 </ol>]]></description>
-</item>
-<item>
-    <title>【Java全栈学习】四、RESTful服务&#43;Swagger</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootp5/</link>
-    <pubDate>Sun, 03 Dec 2023 16:01:03 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootp5/</guid>
-    <description><![CDATA[<h2 id="restful服务">RESTful服务</h2>
-<h3 id="restful介绍">RESTful介绍</h3>
-<p>RESTful是一种软件服务架构设计风格</p>
-<h3 id="restful特点">RESTful特点</h3>
-<p>例如，将请求清晰分类，GET用于获取，POST用于新建，等等等等</p>
-<ul>
-<li>每一个URI代表一种资源。</li>
-<li>客户端使用GET、POST、PUT、DELETE四种表示操作方式的动词对服务端资源进行操作:GET用于获取资源,POST用于新建资源(也可以用于更新资源)，PUT用于更新资源，DELETE用于删除资源。</li>
-<li>通过操作资源的表现形式来实现服务端请求操作。</li>
-<li>资源的表现形式是JSON或者HTML。</li>
-<li>客户端与服务端之间的交互在请求之间是无状态的。从客户端到服务端的每个请求都包含必需的信息。</li>
-</ul>]]></description>
 </item>
 </channel>
 </rss>

@@ -4,7 +4,23 @@
         <link>https://b1ankc-mov.github.io/categories/</link>
         <description>Categories - 分类 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Wed, 06 Mar 2024 15:07:37 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>工作学习</title>
+    <link>https://b1ankc-mov.github.io/categories/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/</link>
+    <pubDate>Wed, 06 Mar 2024 15:07:37 &#43;0800</pubDate>
+    <author>Vulpes</author>
+    <guid>https://b1ankc-mov.github.io/categories/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>个人学习</title>
+    <link>https://b1ankc-mov.github.io/categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/</link>
+    <pubDate>Wed, 06 Mar 2024 08:44:18 &#43;0800</pubDate>
+    <author>Vulpes</author>
+    <guid>https://b1ankc-mov.github.io/categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>SpringBoot&#43;Vue全栈开发</title>
     <link>https://b1ankc-mov.github.io/categories/springboot&#43;vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/</link>
     <pubDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</pubDate>
@@ -18,14 +34,6 @@
     <pubDate>Fri, 12 Jan 2024 09:47:03 &#43;0800</pubDate>
     <author>Vulpes</author>
     <guid>https://b1ankc-mov.github.io/categories/%E8%A7%92%E8%89%B2%E7%85%A7%E7%89%87/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>工作学习</title>
-    <link>https://b1ankc-mov.github.io/categories/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/</link>
-    <pubDate>Mon, 08 Jan 2024 08:55:39 &#43;0800</pubDate>
-    <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/categories/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>

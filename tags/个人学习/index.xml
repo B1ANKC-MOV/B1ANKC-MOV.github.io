@@ -4,7 +4,22 @@
         <link>https://b1ankc-mov.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/</link>
         <description>个人学习 - 标签 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Wed, 06 Mar 2024 08:44:18 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+    <title>在VS code中打开VS studio的cpp文件并调试运行（弹出独立窗口）</title>
+    <link>https://b1ankc-mov.github.io/posts/vsstudio_vscode/</link>
+    <pubDate>Wed, 06 Mar 2024 08:44:18 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/vsstudio_vscode/</guid>
+    <description><![CDATA[<p>在电脑上复现以前的C++项目的时候，自觉VS studio太繁重，准备重新拿VS code编译，没想到还是有很多地方需要注意的，在这里记录一下。</p>
+<h2 id="安装扩展">安装扩展</h2>
+<p>为了编译打开C++文件，需要在VS code上面先安装一些拓展，如下图：</p>
+<p>
+<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240306/VSCODE4.19r4f0j3lfmo.webp" title="安装的扩展" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240306/VSCODE4.19r4f0j3lfmo.webp" data-sub-html="<h2> </h2><p>安装的扩展</p>">
+        
+    </a><figcaption class="image-caption">安装的扩展</figcaption>
+    </figure></p>]]></description>
+</item>
+<item>
     <title>【Java全栈学习】十九、Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)</title>
     <link>https://b1ankc-mov.github.io/posts/springbootvuep20/</link>
     <pubDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</pubDate>
@@ -202,31 +217,6 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://v3.router.vuejs.org/zh/guide/
-</span></span></code></pre></td></tr></table>
-</div>
-</div>]]></description>
-</item>
-<item>
-    <title>【Java全栈学习】十、Axios网络请求</title>
-    <link>https://b1ankc-mov.github.io/posts/vuep11/</link>
-    <pubDate>Fri, 29 Dec 2023 08:47:13 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/vuep11/</guid>
-    <description><![CDATA[<h2 id="axios的使用">Axios的使用</h2>
-<h3 id="axios简介">Axios简介</h3>
-<p>使用背景：在实际项目开发中，前端页面所需要的数据往往需要从服务器端获取，这必然涉及与服务器的通信。
-Axios主要是前端的一个网络请求框架，大部分基于<em><strong>Ajax</strong></em></p>
-<ul>
-<li>Axios基于<strong>promise</strong>网络请求库，作用与node.js和浏览器中。</li>
-<li>Axios在浏览器端使用XMLHttpRequests发送网络请求，并能自动完成<strong>JSON</strong>数据的转换。</li>
-<li>地址</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://www.axios-http.cn/
 </span></span></code></pre></td></tr></table>
 </div>
 </div>]]></description>
