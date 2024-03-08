@@ -4,10 +4,10 @@
         <link>https://b1ankc-mov.github.io/tags/</link>
         <description>Tags - 标签 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Wed, 06 Mar 2024 15:07:37 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/" rel="self" type="application/rss+xml" /><item>
     <title>Java</title>
     <link>https://b1ankc-mov.github.io/tags/java/</link>
-    <pubDate>Wed, 06 Mar 2024 15:07:37 &#43;0800</pubDate>
+    <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
     <author>Vulpes</author>
     <guid>https://b1ankc-mov.github.io/tags/java/</guid>
     <description><![CDATA[]]></description>
@@ -15,7 +15,7 @@
 <item>
     <title>Mybatis</title>
     <link>https://b1ankc-mov.github.io/tags/mybatis/</link>
-    <pubDate>Wed, 06 Mar 2024 15:07:37 &#43;0800</pubDate>
+    <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
     <author>Vulpes</author>
     <guid>https://b1ankc-mov.github.io/tags/mybatis/</guid>
     <description><![CDATA[]]></description>
@@ -23,15 +23,31 @@
 <item>
     <title>MySQL</title>
     <link>https://b1ankc-mov.github.io/tags/mysql/</link>
-    <pubDate>Wed, 06 Mar 2024 15:07:37 &#43;0800</pubDate>
+    <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
     <author>Vulpes</author>
     <guid>https://b1ankc-mov.github.io/tags/mysql/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
+    <title>Navicat</title>
+    <link>https://b1ankc-mov.github.io/tags/navicat/</link>
+    <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
+    <author>Vulpes</author>
+    <guid>https://b1ankc-mov.github.io/tags/navicat/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>TDengine</title>
+    <link>https://b1ankc-mov.github.io/tags/tdengine/</link>
+    <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
+    <author>Vulpes</author>
+    <guid>https://b1ankc-mov.github.io/tags/tdengine/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>工作学习</title>
     <link>https://b1ankc-mov.github.io/tags/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/</link>
-    <pubDate>Wed, 06 Mar 2024 15:07:37 &#43;0800</pubDate>
+    <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
     <author>Vulpes</author>
     <guid>https://b1ankc-mov.github.io/tags/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[]]></description>
@@ -39,7 +55,7 @@
 <item>
     <title>后端</title>
     <link>https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/</link>
-    <pubDate>Wed, 06 Mar 2024 15:07:37 &#43;0800</pubDate>
+    <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
     <author>Vulpes</author>
     <guid>https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/</guid>
     <description><![CDATA[]]></description>
@@ -47,7 +63,7 @@
 <item>
     <title>数据库</title>
     <link>https://b1ankc-mov.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
-    <pubDate>Wed, 06 Mar 2024 15:07:37 &#43;0800</pubDate>
+    <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
     <author>Vulpes</author>
     <guid>https://b1ankc-mov.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
     <description><![CDATA[]]></description>
@@ -66,22 +82,6 @@
     <pubDate>Wed, 06 Mar 2024 08:44:18 &#43;0800</pubDate>
     <author>Vulpes</author>
     <guid>https://b1ankc-mov.github.io/tags/vscode/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>个人学习</title>
-    <link>https://b1ankc-mov.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/</link>
-    <pubDate>Wed, 06 Mar 2024 08:44:18 &#43;0800</pubDate>
-    <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>服务器</title>
-    <link>https://b1ankc-mov.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
-    <pubDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</pubDate>
-    <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

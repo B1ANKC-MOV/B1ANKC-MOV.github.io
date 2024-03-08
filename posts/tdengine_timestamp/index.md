@@ -18,7 +18,7 @@ public class Daily {
 
 ## Mapper接口
 
-继承Mybatis的BaseMapper接口，利用`select语句`进行查询。
+继承Mybatis的BaseMapper接口，利用`insert`语句进行插入，`#{}`中写的内容会自动填入方法中对应的同名参数内容。
 
 ```java
 @Mapper
