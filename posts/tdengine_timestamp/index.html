@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法 - VVulpes</title><meta name="Description" content="A simple Blog website."><meta property="og:title" content="TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法" />
+        <title>[Java] TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法 - VVulpes</title><meta name="Description" content="A simple Blog website."><meta property="og:title" content="[Java] TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法" />
 <meta property="og:description" content="实体类
 定义实体类，插入数据分别代表打卡时间、员工id，
-打卡时间最后需要插入时序数据库中的时间戳类型字段。
+打卡时间是最后需要插入时序数据库中的时间戳类型字段。
 
 
 1
@@ -33,10 +33,10 @@ public class Daily {
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://b1ankc-mov.github.io/47"/>
 
-<meta name="twitter:title" content="TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法"/>
+<meta name="twitter:title" content="[Java] TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法"/>
 <meta name="twitter:description" content="实体类
 定义实体类，插入数据分别代表打卡时间、员工id，
-打卡时间最后需要插入时序数据库中的时间戳类型字段。
+打卡时间是最后需要插入时序数据库中的时间戳类型字段。
 
 
 1
@@ -61,12 +61,12 @@ public class Daily {
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法",
+        "headline": "[Java] TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/b1ankc-mov.github.io\/posts\/tdengine_timestamp\/"
-        },"genre": "posts","keywords": "数据库, 后端, Java, Mybatis, MySQL, 工作学习","wordcount":  302 ,
+        },"genre": "posts","keywords": "TDengine, Navicat, Java, 数据库, 后端, 工作学习","wordcount":  303 ,
         "url": "https:\/\/b1ankc-mov.github.io\/posts\/tdengine_timestamp\/","datePublished": "2024-03-06T15:07:37+08:00","dateModified": "2024-03-06T15:07:37+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -154,10 +154,10 @@ public class Daily {
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[Java] TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工作学习</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2024-03-06">2024-03-06</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2024-03-06">2024-03-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 302 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/tdengine_timestamp/" class="leancloud_visitors" data-flag-title="TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法">
+            <div class="post-meta-line"><i class="far fa-calendar fa-fw"></i>&nbsp;<time datetime="2024-03-06">2024-03-06</time>&nbsp;<i class="far fa-calendar-plus fa-fw"></i>&nbsp;<time datetime="2024-03-06">2024-03-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 303 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/tdengine_timestamp/" class="leancloud_visitors" data-flag-title="[Java] TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;
                     <a href="#comments" id="post-meta-vcount" title="查看评论">
@@ -178,7 +178,7 @@ public class Daily {
             </div>
         <div class="content" id="content"><h2 id="实体类">实体类</h2>
 <p>定义实体类，插入数据分别代表<code>打卡时间</code>、<code>员工id</code>，</p>
-<p>打卡时间最后需要插入时序数据库中的<strong>时间戳类型字段</strong>。</p>
+<p>打卡时间是最后需要插入时序数据库中的<strong>时间戳类型字段</strong>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -285,20 +285,20 @@ public class Daily {
                             <a class="link-to-markdown" href="/posts/tdengine_timestamp/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://b1ankc-mov.github.io/posts/tdengine_timestamp/" data-title="TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法" data-hashtags="数据库,后端,Java,Mybatis,MySQL,工作学习"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://b1ankc-mov.github.io/posts/tdengine_timestamp/" data-hashtag="数据库"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://b1ankc-mov.github.io/posts/tdengine_timestamp/" data-title="TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://b1ankc-mov.github.io/posts/tdengine_timestamp/" data-title="TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://b1ankc-mov.github.io/posts/tdengine_timestamp/" data-title="TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://b1ankc-mov.github.io/posts/tdengine_timestamp/" data-title="[Java] TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法" data-hashtags="TDengine,Navicat,Java,数据库,后端,工作学习"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://b1ankc-mov.github.io/posts/tdengine_timestamp/" data-hashtag="TDengine"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://b1ankc-mov.github.io/posts/tdengine_timestamp/" data-title="[Java] TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://b1ankc-mov.github.io/posts/tdengine_timestamp/" data-title="[Java] TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://b1ankc-mov.github.io/posts/tdengine_timestamp/" data-title="[Java] TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>,&nbsp;<a href="/tags/%E5%90%8E%E7%AB%AF/">后端</a>,&nbsp;<a href="/tags/java/">Java</a>,&nbsp;<a href="/tags/mybatis/">Mybatis</a>,&nbsp;<a href="/tags/mysql/">MySQL</a>,&nbsp;<a href="/tags/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/">工作学习</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/tdengine/">TDengine</a>,&nbsp;<a href="/tags/navicat/">Navicat</a>,&nbsp;<a href="/tags/java/">Java</a>,&nbsp;<a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>,&nbsp;<a href="/tags/%E5%90%8E%E7%AB%AF/">后端</a>,&nbsp;<a href="/tags/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/">工作学习</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/vsstudio_vscode/" class="prev" rel="prev" title="在VS code中打开VS studio的cpp文件并调试运行（弹出独立窗口）"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>在VS code中打开VS studio的cpp文件并调试运行（弹出独立窗口）</a>
-            <a href="/posts/tdengine_navicat/" class="next" rel="next" title="从其他表中查出待存储的表名，并将数据插入该表的实现（跨数据库/数据库平台）">从其他表中查出待存储的表名，并将数据插入该表的实现（跨数据库/数据库平台）<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/posts/vsstudio_vscode/" class="prev" rel="prev" title="[C&#43;&#43;] 在VS code中打开VS studio的cpp文件并调试运行（弹出独立窗口）"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>[C++] 在VS code中打开VS studio的cpp文件并调试运行（弹出独立窗口）</a>
+            <a href="/posts/tdengine_navicat/" class="next" rel="next" title="[Java] 从其他表中查出待存储的表名，并将数据插入该表的实现（跨数据库/数据库平台）">[Java] 从其他表中查出待存储的表名，并将数据插入该表的实现（跨数据库/数据库平台）<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

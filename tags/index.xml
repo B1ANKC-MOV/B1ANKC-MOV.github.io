@@ -4,28 +4,68 @@
         <link>https://b1ankc-mov.github.io/tags/</link>
         <description>Tags - 标签 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Tue, 12 Mar 2024 09:31:58 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>CentOS</title>
+    <link>https://b1ankc-mov.github.io/tags/centos/</link>
+    <pubDate>Tue, 12 Mar 2024 09:31:58 &#43;0800</pubDate>
+    <author>Vulpes</author>
+    <guid>https://b1ankc-mov.github.io/tags/centos/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Linux</title>
+    <link>https://b1ankc-mov.github.io/tags/linux/</link>
+    <pubDate>Tue, 12 Mar 2024 09:31:58 &#43;0800</pubDate>
+    <author>Vulpes</author>
+    <guid>https://b1ankc-mov.github.io/tags/linux/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>PowerShell</title>
+    <link>https://b1ankc-mov.github.io/tags/powershell/</link>
+    <pubDate>Tue, 12 Mar 2024 09:30:34 &#43;0800</pubDate>
+    <author>Vulpes</author>
+    <guid>https://b1ankc-mov.github.io/tags/powershell/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Windows</title>
+    <link>https://b1ankc-mov.github.io/tags/windows/</link>
+    <pubDate>Tue, 12 Mar 2024 09:30:34 &#43;0800</pubDate>
+    <author>Vulpes</author>
+    <guid>https://b1ankc-mov.github.io/tags/windows/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>frp</title>
+    <link>https://b1ankc-mov.github.io/tags/frp/</link>
+    <pubDate>Tue, 12 Mar 2024 09:29:01 &#43;0800</pubDate>
+    <author>Vulpes</author>
+    <guid>https://b1ankc-mov.github.io/tags/frp/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>StardewValley</title>
+    <link>https://b1ankc-mov.github.io/tags/stardewvalley/</link>
+    <pubDate>Tue, 12 Mar 2024 09:29:01 &#43;0800</pubDate>
+    <author>Vulpes</author>
+    <guid>https://b1ankc-mov.github.io/tags/stardewvalley/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>游戏记录</title>
+    <link>https://b1ankc-mov.github.io/tags/%E6%B8%B8%E6%88%8F%E8%AE%B0%E5%BD%95/</link>
+    <pubDate>Tue, 12 Mar 2024 09:29:01 &#43;0800</pubDate>
+    <author>Vulpes</author>
+    <guid>https://b1ankc-mov.github.io/tags/%E6%B8%B8%E6%88%8F%E8%AE%B0%E5%BD%95/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Java</title>
     <link>https://b1ankc-mov.github.io/tags/java/</link>
     <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
     <author>Vulpes</author>
     <guid>https://b1ankc-mov.github.io/tags/java/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Mybatis</title>
-    <link>https://b1ankc-mov.github.io/tags/mybatis/</link>
-    <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
-    <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/mybatis/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>MySQL</title>
-    <link>https://b1ankc-mov.github.io/tags/mysql/</link>
-    <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
-    <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/mysql/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
@@ -42,46 +82,6 @@
     <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
     <author>Vulpes</author>
     <guid>https://b1ankc-mov.github.io/tags/tdengine/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>工作学习</title>
-    <link>https://b1ankc-mov.github.io/tags/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/</link>
-    <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
-    <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>后端</title>
-    <link>https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/</link>
-    <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
-    <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>数据库</title>
-    <link>https://b1ankc-mov.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
-    <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
-    <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>C&#43;&#43;</title>
-    <link>https://b1ankc-mov.github.io/tags/c&#43;&#43;/</link>
-    <pubDate>Wed, 06 Mar 2024 08:44:18 &#43;0800</pubDate>
-    <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/c&#43;&#43;/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>VScode</title>
-    <link>https://b1ankc-mov.github.io/tags/vscode/</link>
-    <pubDate>Wed, 06 Mar 2024 08:44:18 &#43;0800</pubDate>
-    <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/vscode/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

@@ -4,64 +4,7 @@
         <link>https://b1ankc-mov.github.io/tags/mysql/</link>
         <description>MySQL - 标签 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/mysql/" rel="self" type="application/rss+xml" /><item>
-    <title>从其他表中查出待存储的表名，并将数据插入该表的实现（跨数据库/数据库平台）</title>
-    <link>https://b1ankc-mov.github.io/posts/tdengine_navicat/</link>
-    <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/tdengine_navicat/</guid>
-    <description><![CDATA[<p>最后实现的功能大概为：根据传入的<code>person_id</code>，在存放数据位置信息的表中，筛选出数据要插入的表名（例如，person_id=1的数据，在<code>work_table_info</code>表中查出，需要存储在table_id_1表中），并将数据插入。</p>
-<h2 id="实体类">实体类</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Data</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Daily</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">time</span><span class="p">;</span><span class="w">	</span><span class="c1">//打卡时间</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Double</span><span class="w"> </span><span class="n">longitude</span><span class="p">;</span><span class="w">	</span><span class="c1">//打卡经纬度</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Double</span><span class="w"> </span><span class="n">latitude</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">person_id</span><span class="p">;</span><span class="w">	</span><span class="c1">//打卡人员id</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div>]]></description>
-</item>
-<item>
-    <title>TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法</title>
-    <link>https://b1ankc-mov.github.io/posts/tdengine_timestamp/</link>
-    <pubDate>Wed, 06 Mar 2024 15:07:37 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/tdengine_timestamp/</guid>
-    <description><![CDATA[<h2 id="实体类">实体类</h2>
-<p>定义实体类，插入数据分别代表<code>打卡时间</code>、<code>员工id</code>，</p>
-<p>打卡时间最后需要插入时序数据库中的<strong>时间戳类型字段</strong>。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Data</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Daily</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">collect_time</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div>]]></description>
-</item>
-<item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Mon, 08 Jan 2024 08:55:39 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/mysql/" rel="self" type="application/rss+xml" /><item>
     <title>[Java] Mybatis向Mysql插入主副表JSON数据</title>
     <link>https://b1ankc-mov.github.io/posts/mybatisplusmysql/</link>
     <pubDate>Mon, 08 Jan 2024 08:55:39 &#43;0800</pubDate>

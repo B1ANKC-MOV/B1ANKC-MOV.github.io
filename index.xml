@@ -4,10 +4,95 @@
         <link>https://b1ankc-mov.github.io/</link>
         <description>A simple Blog website.</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</lastBuildDate>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Tue, 12 Mar 2024 09:31:58 &#43;0800</lastBuildDate>
             <atom:link href="https://b1ankc-mov.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>从其他表中查出待存储的表名，并将数据插入该表的实现（跨数据库/数据库平台）</title>
+    <title>[汇总] CentOS中查询端口&amp;终止进程的指令</title>
+    <link>https://b1ankc-mov.github.io/posts/linuxcentosportcmd/</link>
+    <pubDate>Tue, 12 Mar 2024 09:31:58 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/linuxcentosportcmd/</guid>
+    <description><![CDATA[<p>由于搭建服务器过程中，经常需要查询端口占用进程，并将进程终止以释放端口，所以将CentOS中相关的操作在这里进行一下汇总，方便以后查询使用，下文<em>端口有关的操作皆以8080为例</em></p>
+<h2 id="端口查看">端口查看</h2>
+<h3 id="查看监听的端口">查看监听的端口</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">netstat -lntp 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>TCP</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">netstat -antp
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">netstat -ntlp
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>UDP</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">netstat -nulp
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item>
+<item>
+    <title>[汇总] cd打开文件命令&amp;文件相对路径写法</title>
+    <link>https://b1ankc-mov.github.io/posts/fileaddresscmd/</link>
+    <pubDate>Tue, 12 Mar 2024 09:30:34 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/fileaddresscmd/</guid>
+    <description><![CDATA[<p>在控制台中输入指令打开文件路径和在项目中输入文件路径的一些写法经常容易混淆记错，因此在这里汇总一下，方便以后查询记忆。</p>
+<h2 id="控制台终端打开文件">控制台终端打开文件</h2>
+<ol>
+<li>
+<p>在搜索框中搜索“cmd”或按<kbd>win</kbd>+<kbd>R</kbd>打开命令窗口，在默认路径后输入“cd”+空格，再输入指定文件夹路径。</p>
+<p>如果回车后暂时还是原来默认的路径，则输入指定文件夹所在的盘再回车即可，例如：<code>D:</code>。</p>
+</li>
+<li>
+<p>打开指定的文件夹，在路径栏里输入“cmd”，回车进入控制台。默认路径就是指定文件夹的路径</p>
+</li>
+<li>
+<p>打开指定的文件夹，按住<kbd>shift</kbd>在空白处右击，在菜单栏中选择<em><strong>在此处打开Powershell窗口</strong></em>（可能有人的选项是<em>在此处打开命令窗口</em>）</p>
+</li>
+</ol>]]></description>
+</item>
+<item>
+    <title>[服务器搭建] 利用Frp内网穿透搭建星露谷服务器局域网的过程</title>
+    <link>https://b1ankc-mov.github.io/posts/stardewvalley_frpserver/</link>
+    <pubDate>Tue, 12 Mar 2024 09:29:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/stardewvalley_frpserver/</guid>
+    <description><![CDATA[<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">服务器端操作系统为<code>CentOS 7.6 64位</code>（阿里云服务器）<em><strong>需要提前在安全组放行端口7000与24642（TCP&amp;UDP）</strong></em>，客户端操作系统为<code>Windows 10 64位</code>，可视化工具与文件传输工具使用<code>XShell</code>与<code>Xftp</code></div>
+        </div>
+    </div>
+<p>购买服务器和XShell连接服务器的操作在</p>
+<p><em><strong><a href="https://b1ankc-mov.github.io/posts/springbootvuep19/" target="_blank" rel="noopener noreffer ">Springboot+Vue云端环境配置（上）</a></strong></em></p>
+<p><em><strong><a href="https://b1ankc-mov.github.io/posts/springbootvuep20/" target="_blank" rel="noopener noreffer ">Springboot+Vue云端环境部署（下）</a></strong></em></p>
+<p>里面详细介绍过，就不再赘述了，有需要可以去翻看一下。</p>]]></description>
+</item>
+<item>
+    <title>[Java] 从其他表中查出待存储的表名，并将数据插入该表的实现（跨数据库/数据库平台）</title>
     <link>https://b1ankc-mov.github.io/posts/tdengine_navicat/</link>
     <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
     <author>作者</author>
@@ -37,14 +122,14 @@
 </div>]]></description>
 </item>
 <item>
-    <title>TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法</title>
+    <title>[Java] TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法</title>
     <link>https://b1ankc-mov.github.io/posts/tdengine_timestamp/</link>
     <pubDate>Wed, 06 Mar 2024 15:07:37 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/tdengine_timestamp/</guid>
     <description><![CDATA[<h2 id="实体类">实体类</h2>
 <p>定义实体类，插入数据分别代表<code>打卡时间</code>、<code>员工id</code>，</p>
-<p>打卡时间最后需要插入时序数据库中的<strong>时间戳类型字段</strong>。</p>
+<p>打卡时间是最后需要插入时序数据库中的<strong>时间戳类型字段</strong>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -64,7 +149,7 @@
 </div>]]></description>
 </item>
 <item>
-    <title>在VS code中打开VS studio的cpp文件并调试运行（弹出独立窗口）</title>
+    <title>[C&#43;&#43;] 在VS code中打开VS studio的cpp文件并调试运行（弹出独立窗口）</title>
     <link>https://b1ankc-mov.github.io/posts/vsstudio_vscode/</link>
     <pubDate>Wed, 06 Mar 2024 08:44:18 &#43;0800</pubDate>
     <author>作者</author>
@@ -139,35 +224,6 @@
     <author>小极</author>
     <guid>https://b1ankc-mov.github.io/posts/ff14hpic/</guid>
     <description><![CDATA[这个劳斯打光简直神迹🔮！这一次约拍是黑白幻化专场，每张分三版：白框、调色、原片。]]></description>
-</item>
-<item>
-    <title>[FF14] 维埃拉族·普通约拍册(竖屏专辑)</title>
-    <link>https://b1ankc-mov.github.io/posts/ff14spic/</link>
-    <pubDate>Fri, 12 Jan 2024 08:01:09 &#43;0800</pubDate>
-    <author>小极</author>
-    <guid>https://b1ankc-mov.github.io/posts/ff14spic/</guid>
-    <description><![CDATA[这个劳斯打光简直神迹🔮！这一次约拍是黑白幻化专场，每张分三版：白框、调色、原片。]]></description>
-</item>
-<item>
-    <title>【Java全栈学习】十七、阿里云服务器的配置&amp;搭建&amp;购买&amp;使用</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootvuep18/</link>
-    <pubDate>Thu, 11 Jan 2024 15:46:16 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootvuep18/</guid>
-    <description><![CDATA[<h2 id="云服务器介绍">云服务器介绍</h2>
-<h3 id="云服务器概念">云服务器概念</h3>
-<ul>
-<li>云服务器(Elastic Compute Service, ECS)是一种简单高效、安全可靠、处理能力可弹性伸缩的计算服务。其管理方式比物理服务器更简单高效。</li>
-<li>用户无需提前购买硬件，即可迅速创建或释放任意多台云服务器。</li>
-</ul>]]></description>
-</item>
-<item>
-    <title>【Java全栈学习】十六、SpringBoot&#43;vue-element-template(前后端集成)</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootvuep17/</link>
-    <pubDate>Thu, 11 Jan 2024 13:44:38 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootvuep17/</guid>
-    <description><![CDATA[将后台管理模板与项目前端进行集成，简单修改前端API接口与后端相连。]]></description>
 </item>
 </channel>
 </rss>

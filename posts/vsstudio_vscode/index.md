@@ -1,4 +1,4 @@
-# 在VS code中打开VS studio的cpp文件并调试运行（弹出独立窗口）
+# [C++] 在VS code中打开VS studio的cpp文件并调试运行（弹出独立窗口）
 
 
 在电脑上复现以前的C++项目的时候，自觉VS studio太繁重，准备重新拿VS code编译，没想到还是有很多地方需要注意的，在这里记录一下。

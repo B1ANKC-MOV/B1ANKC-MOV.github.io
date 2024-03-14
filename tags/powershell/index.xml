@@ -1,0 +1,29 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>PowerShell - 标签 - VVulpes</title>
+        <link>https://b1ankc-mov.github.io/tags/powershell/</link>
+        <description>PowerShell - 标签 - VVulpes</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Tue, 12 Mar 2024 09:30:34 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/powershell/" rel="self" type="application/rss+xml" /><item>
+    <title>[汇总] cd打开文件命令&amp;文件相对路径写法</title>
+    <link>https://b1ankc-mov.github.io/posts/fileaddresscmd/</link>
+    <pubDate>Tue, 12 Mar 2024 09:30:34 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/fileaddresscmd/</guid>
+    <description><![CDATA[<p>在控制台中输入指令打开文件路径和在项目中输入文件路径的一些写法经常容易混淆记错，因此在这里汇总一下，方便以后查询记忆。</p>
+<h2 id="控制台终端打开文件">控制台终端打开文件</h2>
+<ol>
+<li>
+<p>在搜索框中搜索“cmd”或按<kbd>win</kbd>+<kbd>R</kbd>打开命令窗口，在默认路径后输入“cd”+空格，再输入指定文件夹路径。</p>
+<p>如果回车后暂时还是原来默认的路径，则输入指定文件夹所在的盘再回车即可，例如：<code>D:</code>。</p>
+</li>
+<li>
+<p>打开指定的文件夹，在路径栏里输入“cmd”，回车进入控制台。默认路径就是指定文件夹的路径</p>
+</li>
+<li>
+<p>打开指定的文件夹，按住<kbd>shift</kbd>在空白处右击，在菜单栏中选择<em><strong>在此处打开Powershell窗口</strong></em>（可能有人的选项是<em>在此处打开命令窗口</em>）</p>
+</li>
+</ol>]]></description>
+</item>
+</channel>
+</rss>
