@@ -30,7 +30,7 @@
 <!--数据连接池druid-->
 <dependency>
     <groupId>com.alibaba</groupId>
-    <artifactid>druid-spring-boot-starter</artifactId>
+    <artifactId>druid-spring-boot-starter</artifactId>
     <version>1.1.20</version>
 </dependency>
 
