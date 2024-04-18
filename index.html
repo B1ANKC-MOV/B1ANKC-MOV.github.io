@@ -114,6 +114,101 @@
         alt="/fox.png"
         title="What does the fox say?" /></a></div><h1 class="home-title">VVulpes Blog</h1><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/B1ANKC-MOV" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="https://space.bilibili.com/668806092" title="bilibili" target="_blank" rel="noopener noreffer me"><i data-svg-src="/lib/simple-icons/icons/bilibili.min.svg" aria-hidden="true"></i></a><a href="https://blog.csdn.net/m0_48104181" title="CSDN" target="_blank" rel="noopener noreffer me"><i data-svg-src="/svg/icons/plume.min.svg" aria-hidden="true"></i></a><a href="mailto:VVulpes@163.com" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/markdown/">[汇总]Markdown用法&Admonition横幅样式收集</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-04-18">2024-04-18</time>, 
+            </span>&nbsp;<span class="post-publish">更新于 <time datetime="2024-04-18">2024-04-18</time>, 
+            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>个人学习</a></span></div><div class="content"><p>日常使用Markdown编辑文章时，有些技巧和语法非常便捷实用，LoveIt主题自带的admonition横幅也很好用，就是格式太多了，两者在此文汇总方便随取随用。</p></div><div class="post-footer">
+        <a href="/posts/markdown/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/markdown/">Markdown</a>,&nbsp;<a href="/tags/admonition/">admonition</a>,&nbsp;<a href="/tags/%E6%96%87%E7%AB%A0%E7%BC%96%E8%BE%91/">文章编辑</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/emqx_mqtt_ssl_wss/">[MQTT]服务器EMQX搭建SSL/TLS连接过程（wss://)</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-04-17">2024-04-17</time>, 
+            </span>&nbsp;<span class="post-publish">更新于 <time datetime="2024-04-17">2024-04-17</time>, 
+            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工作学习</a></span></div><div class="content"><div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>本文采用<strong>8084端口</strong>进行连接，是EMQX 默认提供了四个常用的监听器之一，如果需要添加其他类型的监听器，可参考官方文档🔗<a href="https://www.emqx.io/docs/zh/latest/dashboard/configuration.html#%e7%ae%a1%e7%90%86" target="_blank" rel="noopener noreffer ">管理 | EMQX 文档</a>。</p>
+<p>本文使用<strong>自签名CA</strong>，需要提前在Linux系统上安装🔗<a href="https://www.openssl.org/" target="_blank" rel="noopener noreffer ">OpenSSL</a>，具体安装教程请自行搜索。</p>
+<p>本文采用<strong>SSL/TLS连接</strong>，需要提前在EMQX上启用，可参考🔗<a href="https://www.emqx.io/docs/zh/latest/network/emqx-mqtt-tls.html#%e5%bc%80%e5%90%af-ssl-tls-%e8%bf%9e%e6%8e%a5" target="_blank" rel="noopener noreffer ">开启 SSL/TLS 连接| EMQX 文档</a></p>
+</div>
+        </div>
+    </div>
+<h2 id="使用openssl获取证书">使用OpenSSL获取证书</h2>
+<h3 id="ca文件">CA文件</h3>
+<ol>
+<li>打开<strong>Linux系统</strong>终端操作窗口，输入以下指令，查看<strong>OpenSSL是否安装</strong>，如果有，则会显示版本信息。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">openssl version
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>生成私钥：<code>my_root_ca.key</code></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">openssl genrsa -out my_root_ca.key <span class="m">2048</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>使用该密钥生成根（CA）证书：<code>my_root_ca.pem</code></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">openssl req -x509 -new -nodes -key my_root_ca.key -sha256 -days <span class="m">3650</span> -out my_root_ca.pem
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>系统会提示以下信息，对应含义如下（根据下面的内容填就可以了，#后面的不需要填）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">You are about to be asked to enter information that will be incorporated
+</span></span><span class="line"><span class="cl">into your certificate request.
+</span></span><span class="line"><span class="cl">What you are about to enter is what is called a Distinguished Name or a DN.
+</span></span><span class="line"><span class="cl">There are quite a few fields but you can leave some blank
+</span></span><span class="line"><span class="cl">For some fields there will be a default value,
+</span></span><span class="line"><span class="cl">If you enter <span class="s1">&#39;.&#39;</span>, the field will be left blank.
+</span></span><span class="line"><span class="cl">-----
+</span></span><span class="line"><span class="cl">Country Name <span class="o">(</span><span class="m">2</span> letter code<span class="o">)</span> <span class="o">[</span>AU<span class="o">]</span>: CN# 国家/地区
+</span></span><span class="line"><span class="cl">State or Province Name <span class="o">(</span>full name<span class="o">)</span> <span class="o">[</span>Some-State<span class="o">]</span>:Zhejiang <span class="c1"># 省/市</span>
+</span></span><span class="line"><span class="cl">Locality Name <span class="o">(</span>eg, city<span class="o">)</span> <span class="o">[]</span>:Hangzhou <span class="c1"># 城市</span>
+</span></span><span class="line"><span class="cl">Organization Name <span class="o">(</span>eg, company<span class="o">)</span> <span class="o">[</span>Internet Widgits Pty Ltd<span class="o">]</span>:EMQX <span class="c1"># 组织机构（或公司名），如 EMQ</span>
+</span></span><span class="line"><span class="cl">Organizational Unit Name <span class="o">(</span>eg, section<span class="o">)</span> <span class="o">[]</span>:EMQX <span class="c1"># 机构部门，如 EMQX</span>
+</span></span><span class="line"><span class="cl">Common Name <span class="o">(</span>e.g. server FQDN or YOUR name<span class="o">)</span> <span class="o">[]</span>:none <span class="c1"># 通用名称，此处应当设置为服务器域名如 mqtt.emqx.com</span>
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer">
+        <a href="/posts/emqx_mqtt_ssl_wss/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/mqtt/">MQTT</a>,&nbsp;<a href="/tags/emqx/">EMQX</a>,&nbsp;<a href="/tags/mqttx/">MQTTX</a>,&nbsp;<a href="/tags/ssl/tls/">SSL/TLS</a>,&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/openssl/">OpenSSL</a>,&nbsp;<a href="/tags/windows/">Windows</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/linuxcentosportcmd/">[汇总] CentOS中查询端口&终止进程的指令</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-03-12">2024-03-12</time>, 
             </span>&nbsp;<span class="post-publish">更新于 <time datetime="2024-03-12">2024-03-12</time>, 
@@ -224,52 +319,6 @@
 </div></div><div class="post-footer">
         <a href="/posts/tdengine_navicat/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/tdengine/">TDengine</a>,&nbsp;<a href="/tags/navicat/">Navicat</a>,&nbsp;<a href="/tags/java/">Java</a>,&nbsp;<a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>,&nbsp;<a href="/tags/%E5%90%8E%E7%AB%AF/">后端</a>,&nbsp;<a href="/tags/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/">工作学习</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/tdengine_timestamp/">[Java] TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-03-06">2024-03-06</time>, 
-            </span>&nbsp;<span class="post-publish">更新于 <time datetime="2024-03-06">2024-03-06</time>, 
-            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工作学习</a></span></div><div class="content"><h2 id="实体类">实体类</h2>
-<p>定义实体类，插入数据分别代表<code>打卡时间</code>、<code>员工id</code>，</p>
-<p>打卡时间是最后需要插入时序数据库中的<strong>时间戳类型字段</strong>。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Data</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Daily</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">collect_time</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div></div><div class="post-footer">
-        <a href="/posts/tdengine_timestamp/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/tdengine/">TDengine</a>,&nbsp;<a href="/tags/navicat/">Navicat</a>,&nbsp;<a href="/tags/java/">Java</a>,&nbsp;<a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>,&nbsp;<a href="/tags/%E5%90%8E%E7%AB%AF/">后端</a>,&nbsp;<a href="/tags/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/">工作学习</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/vsstudio_vscode/">[C++] 在VS code中打开VS studio的cpp文件并调试运行（弹出独立窗口）</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-03-06">2024-03-06</time>, 
-            </span>&nbsp;<span class="post-publish">更新于 <time datetime="2024-03-06">2024-03-06</time>, 
-            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>个人学习</a></span></div><div class="content"><p>在电脑上复现以前的C++项目的时候，自觉VS studio太繁重，准备重新拿VS code编译，没想到还是有很多地方需要注意的，在这里记录一下。</p>
-<h2 id="安装扩展">安装扩展</h2>
-<p>为了编译打开C++文件，需要在VS code上面先安装一些拓展，如下图：</p>
-<p>
-<figure><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240306/VSCODE4.19r4f0j3lfmo.webp" title="安装的扩展" data-thumbnail="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240306/VSCODE4.19r4f0j3lfmo.webp" data-sub-html="<h2> </h2><p>安装的扩展</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240306/VSCODE4.19r4f0j3lfmo.webp"
-            data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240306/VSCODE4.19r4f0j3lfmo.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240306/VSCODE4.19r4f0j3lfmo.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240306/VSCODE4.19r4f0j3lfmo.webp 2x"
-            data-sizes="auto"
-            alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240306/VSCODE4.19r4f0j3lfmo.webp" />
-    </a><figcaption class="image-caption">安装的扩展</figcaption>
-    </figure></p></div><div class="post-footer">
-        <a href="/posts/vsstudio_vscode/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>,&nbsp;<a href="/tags/vscode/">VScode</a>,&nbsp;<a href="/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">个人学习</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
