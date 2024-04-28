@@ -446,4 +446,8 @@ PS: 竖线不需要垂直对齐
 
 [id]: https://b1ankc-mov.github.io/fox.png  "Title"
 
-
+> 参考文章链接
+>
+> 1. *[Markdown 基本语法 - LoveIt (hugoloveit.com)](https://hugoloveit.com/zh-cn/basic-markdown-syntax/)*
+> 2. *[主题文档 - 扩展 Shortcodes - LoveIt (hugoloveit.com)](https://hugoloveit.com/zh-cn/theme-documentation-extended-shortcodes/#4-admonition)*
+> 3. *[Hugo系列(3.0) - LoveIt主题美化与博客功能增强 · 第一章 - Yulin Lewis' Blog (lewky.cn)](https://lewky.cn/posts/hugo-3.html/)*
