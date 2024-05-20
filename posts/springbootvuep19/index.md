@@ -5,7 +5,7 @@
 
 {{< admonition example "注意">}}
 
-以下部署基于Centos7 系统环境
+以下部署基于`Centos7`系统环境
 
 {{< /admonition >}}
 

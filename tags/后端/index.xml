@@ -4,7 +4,53 @@
         <link>https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/</link>
         <description>后端 - 标签 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Tue, 14 May 2024 09:13:57 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>[Java]读取Excel表，转为Json格式发送至Url，获取接口应答报文，失败记录输出至txt</title>
+    <link>https://b1ankc-mov.github.io/posts/exceltoposturl/</link>
+    <pubDate>Tue, 14 May 2024 09:13:57 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/exceltoposturl/</guid>
+    <description><![CDATA[<div class="details admonition question open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-question-circle fa-fw" aria-hidden="true"></i>阅前提示<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><ol>
+<li>
+<p>“转为Json格式”是直接使用我自己定义的方法，强行转换为Json字符串的（因为格式上有一些要求）</p>
+</li>
+<li>
+<p>由于需要获取请求网址的应答报文，代码使用第三方库Apache HttpClient向Url发送JSON数据，而不是HttpURLConnection</p>
+</li>
+<li>
+<p>对HttpURLConnection示例代码感兴趣的，这部分我会放在章末</p>
+</li>
+</ol>
+</div>
+        </div>
+    </div>]]></description>
+</item>
+<item>
+    <title>[Java]读取Excel指定列内容，更新数据库数据</title>
+    <link>https://b1ankc-mov.github.io/posts/exceltomysql/</link>
+    <pubDate>Tue, 14 May 2024 09:13:42 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/exceltomysql/</guid>
+    <description><![CDATA[<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>章前导言<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>根据给的Excel表格更新数据库里面的测点编码，以项目编码&amp;测点名称为准匹配数据库里的记录。</p>
+<ul>
+<li>代码功能内容：读取.xlsx文件，逐行遍历，根据指定列内容，筛选数据库里面的记录进行更新。</li>
+</ul>
+<p>因为在编译的过程中还是耗费的时间和精力不少，也碰了不少壁，就把这次的工作经验拿来写篇文章总结一下</p>
+</div>
+        </div>
+    </div>]]></description>
+</item>
+<item>
     <title>[Java] 从其他表中查出待存储的表名，并将数据插入该表的实现（跨数据库/数据库平台）</title>
     <link>https://b1ankc-mov.github.io/posts/tdengine_navicat/</link>
     <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
@@ -67,7 +113,7 @@
     <pubDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/springbootvuep20/</guid>
-    <description><![CDATA[<div class="details admonition example open">
+    <description><![CDATA[<div class="details admonition example">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
@@ -89,7 +135,21 @@
     </figure></p>
 </div>
         </div>
-    </div>]]></description>
+    </div>
+<h2 id="项目部署">项目部署</h2>
+<h3 id="前端vue项目部署">前端vue项目部署</h3>
+<h4 id="打包简单的vue项目">打包简单的vue项目</h4>
+<p>以<u><strong><a href="https://b1ankc-mov.github.io/posts/vuep10/" target="_blank" rel="noopener noreffer ">全栈学习·第三方组件（element-ui）</a></strong></u>里的vue项目为例。</p>
+<p>打开项目，在终端服务器输入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm run build
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>将代码进行打包，打包下来的文件会放在dist目录下的index.html(只有一行是因为做了压缩)，最后需要做的就是<strong>把dist目录放在服务器上</strong>进行访问。</p>]]></description>
 </item>
 <item>
     <title>【Java全栈学习】十八、Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)</title>
@@ -103,7 +163,7 @@
             <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
         <div class="details-content">
-            <div class="admonition-content">以下部署基于Centos7 系统环境</div>
+            <div class="admonition-content">以下部署基于<code>Centos7</code>系统环境</div>
         </div>
     </div>]]></description>
 </item>
@@ -163,66 +223,6 @@
     <description><![CDATA[<h2 id="创建主表实体类">创建主表实体类</h2>
 <p>首先创建一个entity包下的主表实体类，这里命名为User。</p>
 <p>代码如下：</p>]]></description>
-</item>
-<item>
-    <title>【Java全栈学习】十、Axios网络请求</title>
-    <link>https://b1ankc-mov.github.io/posts/vuep11/</link>
-    <pubDate>Fri, 29 Dec 2023 08:47:13 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/vuep11/</guid>
-    <description><![CDATA[<h2 id="axios的使用">Axios的使用</h2>
-<h3 id="axios简介">Axios简介</h3>
-<p>使用背景：在实际项目开发中，前端页面所需要的数据往往需要从服务器端获取，这必然涉及与服务器的通信。
-Axios主要是前端的一个网络请求框架，大部分基于<em><strong>Ajax</strong></em></p>
-<ul>
-<li>Axios基于<strong>promise</strong>网络请求库，作用与node.js和浏览器中。</li>
-<li>Axios在浏览器端使用XMLHttpRequests发送网络请求，并能自动完成<strong>JSON</strong>数据的转换。</li>
-<li>地址</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://www.axios-http.cn/
-</span></span></code></pre></td></tr></table>
-</div>
-</div>]]></description>
-</item>
-<item>
-    <title>【Java全栈学习】六、MybatisPlus多表查询及分页查询</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootp7/</link>
-    <pubDate>Tue, 05 Dec 2023 16:55:12 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootp7/</guid>
-    <description><![CDATA[<h2 id="mybatis多表查询">Mybatis多表查询</h2>
-<p>实现复杂关系映射，可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">注解</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">@Reults</td>
-<td style="text-align:left">代替<resultMap>标签,该注解中可以加入单个或多个@Result注解</td>
-</tr>
-<tr>
-<td style="text-align:left">@Result</td>
-<td style="text-align:left">代替<id>标签和<Result>标签，@Result中可以使用以下属性: <br/>- column: 数据表的字段名称<br />- property:类中对应的属性名<br />- one:与@one注解配合，进行一对一的映射<br />- many: 与@Many注解配合，进行一对多的映射</td>
-</tr>
-<tr>
-<td style="text-align:left">@One</td>
-<td style="text-align:left">代替<assocation>标签，用于指定查询中返回的单一对象<br />通过select属性指定用于多表查询的方法<br />使用格式:@Result(column=&quot;&quot;,property=&quot;&quot;,one=@one(select=&quot;&quot;))</td>
-</tr>
-<tr>
-<td style="text-align:left">@Many</td>
-<td style="text-align:left">代替<collection>标签,用于指定查询中返回的集合对象<br />使用格式:@Result(column=&quot;&quot;,property=&quot;&quot;,many=@Many(select=&quot;&quot;))</td>
-</tr>
-</tbody>
-</table>]]></description>
 </item>
 </channel>
 </rss>

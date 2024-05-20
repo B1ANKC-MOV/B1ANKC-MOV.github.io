@@ -4,7 +4,53 @@
         <link>https://b1ankc-mov.github.io/categories/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/</link>
         <description>工作学习 - 分类 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Wed, 17 Apr 2024 11:33:17 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/categories/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Tue, 14 May 2024 09:13:57 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/categories/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+    <title>[Java]读取Excel表，转为Json格式发送至Url，获取接口应答报文，失败记录输出至txt</title>
+    <link>https://b1ankc-mov.github.io/posts/exceltoposturl/</link>
+    <pubDate>Tue, 14 May 2024 09:13:57 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/exceltoposturl/</guid>
+    <description><![CDATA[<div class="details admonition question open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-question-circle fa-fw" aria-hidden="true"></i>阅前提示<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><ol>
+<li>
+<p>“转为Json格式”是直接使用我自己定义的方法，强行转换为Json字符串的（因为格式上有一些要求）</p>
+</li>
+<li>
+<p>由于需要获取请求网址的应答报文，代码使用第三方库Apache HttpClient向Url发送JSON数据，而不是HttpURLConnection</p>
+</li>
+<li>
+<p>对HttpURLConnection示例代码感兴趣的，这部分我会放在章末</p>
+</li>
+</ol>
+</div>
+        </div>
+    </div>]]></description>
+</item>
+<item>
+    <title>[Java]读取Excel指定列内容，更新数据库数据</title>
+    <link>https://b1ankc-mov.github.io/posts/exceltomysql/</link>
+    <pubDate>Tue, 14 May 2024 09:13:42 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://b1ankc-mov.github.io/posts/exceltomysql/</guid>
+    <description><![CDATA[<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>章前导言<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>根据给的Excel表格更新数据库里面的测点编码，以项目编码&amp;测点名称为准匹配数据库里的记录。</p>
+<ul>
+<li>代码功能内容：读取.xlsx文件，逐行遍历，根据指定列内容，筛选数据库里面的记录进行更新。</li>
+</ul>
+<p>因为在编译的过程中还是耗费的时间和精力不少，也碰了不少壁，就把这次的工作经验拿来写篇文章总结一下</p>
+</div>
+        </div>
+    </div>]]></description>
+</item>
+<item>
     <title>[MQTT]服务器EMQX搭建SSL/TLS连接过程（wss://)</title>
     <link>https://b1ankc-mov.github.io/posts/emqx_mqtt_ssl_wss/</link>
     <pubDate>Wed, 17 Apr 2024 11:33:17 &#43;0800</pubDate>

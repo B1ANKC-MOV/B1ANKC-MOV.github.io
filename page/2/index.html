@@ -114,6 +114,53 @@
         alt="/fox.png"
         title="What does the fox say?" /></a></div><h1 class="home-title">VVulpes Blog</h1><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/B1ANKC-MOV" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="https://space.bilibili.com/668806092" title="bilibili" target="_blank" rel="noopener noreffer me"><i data-svg-src="/lib/simple-icons/icons/bilibili.min.svg" aria-hidden="true"></i></a><a href="https://blog.csdn.net/m0_48104181" title="CSDN" target="_blank" rel="noopener noreffer me"><i data-svg-src="/svg/icons/plume.min.svg" aria-hidden="true"></i></a><a href="mailto:VVulpes@163.com" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/stardewvalley_frpserver/">[服务器搭建] 利用Frp内网穿透搭建星露谷服务器局域网的过程</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-03-12">2024-03-12</time>, 
+            </span>&nbsp;<span class="post-publish">更新于 <time datetime="2024-03-12">2024-03-12</time>, 
+            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>服务器搭建</a></span></div><div class="content"><div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">服务器端操作系统为<code>CentOS 7.6 64位</code>（阿里云服务器）<em><strong>需要提前在安全组放行端口7000与24642（TCP&amp;UDP）</strong></em>，客户端操作系统为<code>Windows 10 64位</code>，可视化工具与文件传输工具使用<code>XShell</code>与<code>Xftp</code></div>
+        </div>
+    </div>
+<p>购买服务器和XShell连接服务器的操作在</p>
+<p><em><strong><a href="https://b1ankc-mov.github.io/posts/springbootvuep19/" target="_blank" rel="noopener noreffer ">Springboot+Vue云端环境配置（上）</a></strong></em></p>
+<p><em><strong><a href="https://b1ankc-mov.github.io/posts/springbootvuep20/" target="_blank" rel="noopener noreffer ">Springboot+Vue云端环境部署（下）</a></strong></em></p>
+<p>里面详细介绍过，就不再赘述了，有需要可以去翻看一下。</p></div><div class="post-footer">
+        <a href="/posts/stardewvalley_frpserver/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/frp/">frp</a>,&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/windows/">Windows</a>,&nbsp;<a href="/tags/centos/">CentOS</a>,&nbsp;<a href="/tags/stardewvalley/">StardewValley</a>,&nbsp;<a href="/tags/%E6%B8%B8%E6%88%8F%E8%AE%B0%E5%BD%95/">游戏记录</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/tdengine_navicat/">[Java] 从其他表中查出待存储的表名，并将数据插入该表的实现（跨数据库/数据库平台）</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-03-07">2024-03-07</time>, 
+            </span>&nbsp;<span class="post-publish">更新于 <time datetime="2024-03-07">2024-03-07</time>, 
+            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>工作学习</a></span></div><div class="content"><p>最后实现的功能大概为：根据传入的<code>person_id</code>，在存放数据位置信息的表中，筛选出数据要插入的表名（例如，person_id=1的数据，在<code>work_table_info</code>表中查出，需要存储在table_id_1表中），并将数据插入。</p>
+<h2 id="实体类">实体类</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Daily</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">time</span><span class="p">;</span><span class="w">	</span><span class="c1">//打卡时间</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Double</span><span class="w"> </span><span class="n">longitude</span><span class="p">;</span><span class="w">	</span><span class="c1">//打卡经纬度</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Double</span><span class="w"> </span><span class="n">latitude</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">person_id</span><span class="p">;</span><span class="w">	</span><span class="c1">//打卡人员id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer">
+        <a href="/posts/tdengine_navicat/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/tdengine/">TDengine</a>,&nbsp;<a href="/tags/navicat/">Navicat</a>,&nbsp;<a href="/tags/java/">Java</a>,&nbsp;<a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>,&nbsp;<a href="/tags/%E5%90%8E%E7%AB%AF/">后端</a>,&nbsp;<a href="/tags/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/">工作学习</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/tdengine_timestamp/">[Java] TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-03-06">2024-03-06</time>, 
             </span>&nbsp;<span class="post-publish">更新于 <time datetime="2024-03-06">2024-03-06</time>, 
@@ -172,7 +219,7 @@
         <a href="/posts/springbootvuep20/">【Java全栈学习】十九、Springboot+Vue云端环境部署(阿里云服务器部署项目)</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Vulpes</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-01-15">2024-01-15</time>, 
             </span>&nbsp;<span class="post-publish">更新于 <time datetime="2024-01-15">2024-01-15</time>, 
-            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div><div class="content"><div class="details admonition example open">
+            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot+vue%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>SpringBoot+Vue全栈开发</a></span></div><div class="content"><div class="details admonition example">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
@@ -200,7 +247,21 @@
     </figure></p>
 </div>
         </div>
-    </div></div><div class="post-footer">
+    </div>
+<h2 id="项目部署">项目部署</h2>
+<h3 id="前端vue项目部署">前端vue项目部署</h3>
+<h4 id="打包简单的vue项目">打包简单的vue项目</h4>
+<p>以<u><strong><a href="https://b1ankc-mov.github.io/posts/vuep10/" target="_blank" rel="noopener noreffer ">全栈学习·第三方组件（element-ui）</a></strong></u>里的vue项目为例。</p>
+<p>打开项目，在终端服务器输入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm run build
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>将代码进行打包，打包下来的文件会放在dist目录下的index.html(只有一行是因为做了压缩)，最后需要做的就是<strong>把dist目录放在服务器上</strong>进行访问。</p></div><div class="post-footer">
         <a href="/posts/springbootvuep20/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">个人学习</a>,&nbsp;<a href="/tags/%E5%90%8E%E7%AB%AF/">后端</a>,&nbsp;<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>,&nbsp;<a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
@@ -222,43 +283,11 @@
             <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
         <div class="details-content">
-            <div class="admonition-content">以下部署基于Centos7 系统环境</div>
+            <div class="admonition-content">以下部署基于<code>Centos7</code>系统环境</div>
         </div>
     </div></div><div class="post-footer">
         <a href="/posts/springbootvuep19/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/">个人学习</a>,&nbsp;<a href="/tags/%E5%90%8E%E7%AB%AF/">后端</a>,&nbsp;<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>,&nbsp;<a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
-            <a href="/posts/ff14hpic1/"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240118/IMG_7921.32ze2c4dn660.webp"
-        data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240118/IMG_7921.32ze2c4dn660.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240118/IMG_7921.32ze2c4dn660.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240118/IMG_7921.32ze2c4dn660.webp 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240118/IMG_7921.32ze2c4dn660.webp"
-        title="📖🖊" /></a>
-        </div><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/ff14hpic1/">[FF14] 维埃拉族·普通约拍册(横屏专辑·下)</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="mailto:3057123295@qq.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>小极</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-01-12">2024-01-12</time>, 
-            </span>&nbsp;<span class="post-publish">更新于 <time datetime="2024-01-18">2024-01-18</time>, 
-            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%A7%92%E8%89%B2%E7%85%A7%E7%89%87/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>角色照片</a></span></div><div class="content">这个劳斯打光简直神迹🔮！这一次约拍是黑白幻化专场，每张分三版：白框、调色、原片。</div><div class="post-footer">
-        <a href="/posts/ff14hpic1/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%B8%B8%E6%88%8F%E8%AE%B0%E5%BD%95/">游戏记录</a>,&nbsp;<a href="/tags/ff14/">FF14</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
-            <a href="/posts/ff14hpic/"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240118/IMG_7917.5s60hqoj3ws0.webp"
-        data-srcset="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240118/IMG_7917.5s60hqoj3ws0.webp, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240118/IMG_7917.5s60hqoj3ws0.webp 1.5x, https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240118/IMG_7917.5s60hqoj3ws0.webp 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240118/IMG_7917.5s60hqoj3ws0.webp"
-        title="🍭🎆" /></a>
-        </div><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/ff14hpic/">[FF14] 维埃拉族·普通约拍册(横屏专辑·上)</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="mailto:3057123295@qq.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>小极</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2024-01-12">2024-01-12</time>, 
-            </span>&nbsp;<span class="post-publish">更新于 <time datetime="2024-01-18">2024-01-18</time>, 
-            </span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%A7%92%E8%89%B2%E7%85%A7%E7%89%87/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>角色照片</a></span></div><div class="content">这个劳斯打光简直神迹🔮！这一次约拍是黑白幻化专场，每张分三版：白框、调色、原片。</div><div class="post-footer">
-        <a href="/posts/ff14hpic/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%B8%B8%E6%88%8F%E8%AE%B0%E5%BD%95/">游戏记录</a>,&nbsp;<a href="/tags/ff14/">FF14</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>

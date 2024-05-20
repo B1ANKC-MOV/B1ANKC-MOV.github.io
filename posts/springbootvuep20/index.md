@@ -1,7 +1,7 @@
 # 【Java全栈学习】十九、Springboot+Vue云端环境部署(阿里云服务器部署项目)
 
 
-{{< admonition example "注意">}}
+{{< admonition example "注意" false>}}
 
 在部署前后端项目之前，首先需要保证nginx服务是开启的：
 
@@ -14,8 +14,6 @@ systemctl start nginx #开启nginx服务
 ![nginx成功界面](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS1.755p8emc61c0.webp)
 
 {{< /admonition >}}
-
-<!--more-->
 
 ## 项目部署
 
@@ -32,6 +30,8 @@ npm run build
 ```
 
 将代码进行打包，打包下来的文件会放在dist目录下的index.html(只有一行是因为做了压缩)，最后需要做的就是**把dist目录放在服务器上**进行访问。
+
+<!--more-->
 
 ![打包成功的终端界面](https://cdn.jsdelivr.net/gh/B1ANKC-MOV/HttpImg@master/20240116/COS2.66aa97855v40.webp)
 

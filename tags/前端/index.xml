@@ -10,7 +10,7 @@
     <pubDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://b1ankc-mov.github.io/posts/springbootvuep20/</guid>
-    <description><![CDATA[<div class="details admonition example open">
+    <description><![CDATA[<div class="details admonition example">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
@@ -32,7 +32,21 @@
     </figure></p>
 </div>
         </div>
-    </div>]]></description>
+    </div>
+<h2 id="项目部署">项目部署</h2>
+<h3 id="前端vue项目部署">前端vue项目部署</h3>
+<h4 id="打包简单的vue项目">打包简单的vue项目</h4>
+<p>以<u><strong><a href="https://b1ankc-mov.github.io/posts/vuep10/" target="_blank" rel="noopener noreffer ">全栈学习·第三方组件（element-ui）</a></strong></u>里的vue项目为例。</p>
+<p>打开项目，在终端服务器输入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm run build
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>将代码进行打包，打包下来的文件会放在dist目录下的index.html(只有一行是因为做了压缩)，最后需要做的就是<strong>把dist目录放在服务器上</strong>进行访问。</p>]]></description>
 </item>
 <item>
     <title>【Java全栈学习】十八、Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)</title>
@@ -46,7 +60,7 @@
             <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
         <div class="details-content">
-            <div class="admonition-content">以下部署基于Centos7 系统环境</div>
+            <div class="admonition-content">以下部署基于<code>Centos7</code>系统环境</div>
         </div>
     </div>]]></description>
 </item>
