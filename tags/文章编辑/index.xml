@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>文章编辑 - 标签 - VVulpes</title>
-        <link>https://b1ankc-mov.github.io/tags/%E6%96%87%E7%AB%A0%E7%BC%96%E8%BE%91/</link>
+        <link>http://example.org/tags/%E6%96%87%E7%AB%A0%E7%BC%96%E8%BE%91/</link>
         <description>文章编辑 - 标签 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Thu, 18 Apr 2024 14:40:36 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/%E6%96%87%E7%AB%A0%E7%BC%96%E8%BE%91/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Thu, 18 Apr 2024 14:40:36 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/%E6%96%87%E7%AB%A0%E7%BC%96%E8%BE%91/" rel="self" type="application/rss+xml" /><item>
     <title>[汇总]Markdown用法&amp;Admonition横幅样式收集</title>
-    <link>https://b1ankc-mov.github.io/posts/markdown/</link>
+    <link>http://example.org/posts/markdown/</link>
     <pubDate>Thu, 18 Apr 2024 14:40:36 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/markdown/</guid>
+    <guid>http://example.org/posts/markdown/</guid>
     <description><![CDATA[<p>日常使用Markdown编辑文章时，有些技巧和语法非常便捷实用，LoveIt主题自带的admonition横幅也很好用，就是格式太多了，两者在此文汇总方便随取随用。</p>]]></description>
 </item>
 </channel>

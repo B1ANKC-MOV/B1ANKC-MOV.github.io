@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Apache POI - 标签 - VVulpes</title>
-        <link>https://b1ankc-mov.github.io/tags/apache-poi/</link>
+        <link>http://example.org/tags/apache-poi/</link>
         <description>Apache POI - 标签 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Tue, 14 May 2024 09:13:57 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/apache-poi/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Tue, 14 May 2024 09:13:57 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/apache-poi/" rel="self" type="application/rss+xml" /><item>
     <title>[Java]读取Excel表，转为Json格式发送至Url，获取接口应答报文，失败记录输出至txt</title>
-    <link>https://b1ankc-mov.github.io/posts/exceltoposturl/</link>
+    <link>http://example.org/posts/exceltoposturl/</link>
     <pubDate>Tue, 14 May 2024 09:13:57 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/exceltoposturl/</guid>
+    <guid>http://example.org/posts/exceltoposturl/</guid>
     <description><![CDATA[<div class="details admonition question open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-question-circle fa-fw" aria-hidden="true"></i>阅前提示<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
@@ -32,10 +32,10 @@
 </item>
 <item>
     <title>[Java]读取Excel指定列内容，更新数据库数据</title>
-    <link>https://b1ankc-mov.github.io/posts/exceltomysql/</link>
+    <link>http://example.org/posts/exceltomysql/</link>
     <pubDate>Tue, 14 May 2024 09:13:42 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/exceltomysql/</guid>
+    <guid>http://example.org/posts/exceltomysql/</guid>
     <description><![CDATA[<div class="details admonition tip open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>章前导言<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>

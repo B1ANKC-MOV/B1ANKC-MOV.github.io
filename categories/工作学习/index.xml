@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>工作学习 - 分类 - VVulpes</title>
-        <link>https://b1ankc-mov.github.io/categories/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/</link>
+        <link>http://example.org/categories/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/</link>
         <description>工作学习 - 分类 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Tue, 14 May 2024 09:13:57 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/categories/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Tue, 14 May 2024 09:13:57 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
     <title>[Java]读取Excel表，转为Json格式发送至Url，获取接口应答报文，失败记录输出至txt</title>
-    <link>https://b1ankc-mov.github.io/posts/exceltoposturl/</link>
+    <link>http://example.org/posts/exceltoposturl/</link>
     <pubDate>Tue, 14 May 2024 09:13:57 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/exceltoposturl/</guid>
+    <guid>http://example.org/posts/exceltoposturl/</guid>
     <description><![CDATA[<div class="details admonition question open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-question-circle fa-fw" aria-hidden="true"></i>阅前提示<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
@@ -32,10 +32,10 @@
 </item>
 <item>
     <title>[Java]读取Excel指定列内容，更新数据库数据</title>
-    <link>https://b1ankc-mov.github.io/posts/exceltomysql/</link>
+    <link>http://example.org/posts/exceltomysql/</link>
     <pubDate>Tue, 14 May 2024 09:13:42 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/exceltomysql/</guid>
+    <guid>http://example.org/posts/exceltomysql/</guid>
     <description><![CDATA[<div class="details admonition tip open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>章前导言<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
@@ -52,10 +52,10 @@
 </item>
 <item>
     <title>[MQTT]服务器EMQX搭建SSL/TLS连接过程（wss://)</title>
-    <link>https://b1ankc-mov.github.io/posts/emqx_mqtt_ssl_wss/</link>
+    <link>http://example.org/posts/emqx_mqtt_ssl_wss/</link>
     <pubDate>Wed, 17 Apr 2024 11:33:17 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/emqx_mqtt_ssl_wss/</guid>
+    <guid>http://example.org/posts/emqx_mqtt_ssl_wss/</guid>
     <description><![CDATA[<div class="details admonition example open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
@@ -128,7 +128,7 @@
 </span></span><span class="line"><span class="cl">For some fields there will be a default value,
 </span></span><span class="line"><span class="cl">If you enter <span class="s1">&#39;.&#39;</span>, the field will be left blank.
 </span></span><span class="line"><span class="cl">-----
-</span></span><span class="line"><span class="cl">Country Name <span class="o">(</span><span class="m">2</span> letter code<span class="o">)</span> <span class="o">[</span>AU<span class="o">]</span>: CN# 国家/地区
+</span></span><span class="line"><span class="cl">Country Name <span class="o">(</span><span class="m">2</span> letter code<span class="o">)</span> <span class="o">[</span>AU<span class="o">]</span>: CN <span class="c1"># 国家/地区</span>
 </span></span><span class="line"><span class="cl">State or Province Name <span class="o">(</span>full name<span class="o">)</span> <span class="o">[</span>Some-State<span class="o">]</span>:Zhejiang <span class="c1"># 省/市</span>
 </span></span><span class="line"><span class="cl">Locality Name <span class="o">(</span>eg, city<span class="o">)</span> <span class="o">[]</span>:Hangzhou <span class="c1"># 城市</span>
 </span></span><span class="line"><span class="cl">Organization Name <span class="o">(</span>eg, company<span class="o">)</span> <span class="o">[</span>Internet Widgits Pty Ltd<span class="o">]</span>:EMQX <span class="c1"># 组织机构（或公司名），如 EMQ</span>
@@ -141,10 +141,10 @@
 </item>
 <item>
     <title>[Java] 从其他表中查出待存储的表名，并将数据插入该表的实现（跨数据库/数据库平台）</title>
-    <link>https://b1ankc-mov.github.io/posts/tdengine_navicat/</link>
+    <link>http://example.org/posts/tdengine_navicat/</link>
     <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/tdengine_navicat/</guid>
+    <guid>http://example.org/posts/tdengine_navicat/</guid>
     <description><![CDATA[<p>最后实现的功能大概为：根据传入的<code>person_id</code>，在存放数据位置信息的表中，筛选出数据要插入的表名（例如，person_id=1的数据，在<code>work_table_info</code>表中查出，需要存储在table_id_1表中），并将数据插入。</p>
 <h2 id="实体类">实体类</h2>
 <div class="highlight"><div class="chroma">
@@ -171,10 +171,10 @@
 </item>
 <item>
     <title>[Java] TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法</title>
-    <link>https://b1ankc-mov.github.io/posts/tdengine_timestamp/</link>
+    <link>http://example.org/posts/tdengine_timestamp/</link>
     <pubDate>Wed, 06 Mar 2024 15:07:37 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/tdengine_timestamp/</guid>
+    <guid>http://example.org/posts/tdengine_timestamp/</guid>
     <description><![CDATA[<h2 id="实体类">实体类</h2>
 <p>定义实体类，插入数据分别代表<code>打卡时间</code>、<code>员工id</code>，</p>
 <p>打卡时间是最后需要插入时序数据库中的<strong>时间戳类型字段</strong>。</p>
@@ -198,10 +198,10 @@
 </item>
 <item>
     <title>[Java] Mybatis向Mysql插入主副表JSON数据</title>
-    <link>https://b1ankc-mov.github.io/posts/mybatisplusmysql/</link>
+    <link>http://example.org/posts/mybatisplusmysql/</link>
     <pubDate>Mon, 08 Jan 2024 08:55:39 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/mybatisplusmysql/</guid>
+    <guid>http://example.org/posts/mybatisplusmysql/</guid>
     <description><![CDATA[<h2 id="创建主表实体类">创建主表实体类</h2>
 <p>首先创建一个entity包下的主表实体类，这里命名为User。</p>
 <p>代码如下：</p>]]></description>

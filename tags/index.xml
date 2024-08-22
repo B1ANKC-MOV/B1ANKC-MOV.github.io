@@ -1,87 +1,87 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tags - 标签 - VVulpes</title>
-        <link>https://b1ankc-mov.github.io/tags/</link>
+        <link>http://example.org/tags/</link>
         <description>Tags - 标签 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Tue, 14 May 2024 09:13:57 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Tue, 14 May 2024 09:13:57 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
     <title>Apache HttpClient</title>
-    <link>https://b1ankc-mov.github.io/tags/apache-httpclient/</link>
+    <link>http://example.org/tags/apache-httpclient/</link>
     <pubDate>Tue, 14 May 2024 09:13:57 &#43;0800</pubDate>
     <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/apache-httpclient/</guid>
+    <guid>http://example.org/tags/apache-httpclient/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Apache POI</title>
-    <link>https://b1ankc-mov.github.io/tags/apache-poi/</link>
+    <link>http://example.org/tags/apache-poi/</link>
     <pubDate>Tue, 14 May 2024 09:13:57 &#43;0800</pubDate>
     <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/apache-poi/</guid>
+    <guid>http://example.org/tags/apache-poi/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Excel</title>
-    <link>https://b1ankc-mov.github.io/tags/excel/</link>
+    <link>http://example.org/tags/excel/</link>
     <pubDate>Tue, 14 May 2024 09:13:57 &#43;0800</pubDate>
     <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/excel/</guid>
+    <guid>http://example.org/tags/excel/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Json</title>
-    <link>https://b1ankc-mov.github.io/tags/json/</link>
+    <link>http://example.org/tags/json/</link>
     <pubDate>Tue, 14 May 2024 09:13:57 &#43;0800</pubDate>
     <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/json/</guid>
+    <guid>http://example.org/tags/json/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>MybatisPlus</title>
-    <link>https://b1ankc-mov.github.io/tags/mybatisplus/</link>
+    <link>http://example.org/tags/mybatisplus/</link>
     <pubDate>Tue, 14 May 2024 09:13:57 &#43;0800</pubDate>
     <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/mybatisplus/</guid>
+    <guid>http://example.org/tags/mybatisplus/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Navicat</title>
-    <link>https://b1ankc-mov.github.io/tags/navicat/</link>
+    <link>http://example.org/tags/navicat/</link>
     <pubDate>Tue, 14 May 2024 09:13:57 &#43;0800</pubDate>
     <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/navicat/</guid>
+    <guid>http://example.org/tags/navicat/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>后端</title>
-    <link>https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/</link>
+    <link>http://example.org/tags/%E5%90%8E%E7%AB%AF/</link>
     <pubDate>Tue, 14 May 2024 09:13:57 &#43;0800</pubDate>
     <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/</guid>
+    <guid>http://example.org/tags/%E5%90%8E%E7%AB%AF/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Mybatis</title>
-    <link>https://b1ankc-mov.github.io/tags/mybatis/</link>
+    <link>http://example.org/tags/mybatis/</link>
     <pubDate>Tue, 14 May 2024 09:13:42 &#43;0800</pubDate>
     <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/mybatis/</guid>
+    <guid>http://example.org/tags/mybatis/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>工作学习</title>
-    <link>https://b1ankc-mov.github.io/tags/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/</link>
+    <link>http://example.org/tags/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/</link>
     <pubDate>Tue, 14 May 2024 09:13:42 &#43;0800</pubDate>
     <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/</guid>
+    <guid>http://example.org/tags/%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>数据库</title>
-    <link>https://b1ankc-mov.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+    <link>http://example.org/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
     <pubDate>Tue, 14 May 2024 09:13:42 &#43;0800</pubDate>
     <author>Vulpes</author>
-    <guid>https://b1ankc-mov.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+    <guid>http://example.org/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

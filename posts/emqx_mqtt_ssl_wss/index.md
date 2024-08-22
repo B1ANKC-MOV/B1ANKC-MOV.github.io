@@ -43,7 +43,7 @@ There are quite a few fields but you can leave some blank
 For some fields there will be a default value,
 If you enter '.', the field will be left blank.
 -----
-Country Name (2 letter code) [AU]: CN# 国家/地区
+Country Name (2 letter code) [AU]: CN # 国家/地区
 State or Province Name (full name) [Some-State]:Zhejiang # 省/市
 Locality Name (eg, city) []:Hangzhou # 城市
 Organization Name (eg, company) [Internet Widgits Pty Ltd]:EMQX # 组织机构（或公司名），如 EMQ

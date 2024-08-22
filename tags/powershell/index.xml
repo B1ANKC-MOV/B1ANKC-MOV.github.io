@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>PowerShell - 标签 - VVulpes</title>
-        <link>https://b1ankc-mov.github.io/tags/powershell/</link>
+        <link>http://example.org/tags/powershell/</link>
         <description>PowerShell - 标签 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Tue, 12 Mar 2024 09:30:34 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/powershell/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Tue, 12 Mar 2024 09:30:34 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/powershell/" rel="self" type="application/rss+xml" /><item>
     <title>[汇总] cd打开文件命令&amp;文件相对路径写法</title>
-    <link>https://b1ankc-mov.github.io/posts/fileaddresscmd/</link>
+    <link>http://example.org/posts/fileaddresscmd/</link>
     <pubDate>Tue, 12 Mar 2024 09:30:34 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/fileaddresscmd/</guid>
+    <guid>http://example.org/posts/fileaddresscmd/</guid>
     <description><![CDATA[<p>在控制台中输入指令打开文件路径和在项目中输入文件路径的一些写法经常容易混淆记错，因此在这里汇总一下，方便以后查询记忆。</p>
 <h2 id="控制台终端打开文件">控制台终端打开文件</h2>
 <ol>

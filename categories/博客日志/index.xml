@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>博客日志 - 分类 - VVulpes</title>
-        <link>https://b1ankc-mov.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/</link>
+        <link>http://example.org/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/</link>
         <description>博客日志 - 分类 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Fri, 29 Dec 2023 13:53:27 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Fri, 29 Dec 2023 13:53:27 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/" rel="self" type="application/rss+xml" /><item>
     <title>建站日志⚙</title>
-    <link>https://b1ankc-mov.github.io/website/</link>
+    <link>http://example.org/website/</link>
     <pubDate>Fri, 29 Dec 2023 13:53:27 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/website/</guid>
+    <guid>http://example.org/website/</guid>
     <description><![CDATA[(・∀・(・∀・(・∀・*) 🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚🕛★.:☆持续更新中☜(ﾟヮﾟ☜)☆:.★ 🕜🕝🕞🕟🕠🕡🕢🕣🕤🕥🕦🕧 2024-2-22 尝试给本页面添加目录，]]></description>
 </item>
 </channel>

@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>后端 - 标签 - VVulpes</title>
-        <link>https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/</link>
+        <link>http://example.org/tags/%E5%90%8E%E7%AB%AF/</link>
         <description>后端 - 标签 - VVulpes</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>VVulpes@163.com (Vulpes)</managingEditor>
-            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Tue, 14 May 2024 09:13:57 &#43;0800</lastBuildDate><atom:link href="https://b1ankc-mov.github.io/tags/%E5%90%8E%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>VVulpes@163.com (Vulpes)</webMaster><lastBuildDate>Tue, 14 May 2024 09:13:57 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/%E5%90%8E%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
     <title>[Java]读取Excel表，转为Json格式发送至Url，获取接口应答报文，失败记录输出至txt</title>
-    <link>https://b1ankc-mov.github.io/posts/exceltoposturl/</link>
+    <link>http://example.org/posts/exceltoposturl/</link>
     <pubDate>Tue, 14 May 2024 09:13:57 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/exceltoposturl/</guid>
+    <guid>http://example.org/posts/exceltoposturl/</guid>
     <description><![CDATA[<div class="details admonition question open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-question-circle fa-fw" aria-hidden="true"></i>阅前提示<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
@@ -32,10 +32,10 @@
 </item>
 <item>
     <title>[Java]读取Excel指定列内容，更新数据库数据</title>
-    <link>https://b1ankc-mov.github.io/posts/exceltomysql/</link>
+    <link>http://example.org/posts/exceltomysql/</link>
     <pubDate>Tue, 14 May 2024 09:13:42 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/exceltomysql/</guid>
+    <guid>http://example.org/posts/exceltomysql/</guid>
     <description><![CDATA[<div class="details admonition tip open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>章前导言<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
@@ -52,10 +52,10 @@
 </item>
 <item>
     <title>[Java] 从其他表中查出待存储的表名，并将数据插入该表的实现（跨数据库/数据库平台）</title>
-    <link>https://b1ankc-mov.github.io/posts/tdengine_navicat/</link>
+    <link>http://example.org/posts/tdengine_navicat/</link>
     <pubDate>Thu, 07 Mar 2024 08:56:20 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/tdengine_navicat/</guid>
+    <guid>http://example.org/posts/tdengine_navicat/</guid>
     <description><![CDATA[<p>最后实现的功能大概为：根据传入的<code>person_id</code>，在存放数据位置信息的表中，筛选出数据要插入的表名（例如，person_id=1的数据，在<code>work_table_info</code>表中查出，需要存储在table_id_1表中），并将数据插入。</p>
 <h2 id="实体类">实体类</h2>
 <div class="highlight"><div class="chroma">
@@ -82,10 +82,10 @@
 </item>
 <item>
     <title>[Java] TDengine时序数据库时间戳(timestamp)字段插入数据的实现方法</title>
-    <link>https://b1ankc-mov.github.io/posts/tdengine_timestamp/</link>
+    <link>http://example.org/posts/tdengine_timestamp/</link>
     <pubDate>Wed, 06 Mar 2024 15:07:37 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/tdengine_timestamp/</guid>
+    <guid>http://example.org/posts/tdengine_timestamp/</guid>
     <description><![CDATA[<h2 id="实体类">实体类</h2>
 <p>定义实体类，插入数据分别代表<code>打卡时间</code>、<code>员工id</code>，</p>
 <p>打卡时间是最后需要插入时序数据库中的<strong>时间戳类型字段</strong>。</p>
@@ -109,10 +109,10 @@
 </item>
 <item>
     <title>【Java全栈学习】十九、Springboot&#43;Vue云端环境部署(阿里云服务器部署项目)</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootvuep20/</link>
+    <link>http://example.org/posts/springbootvuep20/</link>
     <pubDate>Mon, 15 Jan 2024 11:10:40 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootvuep20/</guid>
+    <guid>http://example.org/posts/springbootvuep20/</guid>
     <description><![CDATA[<div class="details admonition example">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
@@ -153,10 +153,10 @@
 </item>
 <item>
     <title>【Java全栈学习】十八、Springboot&#43;Vue云端环境配置(阿里云服务器环境配置)</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootvuep19/</link>
+    <link>http://example.org/posts/springbootvuep19/</link>
     <pubDate>Fri, 12 Jan 2024 13:55:11 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootvuep19/</guid>
+    <guid>http://example.org/posts/springbootvuep19/</guid>
     <description><![CDATA[<h2 id="云端环境准备">云端环境准备</h2>
 <div class="details admonition example open">
         <div class="details-summary admonition-title">
@@ -169,10 +169,10 @@
 </item>
 <item>
     <title>【Java全栈学习】十七、阿里云服务器的配置&amp;搭建&amp;购买&amp;使用</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootvuep18/</link>
+    <link>http://example.org/posts/springbootvuep18/</link>
     <pubDate>Thu, 11 Jan 2024 15:46:16 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootvuep18/</guid>
+    <guid>http://example.org/posts/springbootvuep18/</guid>
     <description><![CDATA[<h2 id="云服务器介绍">云服务器介绍</h2>
 <h3 id="云服务器概念">云服务器概念</h3>
 <ul>
@@ -182,18 +182,18 @@
 </item>
 <item>
     <title>【Java全栈学习】十六、SpringBoot&#43;vue-element-template(前后端集成)</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootvuep17/</link>
+    <link>http://example.org/posts/springbootvuep17/</link>
     <pubDate>Thu, 11 Jan 2024 13:44:38 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootvuep17/</guid>
+    <guid>http://example.org/posts/springbootvuep17/</guid>
     <description><![CDATA[将后台管理模板与项目前端进行集成，简单修改前端API接口与后端相连。]]></description>
 </item>
 <item>
     <title>【Java全栈学习】十五、JWT跨域认证</title>
-    <link>https://b1ankc-mov.github.io/posts/springbootp16/</link>
+    <link>http://example.org/posts/springbootp16/</link>
     <pubDate>Thu, 11 Jan 2024 10:16:27 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/springbootp16/</guid>
+    <guid>http://example.org/posts/springbootp16/</guid>
     <description><![CDATA[<h2 id="session认证">Session认证</h2>
 <p>互联网服务离不开用户认证。一般流程是下面这样：</p>
 <ol>
@@ -216,10 +216,10 @@
 </item>
 <item>
     <title>[Java] Mybatis向Mysql插入主副表JSON数据</title>
-    <link>https://b1ankc-mov.github.io/posts/mybatisplusmysql/</link>
+    <link>http://example.org/posts/mybatisplusmysql/</link>
     <pubDate>Mon, 08 Jan 2024 08:55:39 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://b1ankc-mov.github.io/posts/mybatisplusmysql/</guid>
+    <guid>http://example.org/posts/mybatisplusmysql/</guid>
     <description><![CDATA[<h2 id="创建主表实体类">创建主表实体类</h2>
 <p>首先创建一个entity包下的主表实体类，这里命名为User。</p>
 <p>代码如下：</p>]]></description>

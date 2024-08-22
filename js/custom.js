@@ -46,7 +46,7 @@ window.onload = function() {
 // 		  "/images/background/DNC.jpg",
 // 		  "/images/background/SAM.jpg",
 // 		  "/images/background/ninja.jpg"
-// 	], { duration: 60000, fade: 1500 });
+// 	], { duration: 6000, fade: 15000 });
 // });
 
 
