@@ -33,7 +33,7 @@ window.onload = function() {
 	  } else {
 		$('[rel="icon"]').attr('href', "/foz.ico");
 		$('[rel="shortcut icon"]').attr('href', "/foz.ico");
-		document.title = '(๑•̀ㅂ•́)و✧Hi~bro!';
+		document.title = '(๑•̀ㅂ•́)و✧Hi~welcome back!';
 		titleTime = setTimeout(function() {
 		  document.title = OriginTitile;
 		}, 2000);
